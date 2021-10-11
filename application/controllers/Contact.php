@@ -13,7 +13,8 @@ class Contact extends CI_Controller
 		$data = array(
 			'page_title' => 'Contacto',
 			'view' => 'Contacto',
-			'data_view' => array()
+			'data_view' => array(),
+			'activo' => 'active'
 		);
 		$this->load->view('Template/main_view', $data);
 	}
