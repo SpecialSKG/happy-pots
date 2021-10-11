@@ -1,4 +1,3 @@
-<!-- Bottom Banner--><a class="section section-banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(<?= base_url() . 'assets/images/banner/background-03-1920x310.jpg'; ?>); background-image: -webkit-image-set( url(<?= base_url() . 'assets/images/banner/background-03-1920x310.jpg'; ?>) 1x, url(<?= base_url() . 'assets/images/banner/background-03-3840x620.jpg'; ?>) 2x )"><img src="<?= base_url() . 'assets/images/banner/foreground-03-1600x310.png'; ?>" srcset="<?= base_url() . 'assets/images/banner/foreground-03-1600x310.png 1x'; ?>, <?= base_url() . 'assets/images/banner/foreground-03-3200x620.png 2x'; ?>" alt="" width="1600" height="310"></a>
 <!-- Page Footer-->
 <footer class="section footer-modern context-dark footer-modern-2">
     <div class="footer-modern-line">

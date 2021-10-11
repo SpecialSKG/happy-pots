@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="page">
-        <!-- Top Banner--><a class="section section-banner text-center d-none d-xl-block" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(<?= base_url() . 'assets/images/banner/background-04-1920x60.jpg'; ?>); background-image: -webkit-image-set( url(<?= base_url() . 'assets/images/banner/background-04-1920x60.jpg'; ?>) 1x, url(<?= base_url() . 'assets/images/banner/background-04-3840x120.jpg'; ?>) 2x )"><img src="<?= base_url() . 'assets/images/banner/foreground-04-1600x60.png'; ?>" srcset="<?= base_url() . 'assets/images/banner/foreground-04-1600x60.png 1x'; ?>, <?= base_url() . 'assets/images/banner/foreground-04-3200x120.png 2x'; ?>" alt="" width="1600" height="310"></a>
+        
         <!-- Page Header-->
         <header class="section page-header">
             <!-- RD Navbar-->
@@ -96,13 +96,13 @@
                                 <div class="rd-navbar-main">
                                     <!-- RD Navbar Nav-->
                                     <ul class="rd-navbar-nav">
-                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                                        <li class="rd-nav-item active"><a class="rd-nav-link" href="<?= base_url() . 'Inicio'; ?>">Inicio</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About us</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="<?= base_url() . 'Acerca'; ?>">Acerca De</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="<?= base_url() . 'Product'; ?>">Productos</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                                        <li class="rd-nav-item"><a class="rd-nav-link" href="<?= base_url() . 'Contact'; ?>">Contacto</a>
                                         </li>
                                     </ul>
                                 </div>
