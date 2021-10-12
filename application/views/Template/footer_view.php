@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row row-50">
                 <div class="col-md-6 col-lg-4">
-                    <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft">What We Offer</span></h5>
+                    <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft">Que Ofrecemos</span></h5>
                     <ul class="footer-modern-list d-inline-block d-sm-block wow fadeInUp">
                         <li><a href="#">Pizzas</a></li>
                         <li><a href="#">Burgers</a></li>
@@ -15,7 +15,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl-3">
-                    <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft">Information</span></h5>
+                    <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft">Información</span></h5>
                     <ul class="footer-modern-list d-inline-block d-sm-block wow fadeInUp">
                         <li><a href="about-us.html">About us</a></li>
                         <li><a href="#">Latest News</a></li>
@@ -25,10 +25,11 @@
                         <li><a href="contacts.html">Contact Us</a></li>
                     </ul>
                 </div>
+                <!--
                 <div class="col-lg-4 col-xl-5">
                     <h5 class="footer-modern-title oh-desktop"><span class="d-inline-block wow slideInLeft">Newsletter</span></h5>
                     <p class="wow fadeInRight">Sign up today for the latest news and updates.</p>
-                    <!-- RD Mailform-->
+                    
                     <form class="rd-form rd-mailform rd-form-inline rd-form-inline-sm oh-desktop" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
                         <div class="form-wrap wow slideInUp">
                             <input class="form-input" id="subscribe-form-2-email" type="email" name="email" data-constraints="@Email @Required" />
@@ -39,6 +40,7 @@
                         </div>
                     </form>
                 </div>
+                -->
             </div>
         </div>
     </div>

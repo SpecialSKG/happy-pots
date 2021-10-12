@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="<?= base_url() . 'assets/image/x-icon'; ?>">
+    <link rel="icon" href="<?= base_url() . 'assets/images/happyicon.ico'; ?>" type="image/gif">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
     <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/css/bootstrap.css'; ?>">
@@ -68,7 +68,7 @@
                                 <!-- RD Navbar Toggle-->
                                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand-->
-                                <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="<?= base_url() . 'assets/images/logo-198x66.png'; ?>" alt="" width="198" height="66" /></a></div>
+                                <div class="rd-navbar-brand"><a class="brand d-flex align-items-center display-6" href="<?=base_url()?>"><img class="brand-logo-dark" src="<?= base_url() . 'assets/images/happypotsmaceta.jpg'; ?>" alt="" width="66" height="66" />Happy pots</a></div>
                             </div>
                             <div class="rd-navbar-right rd-navbar-nav-wrap">
                                 <div class="rd-navbar-aside">
@@ -76,21 +76,19 @@
                                         <li>
                                             <div class="unit unit-spacing-xs">
                                                 <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                                <div class="unit-body"><a class="phone" href="tel:#">+1 718-999-3939</a></div>
+                                                <div class="unit-body"><a class="phone" href="tel:#">7470 0643</a></div>
                                             </div>
                                         </li>
-                                        <li>
+                                        <!--<li>
                                             <div class="unit unit-spacing-xs">
                                                 <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                                                <div class="unit-body"><a class="address" href="#">514 S. Magnolia St. Orlando, FL 32806</a></div>
+                                                <div class="unit-body"><a class="address" href="#">Happy Pots</a></div>
                                             </div>
-                                        </li>
+                                        </li>-->
                                     </ul>
                                     <ul class="list-share-2">
                                         <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                                        <li><a class="icon mdi mdi-twitter" href="#"></a></li>
                                         <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                                        <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
                                     </ul>
                                 </div>
                                 <div class="rd-navbar-main">

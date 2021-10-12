@@ -3,15 +3,15 @@
 <section class="bg-gray-7">
     <div class="breadcrumbs-custom box-transform-wrap context-dark">
         <div class="container">
-            <h3 class="breadcrumbs-custom-title">About us</h3>
+            <h3 class="breadcrumbs-custom-title">Sobre Nosotros</h3>
             <div class="breadcrumbs-custom-decor"></div>
         </div>
         <div class="box-transform" style="background-image: url(<?= base_url() . 'assets/images/bg-1.jpg'; ?>);"></div>
     </div>
     <div class="container">
         <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">Home</a></li>
-            <li class="active">About us</li>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="active">Acerca de Nosotros</li>
         </ul>
     </div>
 </section>
@@ -19,36 +19,32 @@
     <div class="container">
         <div class="tabs-custom row row-50 justify-content-center flex-lg-row-reverse text-center text-md-left" id="tabs-4">
             <div class="col-lg-4 col-xl-3">
-                <h5 class="text-spacing-200 text-capitalize">10+ years of experience</h5>
+                <h5 class="text-spacing-200 text-capitalize">Emprendiendo</h5>
                 <ul class="nav list-category list-category-down-md-inline-block">
-                    <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">About us</a></li>
-                    <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">Our Mission</a></li>
-                    <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".2s"><a href="#tabs-4-3" data-toggle="tab">Our Goals</a></li>
-                    <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".3s"><a href="#tabs-4-4" data-toggle="tab">Our Values</a></li>
-                </ul><a class="button button-xl button-primary button-winona" href="contacts.html">Contact us</a>
+                    <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay="0s"><a class="active" href="#tabs-4-1" data-toggle="tab">Sobre Nosotros</a></li>
+                    <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".1s"><a href="#tabs-4-2" data-toggle="tab">Nuestra Misión</a></li>
+                    <li class="list-category-item wow fadeInRight" role="presentation" data-wow-delay=".2s"><a href="#tabs-4-3" data-toggle="tab">Nuestra Visión</a></li>
+                </ul><a class="button button-xl button-primary button-winona" href="<?= base_url('Contact')?>">Contacto</a>
             </div>
             <div class="col-lg-8 col-xl-9">
                 <!-- Tab panes-->
                 <div class="tab-content tab-content-1">
                     <div class="tab-pane fade show active" id="tabs-4-1">
-                        <h4>a few words about us</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p><img src="<?= base_url() . 'assets/images/about-1-835x418.jpg'; ?>" alt="" width="835" height="418" />
+                        <h4>Algunas palabras sobre nosotros</h4>
+                        <p>Somos una microempresa, dedicada esencialmente a la comercialización de macetas modernas de jardines tanto interiores como interiores instalados en hogares, empresas eventos entre otros.</p>
+                        <p>Contamos con una amplia gama de productos de la más alta calidad para que nuestros clientes sientan orgullo y tranquilidad de hacer negocios con nosotros superando siempre sus expectativas, además contamos con la facilidad de hacer tu idea de macetas realidad. (⁀ᗢ⁀)</p>
+                        <img src="<?= base_url() . 'assets/images/about-1-835x418.jpg'; ?>" alt="" width="835" height="418" />
                     </div>
                     <div class="tab-pane fade" id="tabs-4-2">
-                        <h4>Offering the Best Pizza in Los Angeles</h4>
-                        <p>Lotus advenas ducunt ad gemna. Ubi est domesticus domina? Heu, barbatus mens! Cum elogium favere, omnes lubaes tractare talis, barbatus adiuratores. Mirabilis hydras ducunt ad danista. Dominas sunt accentors de germanus cacula. Amicitias prarere in alta muta! Ecce, bubo! Nunquam promissio verpa. Talis, primus fugas recte consumere de audax, festus indictio. Nunquam quaestio scutum. Valebats</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img src="<?= base_url() . 'assets/images/about-1-835x418.jpg'; ?>" alt="" width="835" height="418" />
+                        <h4>Nuestra Misión</h4>
+                        <p>Happy pots fabrica las mejores macetas en concreto del país, con los mejores materiales para ello.</p>
+                        <p>Esto con el objetivo de ayudar a nuestros clientes a decorar sus jardines de la mejor manera.</p>
+                        <img src="<?= base_url() . 'assets/images/about-1-835x418.jpg'; ?>" alt="" width="835" height="418" />
                     </div>
                     <div class="tab-pane fade" id="tabs-4-3">
-                        <h4>Providing Top-notch Customer Service</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
-                        <p>Lotus advenas ducunt ad gemna. Ubi est domesticus domina? Heu, barbatus mens! Cum elogium favere, omnes lubaes tractare talis, barbatus adiuratores. Mirabilis hydras ducunt ad danista. Dominas sunt accentors de germanus cacula. Amicitias prarere in alta muta! Ecce, bubo! Nunquam promissio verpa. Talis, primus fugas recte consumere de audax, festus indictio. Nunquam quaestio scutum. Valebats</p><img src="<?= base_url() . 'assets/images/about-1-835x418.jpg'; ?>" alt="" width="835" height="418" />
-                    </div>
-                    <div class="tab-pane fade" id="tabs-4-4">
-                        <h4>Integrity & Dedication</h4>
-                        <p>Albus, dexter particulas grauiter consumere de ferox, bi-color abactus. Impositios studere, tanquam mirabilis hippotoxota. Cur torus manducare? Pol, vox! Cum barcas nocere, omnes specieses contactus</p>
-                        <p>Lotus advenas ducunt ad gemna. Ubi est domesticus domina? Heu, barbatus mens! Cum elogium favere, omnes lubaes tractare talis, barbatus adiuratores. Mirabilis hydras ducunt ad danista. Dominas sunt accentors de germanus cacula. Amicitias prarere in alta muta! Ecce, bubo! Nunquam promissio verpa. Talis, primus fugas recte consumere de audax, festus indictio. Nunquam quaestio scutum. Valebats</p><img src="<?= base_url() . 'assets/images/about-1-835x418.jpg'; ?>" alt="" width="835" height="418" />
+                        <h4>Nuestra Visión</h4>
+                        <p>tener almenos una planta dentro una macasetas en cada hoga del país.</p>
+                        <img src="<?= base_url() . 'assets/images/about-1-835x418.jpg'; ?>" alt="" width="835" height="418" />
                     </div>
                 </div>
             </div>
@@ -56,7 +52,7 @@
     </div>
 </section>
 
-<!-- Icon Classic-->
+<!-- 
 <section class="section section-lg bg-gray-100">
     <div class="container">
         <div class="row row-md row-50">
@@ -103,13 +99,13 @@
     </div>
 </section>
 
-<!-- Our Team-->
+<!-- Our Team--
 <section class="section section-lg section-bottom-md-70 bg-default">
     <div class="container">
         <h3 class="oh"><span class="d-inline-block wow slideInUp" data-wow-delay="0s">our team</span></h3>
         <div class="row row-lg row-40 justify-content-center">
             <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".2s" data-wow-duration="1s">
-                <!-- Team Modern-->
+                <!-- Team Modern--
                 <article class="team-modern"><a class="team-modern-figure" href="#"><img src="<?= base_url() . 'assets/images/team-01-270x236.jpg'; ?>" alt="" width="270" height="236" /></a>
                     <div class="team-modern-caption">
                         <h6 class="team-modern-name"><a href="#">Richard Peterson</a></h6>
@@ -124,7 +120,7 @@
                 </article>
             </div>
             <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay="0s" data-wow-duration="1s">
-                <!-- Team Modern-->
+                <!-- Team Modern--
                 <article class="team-modern"><a class="team-modern-figure" href="#"><img src="<?= base_url() . 'assets/images/team-02-270x236.jpg'; ?>" alt="" width="270" height="236" /></a>
                     <div class="team-modern-caption">
                         <h6 class="team-modern-name"><a href="#">Amelia Lee</a></h6>
@@ -139,7 +135,7 @@
                 </article>
             </div>
             <div class="col-sm-6 col-lg-3 wow fadeInRight" data-wow-delay=".1s" data-wow-duration="1s">
-                <!-- Team Modern-->
+                <!-- Team Modern--
                 <article class="team-modern"><a class="team-modern-figure" href="#"><img src="<?= base_url() . 'assets/images/team-03-270x236.jpg'; ?>" alt="" width="270" height="236" /></a>
                     <div class="team-modern-caption">
                         <h6 class="team-modern-name"><a href="#">Sam Peterson</a></h6>
@@ -154,7 +150,7 @@
                 </article>
             </div>
             <div class="col-sm-6 col-lg-3 wow fadeInRight" data-wow-delay=".3s" data-wow-duration="1s">
-                <!-- Team Modern-->
+                <!-- Team Modern--
                 <article class="team-modern"><a class="team-modern-figure" href="#"><img src="<?= base_url() . 'assets/images/team-04-270x236.jpg'; ?>" alt="" width="270" height="236" /></a>
                     <div class="team-modern-caption">
                         <h6 class="team-modern-name"><a href="#">Jane Smith</a></h6>
@@ -226,7 +222,7 @@
     </div>
 </section>
 
-<!-- Our clients-->
+<!-- Our clients--
 <section class="section section-lg bg-default text-md-left">
     <div class="container">
         <div class="row row-60 justify-content-center flex-lg-row-reverse">
@@ -234,10 +230,10 @@
                 <div class="offset-left-xl-70">
                     <h3 class="heading-3">What People Say</h3>
                     <div class="slick-quote">
-                        <!-- Slick Carousel-->
+                        <!-- Slick Carousel--
                         <div class="slick-slider carousel-parent" data-autoplay="true" data-swipe="true" data-items="1" data-child="#child-carousel-5" data-for="#child-carousel-5" data-slide-effect="true">
                             <div class="item">
-                                <!-- Quote Modern-->
+                                <!-- Quote Modern--
                                 <article class="quote-modern">
                                     <h5 class="quote-modern-text"><span class="q">Torus accelerares, tanquam ferox cacula. Fluctuss experimentum in burdigala! Ubi est peritus classis? Peregrinatione superbe ducunt ad magnum verpa.</span></h5>
                                     <h5 class="quote-modern-author">Stephen Adams,</h5>
@@ -245,7 +241,7 @@
                                 </article>
                             </div>
                             <div class="item">
-                                <!-- Quote Modern-->
+                                <!-- Quote Modern--
                                 <article class="quote-modern">
                                     <h5 class="quote-modern-text"><span class="q">Gluten, fluctus, et galatae. Germanus classiss ducunt ad brodium. Pol, a bene cedrium. Tabess unda in neuter avenio! Orexiss sunt adelphiss de rusticus parma.</span></h5>
                                     <h5 class="quote-modern-author">Sam Peterson,</h5>
@@ -253,7 +249,7 @@
                                 </article>
                             </div>
                             <div class="item">
-                                <!-- Quote Modern-->
+                                <!-- Quote Modern--
                                 <article class="quote-modern">
                                     <h5 class="quote-modern-text"><span class="q">Pol, silva! Grandis contencios ducunt ad torus. Monss congregabo in nobilis tectum! Velox, fatalis victrixs sapienter talem de emeritis, festus torus.</span></h5>
                                     <h5 class="quote-modern-author">Jane McMillan,</h5>
@@ -261,7 +257,7 @@
                                 </article>
                             </div>
                             <div class="item">
-                                <!-- Quote Modern-->
+                                <!-- Quote Modern--
                                 <article class="quote-modern">
                                     <h5 class="quote-modern-text"><span class="q">Fluctuss sunt eras de neuter plasmator. Heuretes noster brabeuta est. Nixus, visus, et mensa. Primus, magnum tatas rare locus de altus, camerarius clabulare.</span></h5>
                                     <h5 class="quote-modern-author">Will Jones,</h5>
@@ -287,3 +283,4 @@
         </div>
     </div>
 </section>
+-->
