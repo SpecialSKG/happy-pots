@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="<?= base_url() . 'assets/images/logo.png'; ?>" type="image/png">
+    <link rel="icon" href="<?= base_url() . 'assets/images/happyicon.ico'; ?>" type="image/gif">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
     <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/css/bootstrap.css'; ?>">
@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="page">
-        
+
         <!-- Page Header-->
         <header class="section page-header">
             <!-- RD Navbar-->
@@ -69,11 +69,13 @@
                                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
-                                    <a class="brand" href="<?= base_url() . 'Inicio'; ?>">
-                                    <img class="brand-logo-dark" src="<?= base_url() . 'assets/images/logo-198x66.png'; ?>" alt="" style="max-width: 100px; max-height: 150px;"/>
-                                </a>
+                                    <a class="brand d-flex align-items-center display-6" href="<?= base_url() ?>">
+                                        <img class="brand-logo-dark" src="<?= base_url() . 'assets/images/happypotsmaceta.jpg'; ?>" alt="" width="50" height="50" />
+                                        Happy pots
+                                    </a>
+                                </div>
                             </div>
-                            </div>
+
                             <div class="rd-navbar-right rd-navbar-nav-wrap">
                                 <div class="rd-navbar-aside">
                                     <ul class="rd-navbar-contacts-2">
@@ -110,75 +112,77 @@
                                         </li>
                                     </ul>
                                 </div>
+
+                                
+                        <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-open rd-navbar-fixed-element-1" data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap" data-multitoggle-isolate="data-multitoggle-isolate">
+                            <div class="project-hamburger"><span class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span>
                             </div>
-                            <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-open rd-navbar-fixed-element-1" data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap" data-multitoggle-isolate="data-multitoggle-isolate">
-                                <div class="project-hamburger"><span class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span>
+                        </div>
+                        <div class="rd-navbar-project">
+                            <div class="rd-navbar-project-header">
+                                <h5 class="rd-navbar-project-title">Gallery</h5>
+                                <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-close" data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap" data-multitoggle-isolate="data-multitoggle-isolate">
+                                    <div class="project-close"><span></span><span></span></div>
                                 </div>
                             </div>
-                            <div class="rd-navbar-project">
-                                <div class="rd-navbar-project-header">
-                                    <h5 class="rd-navbar-project-title">Gallery</h5>
-                                    <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-close" data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap" data-multitoggle-isolate="data-multitoggle-isolate">
-                                        <div class="project-close"><span></span><span></span></div>
-                                    </div>
-                                </div>
-                                <div class="rd-navbar-project-content rd-navbar-content">
-                                    <div>
-                                        <div class="row gutters-20" data-lightgallery="group">
-                                            <div class="col-6">
-                                                <!-- Thumbnail Creative-->
-                                                <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-1-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                        <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-1-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                        </div>
-                                                        <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                    </a></article>
-                                            </div>
-                                            <div class="col-6">
-                                                <!-- Thumbnail Creative-->
-                                                <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-2-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                        <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-2-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                        </div>
-                                                        <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                    </a></article>
-                                            </div>
-                                            <div class="col-6">
-                                                <!-- Thumbnail Creative-->
-                                                <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-3-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                        <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-3-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                        </div>
-                                                        <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                    </a></article>
-                                            </div>
-                                            <div class="col-6">
-                                                <!-- Thumbnail Creative-->
-                                                <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-4-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                        <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-4-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                        </div>
-                                                        <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                    </a></article>
-                                            </div>
-                                            <div class="col-6">
-                                                <!-- Thumbnail Creative-->
-                                                <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-5-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                        <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-5-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                        </div>
-                                                        <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                    </a></article>
-                                            </div>
-                                            <div class="col-6">
-                                                <!-- Thumbnail Creative-->
-                                                <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-6-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                        <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-6-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                        </div>
-                                                        <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                    </a></article>
-                                            </div>
+                            <div class="rd-navbar-project-content rd-navbar-content">
+                                <div>
+                                    <div class="row gutters-20" data-lightgallery="group">
+                                        <div class="col-6">
+                                            <!-- Thumbnail Creative-->
+                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-1-1200x800-original.jpg'; ?>" data-lightgallery="item">
+                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-1-195x164.jpg'; ?>" alt="" width="195" height="164" />
+                                                    </div>
+                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                                                </a></article>
+                                        </div>
+                                        <div class="col-6">
+                                            <!-- Thumbnail Creative-->
+                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-2-1200x800-original.jpg'; ?>" data-lightgallery="item">
+                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-2-195x164.jpg'; ?>" alt="" width="195" height="164" />
+                                                    </div>
+                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                                                </a></article>
+                                        </div>
+                                        <div class="col-6">
+                                            <!-- Thumbnail Creative-->
+                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-3-1200x800-original.jpg'; ?>" data-lightgallery="item">
+                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-3-195x164.jpg'; ?>" alt="" width="195" height="164" />
+                                                    </div>
+                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                                                </a></article>
+                                        </div>
+                                        <div class="col-6">
+                                            <!-- Thumbnail Creative-->
+                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-4-1200x800-original.jpg'; ?>" data-lightgallery="item">
+                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-4-195x164.jpg'; ?>" alt="" width="195" height="164" />
+                                                    </div>
+                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                                                </a></article>
+                                        </div>
+                                        <div class="col-6">
+                                            <!-- Thumbnail Creative-->
+                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-5-1200x800-original.jpg'; ?>" data-lightgallery="item">
+                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-5-195x164.jpg'; ?>" alt="" width="195" height="164" />
+                                                    </div>
+                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                                                </a></article>
+                                        </div>
+                                        <div class="col-6">
+                                            <!-- Thumbnail Creative-->
+                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-6-1200x800-original.jpg'; ?>" data-lightgallery="item">
+                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-6-195x164.jpg'; ?>" alt="" width="195" height="164" />
+                                                    </div>
+                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
+                                                </a></article>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                            </div>
+                        </div>
                 </nav>
             </div>
+
         </header>
