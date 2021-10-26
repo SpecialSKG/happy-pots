@@ -59,8 +59,10 @@
 <!-- Global Mailform Output-->
 <div class="snackbars" id="form-output-global"></div>
 <!-- Javascript-->
+<script src="<?= base_url() . 'assets/js/jquery.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/js/core.min.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/js/script.js'; ?>"></script>
+<script src="<?= base_url() . 'assets/js/main.js'; ?>"></script>
 <!-- coded by Himic-->
 </body>
 
