@@ -12,7 +12,7 @@ class Dashboard extends CI_Controller
 	{
 		$data = array(
 			'page_title' => 'Dashboard',
-			'view' => 'Administracion\Dashboard',
+			'view' => 'Administracion/Dashboard',
 			'data_view' => array(),
 			'activo' => 'active'
 		);
