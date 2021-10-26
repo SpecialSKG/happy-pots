@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'happypots',
+	'hostname' => 'bj794z2rilgexy7abgzu-mysql.services.clever-cloud.com',
+	'username' => 'uz59wyeoiyq2qpkh',
+	'password' => 'MygoCRCftz5V9Htysxot',
+	'database' => 'bj794z2rilgexy7abgzu',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
