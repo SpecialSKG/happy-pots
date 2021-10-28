@@ -2,15 +2,14 @@
 <section class="bg-gray-7">
     <div class="breadcrumbs-custom box-transform-wrap context-dark">
         <div class="container">
-            <h3 class="breadcrumbs-custom-title">Contacts</h3>
+            <h3 class="breadcrumbs-custom-title">Contáctanos</h3>
             <div class="breadcrumbs-custom-decor"></div>
         </div>
-        <div class="box-transform" style="background-image: url(<?= base_url() . 'assets/images/bg-1.jpg'; ?>);"></div>
     </div>
     <div class="container">
         <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">Home</a></li>
-            <li class="active">Contacts</li>
+            <li><a href="<?=base_url()?>">Inicio</a></li>
+            <li class="active">Contáctanos</li>
         </ul>
     </div>
 </section>
@@ -19,79 +18,76 @@
     <div class="container">
         <div class="row row-60 justify-content-center">
             <div class="col-lg-8">
-                <h4 class="text-spacing-25 text-transform-none">Get in Touch</h4>
+                <h4 class="text-spacing-25 text-transform-none">Ponerse en contacto</h4>
                 <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
                     <div class="row row-20 gutters-20">
                         <div class="col-md-6">
                             <div class="form-wrap">
                                 <input class="form-input" id="contact-your-name-5" type="text" name="name" data-constraints="@Required">
-                                <label class="form-label" for="contact-your-name-5">Your Name*</label>
+                                <label class="form-label" for="contact-your-name-5">Nombre completo</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-wrap">
                                 <input class="form-input" id="contact-email-5" type="email" name="email" data-constraints="@Email @Required">
-                                <label class="form-label" for="contact-email-5">Your E-mail*</label>
+                                <label class="form-label" for="contact-email-5">Correo electrónico</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-wrap">
                                 <!--Select 2-->
                                 <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
-                                    <option value="1">Select a Service</option>
-                                    <option value="2">Dine-In</option>
-                                    <option value="3">Carry-Out</option>
-                                    <option value="4">Event Catering</option>
+                                    <option>-- Tipo de entrega --</option>
+                                    <option value="1">Entrega rápida</option>
+                                    <option value="2">Entrega normal</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-wrap">
                                 <input class="form-input" id="contact-phone-5" type="text" name="phone" data-constraints="@Numeric">
-                                <label class="form-label" for="contact-phone-5">Your Phone*</label>
+                                <label class="form-label" for="contact-phone-5">Teléfono</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-wrap">
-                                <label class="form-label" for="contact-message-5">Message</label>
+                                <label class="form-label" for="contact-message-5">Mensaje</label>
                                 <textarea class="form-input textarea-lg" id="contact-message-5" name="message" data-constraints="@Required"></textarea>
                             </div>
                         </div>
                     </div>
-                    <button class="button button-secondary button-winona" type="submit">Contact us</button>
+                    <button class="button button-secondary button-winona" type="submit">Enviar</button>
                 </form>
             </div>
             <div class="col-lg-4">
                 <div class="aside-contacts">
                     <div class="row row-30">
                         <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                            <p class="aside-contacts-title">Get social</p>
+                            <p class="aside-contacts-title">Síguenos</p>
                             <ul class="list-inline contacts-social-list list-inline-sm">
                                 <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                                <li><a class="icon mdi mdi-twitter" href="#"></a></li>
-                                <li><a class="icon mdi mdi-instagram" href="#"></a></li>
-                                <li><a class="icon mdi mdi-google-plus" href="#"></a></li>
+                                <li><a class="icon fa fa-instagram" href="#"></a></li>
                             </ul>
                         </div>
                         <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                            <p class="aside-contacts-title">Phone</p>
+                            <p class="aside-contacts-title">Llámanos</p>
                             <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
                                 <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                <div class="unit-body"><a class="phone" href="tel:#">1-800-1234-567</a></div>
+                                <div class="unit-body"><a class="phone" href="tel:+50374700643">(503) 7470-0643</a></div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-12 aside-contacts-item">
                             <p class="aside-contacts-title">E-mail</p>
                             <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
                                 <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
-                                <div class="unit-body"><a class="mail" href="mailto:#">info@demolink.org</a></div>
+                                <div class="unit-body"><a class="mail" href="mailto:happypots@outlook.es">happypots@outlook.es</a></div>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                            <p class="aside-contacts-title">Address</p>
+                            <p class="aside-contacts-title">Dirección</p>
                             <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
                                 <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                                <div class="unit-body"><a class="address" href="#">6036 Richmond hwy., <br class="d-md-none">Alexandria, VA, 2230</a></div>
+                                <div class="unit-body"><a class="address" href="#">San Salvador, <br class="d-md-none">El Salvador</a></div>
                             </div>
                         </div>
                     </div>

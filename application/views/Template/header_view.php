@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="es">
 
 <head>
     <title><?= $page_title; ?></title>
@@ -70,8 +70,7 @@
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
                                     <a class="brand d-flex align-items-center display-6" href="<?= base_url() ?>">
-                                        <img class="brand-logo-dark" src="<?= base_url() . 'assets/images/happypotsmaceta.jpg'; ?>" alt="" width="50" height="50" />
-                                        Happy pots
+                                        <img class="brand-logo-dark img-fluid" src="<?= base_url() . 'assets/images/happypots.jpg'; ?>" alt="Logo de Happy Pots" width="50" height="50" />
                                     </a>
                                 </div>
                             </div>
@@ -82,104 +81,35 @@
                                         <li>
                                             <div class="unit unit-spacing-xs">
                                                 <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                                <div class="unit-body"><a class="phone" href="tel:#">+503 7470 0643</a></div>
+                                                <div class="unit-body"><a class="phone" href="tel:+50374700643">(503) 7470-0643</a></div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="unit unit-spacing-xs">
                                                 <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                                                <div class="unit-body"><a class="address" href="#">El Salvador</a></div>
+                                                <div class="unit-body"><a class="address" href="#">San Salvador, El Salvador</a></div>
                                             </div>
                                         </li>
                                     </ul>
                                     <ul class="list-share-2">
-                                        <li><a class="icon mdi mdi-facebook" href="#" target="_blank"></a></li>
-                                        <!--<li><a class="icon mdi mdi-twitter" href="#"></a></li>-->
-                                        <li><a class="icon mdi mdi-instagram" href="https://www.instagram.com/happy.potsv/" target="_blank"></a></li>
-                                        <!--<li><a class="icon mdi mdi-google-plus" href="#"></a></li>-->
+                                        <li><a class="icon mdi mdi-facebook" href="#" target="_blank"></a></li>->
+                                        <li><a class="icon fa fa-instagram" href="https://www.instagram.com/happy.potsv/" target="_blank"></a></li>
                                     </ul>
                                 </div>
                                 <div class="rd-navbar-main">
                                     <!-- RD Navbar Nav-->
                                     <ul class="rd-navbar-nav">
-                                        <li class="rd-nav-item <?= $activo; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Inicio'; ?>">Inicio</a>
+                                        <li class="rd-nav-item <?=$view == 'Bienvenida' ? $activo : '';?>"><a class="rd-nav-link" href="<?=base_url();?>">Inicio</a>
                                         </li>
-                                        <li class="rd-nav-item <?= $activo; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Acerca'; ?>">Acerca De</a>
+                                        <li class="rd-nav-item <?=$view == 'Acercade' ? $activo : '';?>"><a class="rd-nav-link" href="<?= base_url() . 'Acerca'; ?>">¿Quiénes somos?</a>
                                         </li>
-                                        <li class="rd-nav-item <?= $activo; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Product'; ?>">Productos</a>
+                                        <li class="rd-nav-item <?=$view == 'Producto' ? $activo : '';?>"><a class="rd-nav-link" href="<?= base_url() . 'Product'; ?>">Productos</a>
                                         </li>
-                                        <li class="rd-nav-item <?= $activo; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Contact'; ?>">Contacto</a>
+                                        <li class="rd-nav-item <?=$view == 'Contacto' ? $activo : '';?>"><a class="rd-nav-link" href="<?= base_url() . 'Contact'; ?>">Contáctanos</a>
                                         </li>
                                     </ul>
                                 </div>
-
-                                
-                        <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-open rd-navbar-fixed-element-1" data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap" data-multitoggle-isolate="data-multitoggle-isolate">
-                            <div class="project-hamburger"><span class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span><span class="project-hamburger-arrow"></span>
-                            </div>
-                        </div>
-                        <div class="rd-navbar-project">
-                            <div class="rd-navbar-project-header">
-                                <h5 class="rd-navbar-project-title">Gallery</h5>
-                                <div class="rd-navbar-project-hamburger rd-navbar-project-hamburger-close" data-multitoggle=".rd-navbar-inner" data-multitoggle-blur=".rd-navbar-wrap" data-multitoggle-isolate="data-multitoggle-isolate">
-                                    <div class="project-close"><span></span><span></span></div>
-                                </div>
-                            </div>
-                            <div class="rd-navbar-project-content rd-navbar-content">
-                                <div>
-                                    <div class="row gutters-20" data-lightgallery="group">
-                                        <div class="col-6">
-                                            <!-- Thumbnail Creative-->
-                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-1-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-1-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                    </div>
-                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                </a></article>
-                                        </div>
-                                        <div class="col-6">
-                                            <!-- Thumbnail Creative-->
-                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-2-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-2-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                    </div>
-                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                </a></article>
-                                        </div>
-                                        <div class="col-6">
-                                            <!-- Thumbnail Creative-->
-                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-3-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-3-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                    </div>
-                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                </a></article>
-                                        </div>
-                                        <div class="col-6">
-                                            <!-- Thumbnail Creative-->
-                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-4-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-4-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                    </div>
-                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                </a></article>
-                                        </div>
-                                        <div class="col-6">
-                                            <!-- Thumbnail Creative-->
-                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-5-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-5-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                    </div>
-                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                </a></article>
-                                        </div>
-                                        <div class="col-6">
-                                            <!-- Thumbnail Creative-->
-                                            <article class="thumbnail thumbnail-creative"><a href="<?= base_url() . 'assets/images/project-6-1200x800-original.jpg'; ?>" data-lightgallery="item">
-                                                    <div class="thumbnail-creative-figure"><img src="<?= base_url() . 'assets/images/project-6-195x164.jpg'; ?>" alt="" width="195" height="164" />
-                                                    </div>
-                                                    <div class="thumbnail-creative-caption"><span class="icon thumbnail-creative-icon linearicons-magnifier"></span></div>
-                                                </a></article>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> 
                             </div>
                         </div>
                 </nav>
