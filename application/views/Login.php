@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Happy Pots">
     <meta name="description" content="">
-    <link rel="icon" type="image/png" href="https://www.usam.edu.sv/images/usam.png">
+    <title>Happy Pots - Login</title>
+    <link rel="icon" href="<?= base_url() . 'assets/images/happyicon.ico'; ?>" type="image/gif">
     <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/login/login_view.css'; ?>">
     <link type="text/css" rel="stylesheet" href="assets/login/login_view.css">
 </head>
