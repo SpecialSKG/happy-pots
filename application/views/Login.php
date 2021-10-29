@@ -41,18 +41,18 @@
                 </div>
             </div>
             <div class="leftbox">
-                <h2 class="title"><span>BLOOM</span>&<br>BOUQUET</h2>
-                <p class="desc">pick your perfect <span>bouquet</span></p>
-                <img class="flower smaller" src="<?= base_url() . 'assets/login/flores.jpg'; ?>" alt="1357d638624297b" border="0">
-                <p class="account">have an account?</p>
-                <button class="button" id="signin">login</button>
+                <h2 class="title"></h2>
+                <p class="desc"></p>
+                <img class="flower smaller" src="" alt="1357d638624297b" border="0">
+                <p class="account"></p>
+                
             </div>
             <div class="rightbox">
                 <h2 class="title"><span>BLOOM</span>&<br>BOUQUET</h2>
                 <p class="desc"> pick your perfect <span>bouquet</span></p>
                 <img class="flower" src="<?= base_url() . 'assets/login/flores2.jpg'; ?>" />
-                <p class="account">don't have an account?</p>
-                <button class="button" id="signup">sign up</button>
+                <p class="account"></p>
+                
             </div>
         </div>
     </div>
