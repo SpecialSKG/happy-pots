@@ -1,15 +1,12 @@
-$gray: #8E9AAF;
-$lavender: #CBC0D3;
-$pale: #EAC7CC;
-$white: #f6f6f6;
-$pink: darken($pale, 20%);
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora');
-$sans-serif: 'Open Sans',
-sans-serif;
-$serif: 'Lora',
-serif;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Lora");
 body {
-    background: $lavender;
+    /*background: #cbc0d3;*/
+    background: #00b09b;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96c93d, #00b09b);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
@@ -23,31 +20,32 @@ body {
 }
 
 .welcome {
-    background: $white;
+    background: #f6f6f6;
     width: 650px;
     height: 415px;
     position: absolute;
     top: 25%;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, .1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .pinkbox {
     position: absolute;
     top: -10%;
     left: 5%;
-    background: $pale;
+    /*background: #eac7cc;*/
+    background: #98bf44d5;
     width: 320px;
     height: 500px;
     border-radius: 5px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, .1);
-    transition: all .5s ease-in-out;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in-out;
     z-index: 2;
 }
 
 .nodisplay {
     display: none;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 }
 
 .leftbox,
@@ -69,18 +67,18 @@ body {
 /* font & button styling */
 
 h1 {
-    font-family: $sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-align: center;
     margin-top: 95px;
     text-transform: uppercase;
-    color: $white;
+    color: #f6f6f6;
     font-size: 2em;
     letter-spacing: 8px;
 }
 
 .title {
-    font-family: $serif;
-    color: $gray;
+    font-family: "Lora", serif;
+    color: #8e9aaf;
     font-size: 1.8em;
     line-height: 1.1em;
     letter-spacing: 3px;
@@ -99,15 +97,16 @@ h1 {
 }
 
 p {
-    font-family: $sans-serif;
-    font-size: .7em;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.7em;
     letter-spacing: 2px;
-    color: $gray;
+    color: #8e9aaf;
     text-align: center;
 }
 
 span {
-    color: $pale;
+    /*color: #eac7cc;*/
+    color: #98bf44d5;
 }
 
 .flower {
@@ -116,7 +115,7 @@ span {
     height: 120px;
     top: 46%;
     left: 29%;
-    opacity: .7;
+    opacity: 0.7;
 }
 
 .smaller {
@@ -124,12 +123,12 @@ span {
     height: 100px;
     top: 48%;
     left: 38%;
-    opacity: .9;
+    opacity: 0.9;
 }
 
 button {
     padding: 12px;
-    font-family: $sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 11px;
@@ -137,18 +136,21 @@ button {
     margin: auto;
     outline: none;
     display: block;
-    &:hover {
-        background: $pale;
-        color: $white;
-        transition: background-color 1s ease-out;
-    }
+}
+
+button:hover {
+    /*background: #eac7cc;*/
+    background: #98bf44d5;
+    color: #f6f6f6;
+    transition: background-color 1s ease-out;
 }
 
 .button {
     margin-top: 3%;
-    background: $white;
-    color: $pink;
-    border: solid 1px $pale;
+    background: #f6f6f6;
+    color: #282826;
+    /*border: solid 1px #eac7cc;*/
+    border: solid 1px #98bf44d5;
 }
 
 
@@ -163,53 +165,60 @@ form {
 
 .more-padding {
     padding-top: 35px;
-    input {
-        padding: 12px;
-    }
-    .submit {
-        margin-top: 45px;
-    }
+}
+
+.more-padding input {
+    padding: 12px;
+}
+
+.more-padding .submit {
+    margin-top: 45px;
 }
 
 .submit {
     margin-top: 25px;
     padding: 12px;
-    border-color: $pink;
-    &:hover {
-        background: $lavender;
-        border-color: darken($lavender, 5%);
-    }
+    border-color: #282826;
+}
+
+.submit:hover {
+    background: #cbc0d3;
+    border-color: #bfb1c9;
 }
 
 input {
-    background: $pale;
+    /*background: #eac7cc;*/
+    background: #98bf44d5;
     width: 65%;
-    color: $pink;
+    color: #282826;
     border: none;
-    border-bottom: 1px solid rgba($white, 0.5);
+    border-bottom: 1px solid rgba(246, 246, 246, 0.5);
     padding: 9px;
     margin: 7px;
-    &::placeholder {
-        color: rgba($white, 1);
-        letter-spacing: 2px;
-        font-size: 1.3em;
-        font-weight: 100;
-    }
-    &:focus {
-        color: $pink;
-        outline: none;
-        border-bottom: 1.2px solid rgba($pink, 0.7);
-        font-size: 1em;
-        transition: .8s all ease;
-        &::placeholder {
-            opacity: 0;
-        }
-    }
+}
+
+input::placeholder {
+    color: #f6f6f6;
+    letter-spacing: 2px;
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+input:focus {
+    color: #282826;
+    outline: none;
+    border-bottom: 1.2px solid rgba(88, 86, 87, 0.7);
+    font-size: 1em;
+    transition: 0.8s all ease;
+}
+
+input:focus::placeholder {
+    opacity: 0;
 }
 
 label {
-    font-family: $sans-serif;
-    color: $pink;
+    font-family: "Open Sans", sans-serif;
+    color: #282826;
     font-size: 0.8em;
     letter-spacing: 1px;
 }
@@ -224,10 +233,10 @@ label {
 
 input[type=checkbox] {
     width: 7px;
-    background: $pink;
+    background: #282826;
 }
 
-.checkbox input[type="checkbox"]:checked+label {
-    color: $pink;
-    transition: .5s all ease;
+.checkbox input[type=checkbox]:checked+label {
+    color: #282826;
+    transition: 0.5s all ease;
 }

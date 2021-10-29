@@ -10,7 +10,6 @@
     <title>Happy Pots - Login</title>
     <link rel="icon" href="<?= base_url() . 'assets/images/happyicon.ico'; ?>" type="image/gif">
     <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/login/login_view.css'; ?>">
-    <link type="text/css" rel="stylesheet" href="assets/login/login_view.css">
 </head>
 
 <body>
@@ -28,55 +27,26 @@
                     </form>
                 </div>
                 <div class="signin">
-                    <h1>sign in</h1>
-                    <form class="more-padding" autocomplete="off" action="<?php echo base_url();?>Login/iniciar_sesion" method="POST">
-                        <input type="text" placeholder="username" name="user" required>
-                        <input type="password" placeholder="password" name="pass" required>
-                        <div class="checkbox">
-                            <input type="checkbox" id="remember" /><label for="remember">remember me</label>
-                        </div>
-
-                        <button class="button submit">login</button>
+                    <h1>Iniciar Sesion</h1>
+                    <form class="more-padding" autocomplete="off" action="<?php echo base_url();?>Login/iniciar_sesion"
+                        method="POST">
+                        <input type="text" placeholder="Usuario" name="user" required>
+                        <input type="password" placeholder="Contraseña" name="pass" required>
+                        
+                        <button class="button submit">Login</button>
                     </form>
                 </div>
             </div>
-            <div class="leftbox">
-                <h2 class="title"></h2>
-                <p class="desc"></p>
-                <img class="flower smaller" src="" alt="1357d638624297b" border="0">
-                <p class="account"></p>
-                
-            </div>
             <div class="rightbox">
-                <h2 class="title"><span>BLOOM</span>&<br>BOUQUET</h2>
-                <p class="desc"> pick your perfect <span>bouquet</span></p>
-                <img class="flower" src="<?= base_url() . 'assets/login/flores2.jpg'; ?>" />
-                <p class="account"></p>
-                
+                <h2 class="title"><span>Happy</span>-<br>Pots</h2>
+                <p class="desc">---------------------</p>
+                <img class="flower" src="<?= base_url() . 'assets/images/happypots.jpg'; ?>" alt="Logo de Happy Pots" width="50" height="50" />
+                <p class="account">-----------------------</p>
             </div>
         </div>
     </div>
 
     </div>
 </body>
-
-<script src="<?= base_url() . 'assets/js/jquery-3.6.0.js'; ?>"></script>
-<script src="<?= base_url() . 'assets/login/login_view.js'; ?>"></script>
 <script src="<?= base_url() . 'assets/js/jquery.js'; ?>"></script>
-<script src="<?= base_url() . 'assets/js/main.js'; ?>"></script>
-<script src="assets/login/login_view.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#signup').click(function() {
-            $('.pinkbox').css('transform', 'translateX(80%)');
-            $('.signin').addClass('nodisplay');
-            $('.signup').removeClass('nodisplay');
-        });
-
-        $('#signin').click(function() {
-            $('.pinkbox').css('transform', 'translateX(0%)');
-            $('.signup').addClass('nodisplay');
-            $('.signin').removeClass('nodisplay');
-        });
-    });
-</script>
+<script src="<?= base_url() . 'assets/login/login_view.js'; ?>"></script>
