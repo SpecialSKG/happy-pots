@@ -92,8 +92,15 @@
                                         </li>
                                     </ul>
                                     <ul class="list-share-2">
-                                        <li><a class="icon mdi mdi-facebook" href="#" target="_blank"></a></li>->
-                                        <li><a class="icon fa fa-instagram" href="https://www.instagram.com/happy.potsv/" target="_blank"></a></li>
+                                        <li>
+                                            <a class="icon mdi mdi-facebook" href="#" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon fa fa-instagram" href="https://www.instagram.com/happy.potsv/" target="_blank"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon fa fa-user-o" href="<?= base_url() . 'Login'; ?>"></a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="rd-navbar-main">
