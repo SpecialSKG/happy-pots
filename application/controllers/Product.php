@@ -18,4 +18,42 @@ class Product extends CI_Controller
 		);
 		$this->load->view('Template/main_view', $data);
 	}
+
+	public function insertar_producto()
+	{
+		$producto=array(
+			'nombre'=>$this->input->post('nombre'),
+			'descripcion'=>$this->input->post('direccion'),
+			'precio'=>$this->input->post('telefono'),
+			'productocol'=>$this->input->post('telefono'),
+			'img_producto_id'=>$this->input->post('telefono')
+		);
+		$this->load->model('model_producto');
+		$this->model_producto->insertar_producto($producto);
+		
+		redirect('Control');
+	}
+
+	public function actualizar_producto()
+	{
+		$producto=array(
+			'nombre'=>$this->input->post('nombre'),
+			'descripcion'=>$this->input->post('direccion'),
+			'precio'=>$this->input->post('telefono'),
+			'productocol'=>$this->input->post('telefono'),
+			'img_producto_id'=>$this->input->post('telefono')
+		);
+		$id=$this->input->post('id');
+		$this->load->model('model_producto');
+		$this->model_producto->actualizar_producto($id,$producto);
+		redirect('Control');
+	}
+
+	public function eliminar_producto($id){
+		$this->load->model('model_producto');
+		$this->model_producto->eliminar_producto($id);
+
+		redirect('Control');
+	}
 }
+
