@@ -24,9 +24,9 @@ class Product extends CI_Controller
 		$producto=array(
 			'nombre'=>$this->input->post('nombre'),
 			'descripcion'=>$this->input->post('direccion'),
-			'precio'=>$this->input->post('telefono'),
-			'productocol'=>$this->input->post('telefono'),
-			'img_producto_id'=>$this->input->post('telefono')
+			'precio'=>$this->input->post('precio'),
+			'productocol'=>$this->input->post('productocol'),
+			'img_producto_id'=>$this->input->post('img_producto_id')
 		);
 		$this->load->model('model_producto');
 		$this->model_producto->insertar_producto($producto);
@@ -39,9 +39,9 @@ class Product extends CI_Controller
 		$producto=array(
 			'nombre'=>$this->input->post('nombre'),
 			'descripcion'=>$this->input->post('direccion'),
-			'precio'=>$this->input->post('telefono'),
-			'productocol'=>$this->input->post('telefono'),
-			'img_producto_id'=>$this->input->post('telefono')
+			'precio'=>$this->input->post('precio'),
+			'productocol'=>$this->input->post('productocol'),
+			'img_producto_id'=>$this->input->post('img_producto_id')
 		);
 		$id=$this->input->post('id');
 		$this->load->model('model_producto');
