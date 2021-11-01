@@ -16,7 +16,16 @@ class Product extends CI_Controller
 			'data_view' => array(),
 			'activo' => 'active'
 		);
-		$this->load->view('Template/main_view', $data);
+	
+			$this->load->model('model_producto');
+			$data['producto'] = $this->model_producto->mostrar_producto();
+
+			if($this->uri->segment(3)!='')
+			{
+				$id=$this->uri->segment(3);
+				$data['producto_actualizar'] = $this->model_producto->traer_producto($id);
+			}
+			$this->load->view('Template/main_view',$data);
 	}
 
 	public function insertar_producto()
@@ -31,7 +40,7 @@ class Product extends CI_Controller
 		$this->load->model('model_producto');
 		$this->model_producto->insertar_producto($producto);
 		
-		redirect('Control');
+		
 	}
 
 	public function actualizar_producto()
@@ -46,14 +55,14 @@ class Product extends CI_Controller
 		$id=$this->input->post('id');
 		$this->load->model('model_producto');
 		$this->model_producto->actualizar_producto($id,$producto);
-		redirect('Control');
+		
 	}
 
 	public function eliminar_producto($id){
 		$this->load->model('model_producto');
 		$this->model_producto->eliminar_producto($id);
 
-		redirect('Control');
+		
 	}
 }
 
