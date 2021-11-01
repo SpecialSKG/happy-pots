@@ -8,8 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="<?= base_url() . 'assets/images/happyicon.ico'; ?>" type="image/gif">
+
     <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,600,700,900%7CRaleway:500">
+
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+    
     <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/css/bootstrap.css'; ?>">
     <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/css/fonts.css"'; ?>">
     <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/css/style.css'; ?>">
@@ -106,19 +113,19 @@
                                 <div class="rd-navbar-main">
                                     <!-- RD Navbar Nav-->
                                     <ul class="rd-navbar-nav">
-                                        <li class="rd-nav-item <?=$view == 'Bienvenida' ? $activo : '';?>"><a class="rd-nav-link" href="<?=base_url();?>">Inicio</a>
+                                        <li class="rd-nav-item <?= $view == 'Bienvenida' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url(); ?>">Inicio</a>
                                         </li>
-                                        <li class="rd-nav-item <?=$view == 'Acercade' ? $activo : '';?>"><a class="rd-nav-link" href="<?= base_url() . 'Acerca'; ?>">¿Quiénes somos?</a>
+                                        <li class="rd-nav-item <?= $view == 'Acercade' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Acerca'; ?>">¿Quiénes somos?</a>
                                         </li>
-                                        <li class="rd-nav-item <?=$view == 'Producto' ? $activo : '';?>"><a class="rd-nav-link" href="<?= base_url() . 'Product'; ?>">Productos</a>
+                                        <li class="rd-nav-item <?= $view == 'Producto' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Product'; ?>">Productos</a>
                                         </li>
-                                        <li class="rd-nav-item <?=$view == 'Contacto' ? $activo : '';?>"><a class="rd-nav-link" href="<?= base_url() . 'Contact'; ?>">Contáctanos</a>
+                                        <li class="rd-nav-item <?= $view == 'Contacto' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Contact'; ?>">Contáctanos</a>
                                         </li>
                                     </ul>
                                 </div>
-                        </div> 
                             </div>
                         </div>
+                    </div>
                 </nav>
             </div>
 

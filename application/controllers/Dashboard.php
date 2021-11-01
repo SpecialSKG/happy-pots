@@ -10,12 +10,15 @@ class Dashboard extends CI_Controller
 
 	public function index()
 	{
-		$data = array(
-			'page_title' => 'Dashboard',
-			'view' => 'Administracion/Dashboard',
-			'data_view' => array(),
-			'activo' => 'active'
-		);
-		$this->load->view('Template2/main_view', $data);
+		if ($this->session->userdata("login") === TRUE) {
+			$data = array(
+				'page_title' => 'Dashboard',
+				'view' => 'Administracion/Dashboard',
+				'data_view' => array()
+			);
+			$this->load->view('Template2/main_view', $data);
+		} else {
+			redirect(base_url() . 'Login', 'refresh');
+		}
 	}
 }

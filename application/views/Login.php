@@ -1,4 +1,3 @@
-<?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -28,12 +27,11 @@
                 </div>
                 <div class="signin">
                     <h1>Iniciar Sesion</h1>
-                    <form class="more-padding" autocomplete="off" action="<?php echo base_url();?>Login/iniciar_sesion"
-                        method="POST">
-                        <input type="text" placeholder="Usuario" name="user" required>
+                    <form class="more-padding" autocomplete="off" action="<?php echo base_url(); ?>Login/iniciar_sesion" method="POST">
+                        <input type="email" placeholder="Correo" name="email" required>
                         <input type="password" placeholder="Contraseña" name="pass" required>
-                        
-                        <button class="button submit">Login</button>
+
+                        <button type="submit" class="button submit">Login</button>
                     </form>
                 </div>
             </div>
@@ -42,6 +40,10 @@
                 <p class="desc">---------------------</p>
                 <img class="flower" src="<?= base_url() . 'assets/images/happypots.jpg'; ?>" alt="Logo de Happy Pots" width="50" height="50" />
                 <p class="account">-----------------------</p>
+                <button class="button">
+                    <a href="<?php echo base_url(); ?>Inicio">Inicio</a>
+                </button>
+                
             </div>
         </div>
     </div>
