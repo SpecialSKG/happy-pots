@@ -16,6 +16,53 @@ class Product extends CI_Controller
 			'data_view' => array(),
 			'activo' => 'active'
 		);
-		$this->load->view('Template/main_view', $data);
+	
+			$this->load->model('model_producto');
+			$data['producto'] = $this->model_producto->mostrar_producto();
+
+			if($this->uri->segment(3)!='')
+			{
+				$id=$this->uri->segment(3);
+				$data['producto_actualizar'] = $this->model_producto->traer_producto($id);
+			}
+			$this->load->view('Template/main_view',$data);
+	}
+
+	public function insertar_producto()
+	{
+		$producto=array(
+			'nombre'=>$this->input->post('nombre'),
+			'descripcion'=>$this->input->post('direccion'),
+			'precio'=>$this->input->post('precio'),
+			'productocol'=>$this->input->post('productocol'),
+			'img_producto_id'=>$this->input->post('img_producto_id')
+		);
+		$this->load->model('model_producto');
+		$this->model_producto->insertar_producto($producto);
+		
+		
+	}
+
+	public function actualizar_producto()
+	{
+		$producto=array(
+			'nombre'=>$this->input->post('nombre'),
+			'descripcion'=>$this->input->post('direccion'),
+			'precio'=>$this->input->post('precio'),
+			'productocol'=>$this->input->post('productocol'),
+			'img_producto_id'=>$this->input->post('img_producto_id')
+		);
+		$id=$this->input->post('id');
+		$this->load->model('model_producto');
+		$this->model_producto->actualizar_producto($id,$producto);
+		
+	}
+
+	public function eliminar_producto($id){
+		$this->load->model('model_producto');
+		$this->model_producto->eliminar_producto($id);
+
+		
 	}
 }
+
