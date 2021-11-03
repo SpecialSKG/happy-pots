@@ -14,7 +14,7 @@ class Usuario extends CI_Controller
 		if ($this->session->userdata("login") === TRUE) {
 			$data = array(
 				'page_title' => 'Usuario',
-				'view' => 'Administracion/Usuario',
+				'view' => 'Usuarios/Usuario',
 				'data_view' => array(),
 				'data' => $this->Usuario_M->getUsuarios()
 			);
@@ -29,7 +29,7 @@ class Usuario extends CI_Controller
 		if ($this->session->userdata("login") === TRUE) {
 			$data = array(
 				'page_title' => 'Usuario',
-				'view' => 'Administracion/UsuarioInsert',
+				'view' => 'Usuarios/UsuarioInsert',
 				'data_view' => array(),
 				'data' => $this->Usuario_M->getUsuarios()
 			);
@@ -45,7 +45,7 @@ class Usuario extends CI_Controller
 		if ($this->session->userdata("login") === TRUE) {
 			$data = array(
 				'page_title' => 'Detalle Entidad',
-				'view' => 'Administracion/UsuarioUpdate',
+				'view' => 'Usuarios/UsuarioUpdate',
 				'data_view' => array(),
 				'detalle' => $this->Usuario_M->obtUsuario($id)
 			);
@@ -121,7 +121,7 @@ class Usuario extends CI_Controller
 		if ($this->session->userdata("login") === TRUE) {
 			$data = array(
 				'page_title' => 'Datos Perfil',
-				'view' => 'Administracion/UsuarioPerfil',
+				'view' => 'Usuarios/UsuarioPerfil',
 				'data_view' => array(),
 				'Perfil' => $this->Usuario_M->obtPerfil($id)
 			);
