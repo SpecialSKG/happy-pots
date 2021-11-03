@@ -25,6 +25,11 @@ class Usuario_M extends CI_Model {
 		return ($obt->num_rows() === 1) ? $obt->row(): false;
 	}
 
+	//insertar los datos de 1 usuario
+	public function insertUsuario($data){
+		return ($this->db->insert('usuario', $data)) ? true:false;
+	}
+
 	//actualizar los datos de 1 usuario
 	public function updateUsuario($data){
 		$this->db->where('id', $data['id']);

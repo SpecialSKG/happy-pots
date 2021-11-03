@@ -35,7 +35,7 @@ $('tr td #delete').click(
                                 showConfirmButton: false,
                                 timer: 1500
                             })
-                            document.location.href = baseurl + 'entidades/';
+                            document.location.href = baseurl + 'Usuario/';
                         } else {
                             Swal.fire({
                                 icon: 'error',

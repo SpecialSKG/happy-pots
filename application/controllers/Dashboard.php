@@ -16,7 +16,7 @@ class Dashboard extends CI_Controller
 				'view' => 'Administracion/Dashboard',
 				'data_view' => array()
 			);
-			$this->load->view('Template2/main_view', $data);
+			$this->load->view('Template/main_admin', $data);
 		} else {
 			redirect(base_url() . 'Login', 'refresh');
 		}

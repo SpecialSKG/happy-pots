@@ -139,7 +139,8 @@ $('#update_usuario').click(function() {
         cell = $('#floating_cell').val(),
         email = $('#floating_email').val(),
         pass = $('#floating_pass').val(),
-        id = $('#floating_id').val();
+        id = $('#floating_id').val(),
+        tipo = $('#floating_tipo').val();
 
     $.ajax({
         dataType: 'json',
@@ -151,7 +152,8 @@ $('#update_usuario').click(function() {
             cell,
             email,
             pass,
-            id
+            id,
+            tipo
         },
         dataType: 'json',
         before: function() {},
@@ -196,7 +198,19 @@ $('#update_usuario').click(function() {
             }
         },
         error: function(e) {
-            console.log(e);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: 'No se pudo Actualizar, Hay un error interno',
+                text: (e),
+                type: 'error',
+                showConfirmButton: false,
+                timer: 1500,
+                animation: false,
+                customClass: {
+                    popup: 'animated flipInY'
+                }
+            })
         }
     });
 

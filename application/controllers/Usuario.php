@@ -14,11 +14,26 @@ class Usuario extends CI_Controller
 		if ($this->session->userdata("login") === TRUE) {
 			$data = array(
 				'page_title' => 'Usuario',
-				'view' => 'Administracion\Usuario',
+				'view' => 'Administracion/Usuario',
 				'data_view' => array(),
 				'data' => $this->Usuario_M->getUsuarios()
 			);
-			$this->load->view('Template2/main_view', $data);
+			$this->load->view('Template/main_admin', $data);
+		} else {
+			redirect(base_url() . 'Login', 'refresh');
+		}
+	}
+
+	public function ins_Usuario()
+	{
+		if ($this->session->userdata("login") === TRUE) {
+			$data = array(
+				'page_title' => 'Usuario',
+				'view' => 'Administracion/UsuarioInsert',
+				'data_view' => array(),
+				'data' => $this->Usuario_M->getUsuarios()
+			);
+			$this->load->view('Template/main_admin', $data);
 		} else {
 			redirect(base_url() . 'Login', 'refresh');
 		}
@@ -34,9 +49,30 @@ class Usuario extends CI_Controller
 				'data_view' => array(),
 				'detalle' => $this->Usuario_M->obtUsuario($id)
 			);
-			$this->load->view('Template2/main_view', $data);
+			$this->load->view('Template/main_admin', $data);
 		} else {
 			redirect(base_url() . 'Login', 'refresh');
+		}
+	}
+
+	//Insertar datos de 1 usuario
+	public function insertarUsuario()
+	{
+		if ($this->input->is_ajax_request()) {
+			$data = array(
+				'nombre' => $this->input->post('nombre'),
+				'cell' => $this->input->post('cell'),
+				'email' => $this->input->post('email'),
+				'pass' => base64_encode($this->input->post('pass')),
+				'tipo' => $this->input->post('tipo')
+			);
+			if ($this->Usuario_M->insertUsuario($data)) {
+				echo json_encode(array('success' => 1));
+			} else {
+				echo json_encode(array('success' => 0));
+			}
+		} else {
+			echo "no se puede acceder";
 		}
 	}
 
@@ -49,6 +85,7 @@ class Usuario extends CI_Controller
 				'cell' => $this->input->post('cell'),
 				'email' => $this->input->post('email'),
 				'pass' => base64_encode($this->input->post('pass')),
+				'tipo' => $this->input->post('tipo'),
 				'id' => $this->input->post('id')
 			);
 			if ($this->Usuario_M->updateUsuario($data)) {
@@ -84,11 +121,11 @@ class Usuario extends CI_Controller
 		if ($this->session->userdata("login") === TRUE) {
 			$data = array(
 				'page_title' => 'Datos Perfil',
-				'view' => 'Administracion\UsuarioPerfil',
+				'view' => 'Administracion/UsuarioPerfil',
 				'data_view' => array(),
 				'Perfil' => $this->Usuario_M->obtPerfil($id)
 			);
-			$this->load->view('Template2/main_view', $data);
+			$this->load->view('Template/main_admin', $data);
 		} else {
 			redirect(base_url() . 'Login', 'refresh');
 		}
