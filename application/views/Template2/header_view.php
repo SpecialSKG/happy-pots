@@ -27,7 +27,6 @@
 
     <!-- Template Main CSS File -->
     <link href="<?= base_url() . 'assets/admin/css/style.css'; ?>" rel="stylesheet">
-
     <script src="<?= base_url() . 'assets/js/jquery.js'; ?>"></script>
 </head>
 

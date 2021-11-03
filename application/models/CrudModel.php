@@ -10,9 +10,14 @@ class CrudModel extends CI_Model{
 
     public function insertar($tabla, $item){
         $flag = false;
-        if($this->db->insert($tabla, $item)){
+        try {
+            if($this->db->insert($tabla, $item)){
             $flag = true;
         }
+        } catch (Exception $e) {
+            echo $e;
+        }
+        
         return $flag;
     }
 
