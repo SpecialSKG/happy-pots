@@ -44,14 +44,14 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <h2>Elefantito</h2>
+                <h2><?=$producto->nombre;?></h2>
                 <br>
                 <p><del>$15.00</del></p>
-                <h5>$10.00</h5>
+                <h5><?=$producto->precio;?></h5>
                 <p>Colores</p>
-                <div id="color" style="width:40px; height:40px; background-color:grey; display:inline-block;"></div>
-                <div id="color" style="width:40px; height:40px; background-color:blue; display:inline-block;"></div>
-                <div id="color" style="width:40px; height:40px; background-color:brown; display:inline-block;"></div>                
+                <select name="" id="">
+                    <option value=""><?=$producto->productocol;?></option>
+                </select>               
                 <input type="number" class="form-control mt-5" id="cantidad" placeholder="¿Cuántos quieres?" style="font-size:1.3rem;">
                 <button class="btn btn-sm btn-primary mt-4">Reservar producto</button>
                 <button class="btn btn-sm mt-4">Ver canasta</button>
@@ -67,9 +67,9 @@
             </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-des" role="tabpanel" aria-labelledby="nav-des-tab">
-                        <h3 class="my-4">Elefantito</h3>
+                        <h3 class="my-4"><?=$producto->nombre;?></h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan rhoncus erat quis faucibus. Ut ultrices mi sed augue finibus, a euismod arcu egestas. Cras dapibus rhoncus enim, ac hendrerit purus tristique ut. Suspendisse accumsan efficitur dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec commodo purus. Phasellus sed purus mi. Ut ex nunc, eleifend non aliquet a, egestas at massa. Suspendisse facilisis risus lectus, id tempor sem venenatis interdum. Proin vestibulum neque sit amet eros tristique, auctor fringilla massa pharetra. Nullam lacinia auctor libero, in aliquet velit commodo sed. Vivamus dictum pellentesque lorem vitae tristique.
+                            <?=$producto->descripcion;?>
                         </p>
                     </div>
                     <div class="tab-pane fade" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
