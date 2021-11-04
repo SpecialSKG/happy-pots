@@ -14,6 +14,16 @@ class Carrito extends CI_Controller
         $this->nombreCampoId = "id";
     }
 
+    public function index()
+    {
+        $data = array(
+            'page_title' => 'Carrito',
+            'view' => 'cart',
+            'data_view' => array()
+        );
+        $this->load->view('Template/main_view',$data);
+    }
+
 /*  Esta funcion es para insertar un registro en detalle_temp,
     se necesita esta logeado, con inputs post producto(int) materia(int) cantidad(int)
      se envia una respuesta en json en caso que inserte o no, 1 si inserta 0 si no lo hace
