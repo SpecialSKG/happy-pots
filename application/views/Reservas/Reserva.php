@@ -61,4 +61,4 @@
     </div>
 </section>
 
-<script src="<?php echo base_url() . 'assets/js/usuario/delete_usuario.js'; ?>"></script>
+<script src="<?php echo base_url() . 'assets/js/usuario/delete_reserva.js'; ?>"></script>
