@@ -92,10 +92,13 @@ class Product extends CI_Controller
 
 	public function goToInsert()
 	{
+		$this->load->model('CrudModel');
 		$data = array(
 			'page_title' => 'Productos',
 			'view' => 'testform',
-			'data_view' => array(),
+			'data_view' => array(
+				'categorias' => $this->CrudModel->mostrar("id", "categoria")
+			),
 			'activo' => 'active'
 		);
 		$this->load->view('Template/main_view',$data);
@@ -125,6 +128,7 @@ class Product extends CI_Controller
 				'nombre' => $this->input->post('nombre'),
 				'descripcion' => $this->input->post('descripcion'),
 				'precio' => $this->input->post('precio'),
+				'id_categoria' => $this->input->post('categoria'),
 				//nombre del archivo
 				'img_producto_id' => $imgloaded['file_name']
 			);

@@ -36,7 +36,8 @@ class Carrito extends CI_Controller
                     'usuario' => $this->session->userdata('id'),
                     'producto' => $this->input->post('producto', true),
                     'material' => $this->input->post('materia', true),
-                    'cantidad' => $this->input->post('cantidad', true)
+                    'cantidad' => $this->input->post('cantidad', true),
+                    'id_categoria' => $this->input->post('categoria', true)
                 );
 
                 if ($this->crudModel->insertar($this->tabla, $item)) {
