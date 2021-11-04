@@ -111,6 +111,9 @@
                                         <li>
                                             <a class="icon fa fa-user-o" href="<?= base_url() . 'Login'; ?>"></a>
                                         </li>
+                                        <li>
+                                            <a class="icon mdi mdi-cart" href="<?= base_url() . 'Carrito'; ?>"></a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="rd-navbar-main">
@@ -124,6 +127,8 @@
                                         </li>
                                         <li class="rd-nav-item <?= $view == 'Contacto' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Contact'; ?>">Contáctanos</a>
                                         </li>
+                                        <!--<li class="rd-nav-item <?= $view == 'Reserva' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Reserva'; ?>">Reserva</a>
+                                        </li>-->
                                     </ul>
                                 </div>
                             </div>

@@ -80,6 +80,13 @@ $db['default'] = array(
 	'username' => 'uz59wyeoiyq2qpkh',
 	'password' => 'MygoCRCftz5V9Htysxot',
 	'database' => 'bj794z2rilgexy7abgzu',
+	
+	/*
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'happypots',
+	*/
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -44,10 +44,10 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <h2><?= $producto->nombre ?></h2>
+                <h2><?=$producto->nombre;?></h2>
                 <br>
-                <p><del><?= '$ ' . ($producto->precio + 2.5) ?></del></p>
-                <h5><?= '$ ' . $producto->precio ?></h5>
+                <p><del>$15.00</del></p>
+                <h5><?=$producto->precio;?></h5>
                 <p>Colores</p>
 
                 <label class="col-2">
@@ -84,9 +84,9 @@
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-des" role="tabpanel" aria-labelledby="nav-des-tab">
-                        <h3 class="my-4"><?= $producto->nombre ?></h3>
+                        <h3 class="my-4"><?=$producto->nombre;?></h3>
                         <p>
-                            <?= $producto->descripcion ?>
+                            <?=$producto->descripcion;?>
                         </p>
                     </div>
                 </div>

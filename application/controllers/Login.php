@@ -41,7 +41,7 @@ class Login extends CI_Controller
 			if ($data['tipo'] == '1') {
 				redirect(base_url() . 'Dashboard', 'refresh');
 			} else if ($data['tipo'] == '2') {
-				redirect(base_url() . 'Dashboard', 'refresh');
+				redirect(base_url(), 'refresh');
 			}
 		} else {
 			redirect(base_url() . 'Dashboard', 'refresh');
