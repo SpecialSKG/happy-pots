@@ -42,7 +42,7 @@
         <button type="submit" class="btn btn-sm btn-primary m-0">Enviar</button>
     </form>
     <h4 class="text-center my-3 py-3">Detalle</h4>
-    <table class="table table-striped my-5">
+    <table class="table table-striped table-responsive my-5">
         <tr style="background-color: #98BF44;">
             <th width="5%">N°</th>
             <th width="30%">Nombre del producto</th>
