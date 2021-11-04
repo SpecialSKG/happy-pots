@@ -75,5 +75,27 @@
         </tr>
         <!-- Esto dentro de foreach() -->
     </table>
+    <table class="table text-left">
+        <tr>
+            <th>Sub Total : </th>
+            <td>$ 10.00</td>
+        </tr>
+        <tr>
+            <th>IVA : </th>
+            <td>$ 0.13
+            </td>
+        </tr>
+        <tr>
+            <th>Total a pagar :</th>
+            <td>$ 11.30</td>
+        </tr>
+    </table>
+    <!-- Aquí mostrar un mensaje cuando el carrito este vacío -->
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-sm btn-primary" href="<?php base_url().'Product'; ?>">Seguir comprando</a>
+            <a class="btn btn-sm" href="<?php base_url().'Reserva'; ?>">Finalizar reserva</a>
+        </div>
+    </div>
 </div>
 </section>
