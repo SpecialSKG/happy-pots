@@ -1,4 +1,13 @@
-<br><br>
+<div class="pagetitle">
+    <h1>Tabla Usuarios</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><i class="bi bi-house-door"></i></li>
+            <li class="breadcrumb-item">Usuario</li>
+            <li class="breadcrumb-item active">Data</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title --><br><br>
 
 <section class="section">
     <div class="row justify-content-center">
@@ -12,36 +21,38 @@
                     <form class="row g-3">
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floating_nombre" placeholder="Nombre">
+                                <input type="text" class="form-control" id="floating_nombre" placeholder="Nombre" required>
                                 <label for="floating_nombre">Nombre</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="floating_email" placeholder="Correo">
+                                <input type="email" class="form-control" id="floating_email" placeholder="Correo" required>
                                 <label for="floating_email">Correo</label>
                             </div>
                         </div>
+
                         <div class="col-md-6">
-                            <label class="col-sm-2 col-form-label">Tipo</label>
-                            <div class="col-sm-10">
-                                <select class="form-select" aria-label="Default select example" id="floating_tipo">
-                                    <option selected>Menú de Selección</option>
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="floating_tipo" aria-label="State" required>
+                                    <option selected>Opciones</option>
                                     <option value="1">Administracion</option>
                                     <option value="2">Usuario</option>
                                 </select>
+                                <label for="floating_usuario">Tipo</label>
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floating_pass" placeholder="Password">
+                                <input type="text" class="form-control" id="floating_pass" placeholder="Password" required>
                                 <label for="floating_pass">Password</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="floating_cell" placeholder="Telefono">
+                                    <input type="text" class="form-control" id="floating_cell" placeholder="Telefono" required>
                                     <label for="floating_cell">Telefono</label>
                                 </div>
                             </div>

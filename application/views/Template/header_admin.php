@@ -38,7 +38,7 @@
         <div class="d-flex align-items-center justify-content-between">
             <a href="<?php echo base_url(); ?>Dashboard" class="logo d-flex align-items-center">
 
-                <img src="<?= base_url() . 'assets/images/happypots.jpg'; ?>" alt="Logo de Happy Pots" />
+                <!-- <img src="<?= base_url() . 'assets/images/happypots.jpg'; ?>" alt="Logo de Happy Pots" /> -->
                 <span class="d-none d-lg-block">Happy Pots</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -153,7 +153,7 @@
 
                         <li class="message-item">
                             <a href="#">
-                                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                                <img src="<?= base_url() . 'assets/admin/img/messages-1.jpg'; ?>" alt="" class="rounded-circle">
                                 <div>
                                     <h4>Maria Hudson</h4>
                                     <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -167,7 +167,7 @@
 
                         <li class="message-item">
                             <a href="#">
-                                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                                <img src="<?= base_url() . 'assets/admin/img/messages-2.jpg'; ?>" alt="" class="rounded-circle">
                                 <div>
                                     <h4>Anna Nelson</h4>
                                     <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -181,7 +181,7 @@
 
                         <li class="message-item">
                             <a href="#">
-                                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                                <img src="<?= base_url() . 'assets/admin/img/messages-3.jpg'; ?>" alt="" class="rounded-circle">
                                 <div>
                                     <h4>David Muldon</h4>
                                     <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -277,6 +277,20 @@
                 <a class="nav-link collapsed" href="<?= base_url(); ?>">
                     <i class="bi bi-gem"></i>
                     <span>Productos</span>
+                </a>
+            </li><!-- End Productos Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="<?= base_url(); ?>Reservas">
+                    <i class="bi bi-gem"></i>
+                    <span>Reservas</span>
+                </a>
+            </li><!-- End Productos Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="<?= base_url(); ?>Reservas/obtenerReservaPerfil/<?php echo $this->session->userdata('id') ?>">
+                    <i class="bi bi-layout-text-window-reverse"></i>
+                    <span>Reserva Detalle</span>
                 </a>
             </li><!-- End Productos Page Nav -->
 
