@@ -8,7 +8,7 @@ $('#insert_usuario').click(function() {
 
     $.ajax({
         dataType: 'json',
-        url: baseurl + 'Usuario/insertarUsuario',
+        url: baseurl + '/Usuario/insertarUsuario',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -41,7 +41,7 @@ $('#insert_usuario').click(function() {
                     },
                     willClose: () => {
                         clearInterval(timerInterval);
-                        document.location.href = baseurl + 'Usuario/';
+                        document.location.href = baseurl + '/Usuario/';
                     }
                 })
 

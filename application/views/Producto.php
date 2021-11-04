@@ -1,4 +1,3 @@
-
 <!-- Breadcrumbs -->
 <section class="bg-gray-7">
     <div class="breadcrumbs-custom box-transform-wrap context-dark">
@@ -18,16 +17,14 @@
 <section class="section section-sm section-first bg-default section-style-2 text-md-left">
     <div class="container">
         <div class="row">
-            <?php foreach($producto as $p){ ?>
+            <?php foreach ($producto as $p) { ?>
                 <div class="col-sm-12 col-md-3 col-lg-3 my-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="<?=base_url().'assets/images/producto.jpg'?>" class="card-img-top" alt="...">
+                        <img src="<?= base_url() . 'assets/images/productos/' . $p->img_producto_id ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><?=$p->nombre?></h5>
-                            <p>$ <?=$p->precio?></p>
-                            <a href="#" class="btn btn-sm btn-block btn-primary mt-5">Reservar</a>
-                            <br>
-                            <a href="<?=base_url().'DetalleProducto';?>" class="btn btn-sm btn-block">Ver producto</a>
+                            <h5 class="card-title"><?= $p->nombre ?></h5>
+                            <p>$ <?= $p->precio ?></p>
+                            <a href="<?=base_url(). "Product/maceta/". $p->id?>" class="btn btn-sm btn-block btn-primary mt-5">Ver producto</a>
                         </div>
                     </div>
                 </div>
@@ -36,7 +33,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <nav aria-label="Page navigation example">
-                    <?php echo $this->pagination->create_links();?>
+                    <?php echo $this->pagination->create_links(); ?>
                 </nav>
             </div>
         </div>

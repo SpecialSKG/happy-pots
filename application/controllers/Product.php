@@ -19,41 +19,12 @@ class Product extends CI_Controller
 		if($pagina){
 			$inicio = ($pagina - 1) * $limite;
 		}
-
 		$data = array(
 			'page_title' => 'Productos',
 			'view' => 'Producto',
-			'data_view' => array(
-				'productos' => $this->model_producto->mostrar_producto()
-			),
-			'activo' => 'active'
-		);
-		$this->load->view('Template/main_view', $data);
-	}
-
-	public function maceta()
-	{
-		if ($this->uri->segment(3) != '') {
-			$data = array(
-				'page_title' => 'Productos',
-				'view' => 'producto-detalle',
-				'data_view' => array(
-					'producto' => $this->model_producto->traer_producto($this->uri->segment(3))
-				),
-				'activo' => 'active'
-			);
-			$this->load->view('Template/main_view', $data);
-		}
-	}
-
-	public function goToInsert()
-	{
-		$data = array(
-			'page_title' => 'Productos',
-			'view' => 'testform',
 			'data_view' => array(),
 			'activo' => 'active'
-		);
+			);
 
 		$data['producto'] = $this->model_producto->mostrar_producto($inicio,$limite);
 
@@ -85,11 +56,48 @@ class Product extends CI_Controller
 		$this->pagination->initialize($config);
 		/*end pagination*/
 
+		
 		if($this->uri->segment(3)!='')
 		{
 			$id=$this->uri->segment(3);
 			$data['producto_actualizar'] = $this->model_producto->traer_producto($id);
 		}
+		/*
+		$data = array(
+			'page_title' => 'Productos',
+			'view' => 'Producto',
+			'data_view' => array(
+				'productos' => $this->model_producto->mostrar_producto()
+			),
+			'activo' => 'active'
+		);*/
+		
+		$this->load->view('Template/main_view', $data);
+	}
+
+	public function maceta()
+	{
+		if ($this->uri->segment(3) != '') {
+			$data = array(
+				'page_title' => 'Productos',
+				'view' => 'producto-detalle',
+				'data_view' => array(
+					'producto' => $this->model_producto->traer_producto($this->uri->segment(3))
+				),
+				'activo' => 'active'
+			);
+			$this->load->view('Template/main_view', $data);
+		}
+	}
+
+	public function goToInsert()
+	{
+		$data = array(
+			'page_title' => 'Productos',
+			'view' => 'testform',
+			'data_view' => array(),
+			'activo' => 'active'
+		);
 		$this->load->view('Template/main_view',$data);
 	}
 
@@ -97,7 +105,7 @@ class Product extends CI_Controller
 	{
 		//traemos la imagen del form
 		$imagen = 'img';
-		//configuraciones para colocar la imagen en el poryecto
+		//configuraciones para colocar la imagen en el proyecto
 		//ruta donde se va  aguardar
 		$config['upload_path'] = "assets/images/productos";
 		//archivos permitidos
