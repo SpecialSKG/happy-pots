@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Inicio';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['product/pagina/(:num)'] = 'product/index/$1';
 
 //$route['/'] = 'Inicio/index';
 //$route['conoceme'] = 'welcome/conoceme';

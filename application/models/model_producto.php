@@ -11,12 +11,24 @@ class Model_producto extends CI_Model {
 			return false;
 	}
 
-	public function mostrar_producto()
+	public function mostrar_producto($inicio = FALSE, $limite = FALSE)
 	{
-		$this->db->order_by('id');
+		$this->db->order_by('id', 'asc');
+		if($inicio !== FALSE && $limite !== FALSE){
+			$this->db->limit($limite,$inicio);
+		}
 		$query=$this->db->get('producto');
 
 		return $query->result();
+	}
+
+		//Obtener todos los datos de los productos
+	public function getProductos(){
+		$this->db->select('*');
+		$this->db->from('producto');
+		$this->db->order_by('id', 'ASC');
+		$result = $this->db->get();
+		return $result->result();
 	}
 
 	public function traer_producto($id)

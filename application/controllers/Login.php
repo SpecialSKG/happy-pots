@@ -13,7 +13,11 @@ class Login extends CI_Controller
 	public function index()
 	{
 		if ($this->session->userdata('login') === TRUE) {
-			redirect(base_url() . 'Dashboard', 'refresh');
+			if ($this->session->userdata('tipo') == '1') {
+				redirect(base_url() . 'Dashboard', 'refresh');
+			} else if ($this->session->userdata('tipo') == '2') {
+				redirect(base_url() . 'DashboardCliente', 'refresh');
+			}
 		} else {
 			$this->load->view('Login');
 		}
@@ -41,7 +45,7 @@ class Login extends CI_Controller
 			if ($data['tipo'] == '1') {
 				redirect(base_url() . 'Dashboard', 'refresh');
 			} else if ($data['tipo'] == '2') {
-				redirect(base_url() . 'Dashboard', 'refresh');
+				redirect(base_url(), 'refresh');
 			}
 		} else {
 			redirect(base_url() . 'Dashboard', 'refresh');
@@ -52,5 +56,25 @@ class Login extends CI_Controller
 	{
 		$this->session->sess_destroy();
 		redirect(base_url() . 'Login', 'refresh');
+	}
+
+	public function registrar_Cliente()
+	{
+		if ($this->input->is_ajax_request()) {
+			$data = array(
+				'nombre' => $this->input->post('nombre'),
+				'email' => $this->input->post('email'),
+				'pass' => base64_encode($this->input->post('pass')),
+				'cell' => $this->input->post('cell'),
+				'tipo' => $this->input->post('tipo')
+			);
+			if ($this->Login_M->registroCliente($data)) {
+				echo json_encode(array('success' => 1));
+			} else {
+				echo json_encode(array('success' => 0));
+			}
+		} else {
+			echo 'no se puede acceder';
+		}
 	}
 }

@@ -10,8 +10,59 @@ class Product extends CI_Controller
 		$this->load->model('CrudModel');
 	}
 
-	public function index()
+	public function index($pagina = FALSE)
 	{
+
+		$inicio = 0;
+		$limite = 4;
+
+		if($pagina){
+			$inicio = ($pagina - 1) * $limite;
+		}
+		$data = array(
+			'page_title' => 'Productos',
+			'view' => 'Producto',
+			'data_view' => array(),
+			'activo' => 'active'
+			);
+
+		$data['producto'] = $this->model_producto->mostrar_producto($inicio,$limite);
+
+		/*pagination*/
+		$this->load->library('pagination');
+		$config['base_url'] = base_url().'product/pagina/';
+		$config['total_rows'] = count($this->model_producto->mostrar_producto());
+		$config['per_page'] = $limite;
+		$config['first_url'] = base_url().'product';
+		$config['full_tag_open'] = '<ul class="pagination">';
+		$config['full_tag_close'] = '</ul>';
+		$config['first_link'] = '&lsaquo;&lsaquo; Primero';
+		$config['last_link'] = 'Último &rsaquo;&rsaquo;';
+		$config['next_link'] = 'Siguiente &gt;';
+		$config['prev_link'] = '&lt; Anterior';
+		$config['first_tag_open'] = '<li class="page-item">';
+		$config['last_tag_open'] = '<li class="page-item">';
+		$config['first_tag_close'] = '</li>';
+		$config['last_tag_close'] = '</li>';
+		$config['next_tag_open'] = '<li class="page-item">';
+		$config['prev_tag_open'] = '<li class="page-item">';
+		$config['next_tag_close'] = '</li>';
+		$config['prev_tag_close'] = '</li>';
+		$config['cur_tag_open'] = '<li class="page-item"><strong>';
+		$config['cur_tag_close'] = '</strong></li>';
+		$config['num_tag_open'] = '<li>';
+		$config['num_tag_close'] = '</li>';
+
+		$this->pagination->initialize($config);
+		/*end pagination*/
+
+		
+		if($this->uri->segment(3)!='')
+		{
+			$id=$this->uri->segment(3);
+			$data['producto_actualizar'] = $this->model_producto->traer_producto($id);
+		}
+		/*
 		$data = array(
 			'page_title' => 'Productos',
 			'view' => 'Producto',
@@ -19,7 +70,8 @@ class Product extends CI_Controller
 				'productos' => $this->model_producto->mostrar_producto()
 			),
 			'activo' => 'active'
-		);
+		);*/
+		
 		$this->load->view('Template/main_view', $data);
 	}
 
@@ -38,22 +90,23 @@ class Product extends CI_Controller
 		}
 	}
 
-	public function goToInsert()
+	/*public function goToInsert()
 	{
+		$this->load->model('CrudModel');
 		$data = array(
 			'page_title' => 'Productos',
-			'view' => 'testform',
+			'view' => 'Administracion/ProductosAdmin',
 			'data_view' => array(),
 			'activo' => 'active'
 		);
-		$this->load->view('Template/main_view', $data);
+		$this->load->view('Template/main_view',$data);
 	}
 
 	public function insertar_producto()
 	{
 		//traemos la imagen del form
 		$imagen = 'img';
-		//configuraciones para colocar la imagen en el poryecto
+		//configuraciones para colocar la imagen en el proyecto
 		//ruta donde se va  aguardar
 		$config['upload_path'] = "assets/images/productos";
 		//archivos permitidos
@@ -73,6 +126,7 @@ class Product extends CI_Controller
 				'nombre' => $this->input->post('nombre'),
 				'descripcion' => $this->input->post('descripcion'),
 				'precio' => $this->input->post('precio'),
+				'id_categoria' => $this->input->post('categoria'),
 				//nombre del archivo
 				'img_producto_id' => $imgloaded['file_name']
 			);
@@ -103,7 +157,7 @@ class Product extends CI_Controller
 	public function eliminar_producto($id)
 	{
 		$this->model_producto->eliminar_producto($id);
-	}
+	}*/
 
 	public function insertarDetalleTemp()
 	{

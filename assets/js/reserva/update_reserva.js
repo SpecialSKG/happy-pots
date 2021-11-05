@@ -1,22 +1,22 @@
-$('#insert_usuario').click(function() {
+$('#update_reserva').click(function() {
     var
-        nombre = $('#floating_nombre').val(),
-        cell = $('#floating_cell').val(),
-        email = $('#floating_email').val(),
-        pass = $('#floating_pass').val(),
-        tipo = $('#floating_tipo').val();
+        usuario = $('#floating_usuario').val(),
+        lugar = $('#floating_lugar').val(),
+        fecha = $('#floating_fecha').val(),
+        hora = $('#floating_hora').val(),
+        id = $('#floating_id').val();
 
     $.ajax({
         dataType: 'json',
-        url: baseurl + '/Usuario/insertarUsuario',
+        url: baseurl + '/Reservas/actualizarReserva',
         type: 'POST',
         dataType: 'json',
         data: {
-            nombre,
-            cell,
-            email,
-            pass,
-            tipo
+            usuario,
+            lugar,
+            fecha,
+            hora,
+            id
         },
         dataType: 'json',
         before: function() {},
@@ -24,8 +24,8 @@ $('#insert_usuario').click(function() {
             if (data.success === 1) {
                 let timerInterval
                 Swal.fire({
-                    icon: 'success',
-                    title: 'Guardando..!',
+                    icon: 'info',
+                    title: 'Actualizando..!',
                     timer: 1500,
                     didOpen: () => {
                         Swal.showLoading()
@@ -41,7 +41,7 @@ $('#insert_usuario').click(function() {
                     },
                     willClose: () => {
                         clearInterval(timerInterval);
-                        document.location.href = baseurl + '/Usuario/';
+                        document.location.href = baseurl + '/Reservas/';
                     }
                 })
 
@@ -49,7 +49,7 @@ $('#insert_usuario').click(function() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error!',
-                    text: 'No se pudo Ingresar',
+                    text: 'No se pudo Actualizar',
                     type: 'error',
                     showConfirmButton: false,
                     timer: 1500,
@@ -64,7 +64,7 @@ $('#insert_usuario').click(function() {
             Swal.fire({
                 icon: 'error',
                 title: 'Error!',
-                text: 'No se pudo Ingresar, Hay un error interno',
+                text: 'No se pudo Actualizar, Hay un error interno',
                 text: (e),
                 type: 'error',
                 showConfirmButton: false,

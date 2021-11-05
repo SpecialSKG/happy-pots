@@ -1,22 +1,20 @@
-$('#insert_usuario').click(function() {
+$('#insert_reserva').click(function() {
     var
-        nombre = $('#floating_nombre').val(),
-        cell = $('#floating_cell').val(),
-        email = $('#floating_email').val(),
-        pass = $('#floating_pass').val(),
-        tipo = $('#floating_tipo').val();
+        usuario = $('#floating_usuario').val(),
+        lugar = $('#floating_lugar').val(),
+        fecha = $('#floating_fecha').val(),
+        hora = $('#floating_hora').val();
 
     $.ajax({
         dataType: 'json',
-        url: baseurl + '/Usuario/insertarUsuario',
+        url: baseurl + '/Reservas/insertarUsuario',
         type: 'POST',
         dataType: 'json',
         data: {
-            nombre,
-            cell,
-            email,
-            pass,
-            tipo
+            usuario,
+            lugar,
+            fecha,
+            hora
         },
         dataType: 'json',
         before: function() {},
@@ -41,7 +39,7 @@ $('#insert_usuario').click(function() {
                     },
                     willClose: () => {
                         clearInterval(timerInterval);
-                        document.location.href = baseurl + '/Usuario/';
+                        document.location.href = baseurl + '/Reservas/';
                     }
                 })
 
