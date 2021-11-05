@@ -1,4 +1,4 @@
-<form action="<?= base_url("/Product/insertar_producto")?>" method="post" enctype="multipart/form-data" class="d-flex flex-column" >
+<form action="<?= base_url("/ProductosAd/insertar_producto")?>" method="post" enctype="multipart/form-data" class="d-flex flex-column" >
     <input type="text"  required placeholder="nombre" name="nombre" id="nombre">
     <input type="text"  required placeholder="descripcion"name="descripcion" id="descripcion">
     <input type="text"  required placeholder="precio"name="precio" id="precio">

@@ -22,6 +22,15 @@ class Model_producto extends CI_Model {
 		return $query->result();
 	}
 
+		//Obtener todos los datos de los productos
+	public function getProductos(){
+		$this->db->select('*');
+		$this->db->from('producto');
+		$this->db->order_by('id', 'ASC');
+		$result = $this->db->get();
+		return $result->result();
+	}
+
 	public function traer_producto($id)
 	{
 		$this->db->where('id',$id);
