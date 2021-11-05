@@ -25,6 +25,21 @@ class ProductosAd extends CI_Controller
 		}
 	}
 
+	public function insertProd()
+	{
+		if ($this->session->userdata("login") === TRUE) {
+			$data = array(
+				'page_title' => 'Productos',
+				'view' => 'testform',
+				'data_view' => array(),
+				'categorias' => $this->CrudModel->mostrar('id','categoria')
+			);
+			$this->load->view('Template/main_admin', $data);
+		} else {
+			redirect(base_url() . 'Login', 'refresh');
+		}
+	}
+
 
 	public function insertar_producto()
 	{
@@ -55,12 +70,13 @@ class ProductosAd extends CI_Controller
 			);
 			//intentamos insertar en base de datos y retornamos segun sea el caso
 			if ($this->model_producto->insertar_producto($producto)) {
-				echo json_encode(array('status' => 1, 'message' => "Producto Insertado"));
+				
+				redirect(base_url() . 'Dashboard', 'refresh');
 			} else {
-				echo json_encode(array('status' => 0, 'message' => "Error al insertar el producto"));
+				redirect(base_url() . 'Dashboard', 'refresh');
 			}
 		} else {
-			echo json_encode(array('status' => 1, 'message' => "solo se adminte guardar imagenes con extensiones: jpg, png, jpeg, gif"));
+			redirect(base_url() . 'Dashboard', 'refresh');
 		}
 	}
 

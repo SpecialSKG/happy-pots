@@ -16,7 +16,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Productos</h5>
-                    <a class="btn btn-primary" href="<?= base_url(); ?>ProductosAd/insertar_producto">
+                    <a class="btn btn-primary" href="<?= base_url(); ?>ProductosAd/insertProd">
                         <i class="bi bi-star me-1"></i> Agregar
                     </a>
 

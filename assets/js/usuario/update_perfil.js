@@ -7,7 +7,7 @@ $('#update_perfil_datos').click(function() {
 
     $.ajax({
         dataType: 'json',
-        url: baseurl + 'Usuario/update_perfilDatos',
+        url: baseurl + '/Usuario/update_perfilDatos',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -39,7 +39,7 @@ $('#update_perfil_datos').click(function() {
                     },
                     willClose: () => {
                         clearInterval(timerInterval);
-                        document.location.href = baseurl + 'Dashboard/';
+                        document.location.href = baseurl + '/DashboardCliente/';
                     }
                 })
 
@@ -72,7 +72,7 @@ $('#update_perfil_pass').click(function() {
 
     $.ajax({
         dataType: 'json',
-        url: baseurl + 'Usuario/update_perfilPass',
+        url: baseurl + '/Usuario/update_perfilPass',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -102,7 +102,7 @@ $('#update_perfil_pass').click(function() {
                     },
                     willClose: () => {
                         clearInterval(timerInterval);
-                        document.location.href = baseurl + 'Dashboard/';
+                        document.location.href = baseurl + '/DashboardCliente/';
                     }
                 })
 
@@ -144,7 +144,7 @@ $('#update_usuario').click(function() {
 
     $.ajax({
         dataType: 'json',
-        url: baseurl + 'Usuario/actualizarUsuario',
+        url: baseurl + '/Usuario/actualizarUsuario',
         type: 'POST',
         dataType: 'json',
         data: {
@@ -178,7 +178,7 @@ $('#update_usuario').click(function() {
                     },
                     willClose: () => {
                         clearInterval(timerInterval);
-                        document.location.href = baseurl + 'Usuario';
+                        document.location.href = baseurl + '/Usuario';
                     }
                 })
 
