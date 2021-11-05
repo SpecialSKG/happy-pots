@@ -16,10 +16,12 @@ class Reserva_M extends CI_Model {
 
 	//obtener los datos de 1 perfil de Reserva
 	public function obtReservas($id){
+		$this->db->select('*');
+		$this->db->from('reserva');
 		$this->db->where('id', $id);
-		$obt = $this->db->get('reserva');
+		$obt = $this->db->get();
 		return ($obt->num_rows() === 1) ? $obt->row(): false;
-	}
+	} 
 	
 	//obtener los datos de usuarios
 	public function getUsuario(){

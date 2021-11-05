@@ -32,11 +32,12 @@
 
                 <div class="signin">
                     <h1>Iniciar Sesion</h1>
-                    <form class="more-padding" autocomplete="off">
+                    <form class="more-padding" autocomplete="off" action="<?php echo base_url(); ?>Login/iniciar_sesion" method="POST">
                         <input type="email" placeholder="Correo" name="email" id="l_email" required>
-                        <input type="pass" placeholder="Contraseña" name="pass" id="l_pass">
+                        <input type="password" placeholder="Contraseña" name="pass" id="l_pass" required>
 
-                        <input type="button" class="button submit" value="Login" id="logeo">
+                        <!-- <input type="button" class="button submit" value="Login" id="logeo"> -->
+                        <button type="submit" class="button submit">Login</button>
                     </form>
                 </div>
 

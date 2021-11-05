@@ -12,7 +12,7 @@
 
     <div class="row gy-4">
 
-        <div class="col-xl-6">
+        <div class="col-xl-6 offset-lg-3">
 
             <div class="row">
                 <div class="col-lg-6">
