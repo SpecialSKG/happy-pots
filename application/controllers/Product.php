@@ -6,7 +6,7 @@ class Product extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		//$this->load->model('model_producto');
+		$this->load->model('model_producto');
 		$this->load->model('CrudModel');
 	}
 
@@ -25,7 +25,7 @@ class Product extends CI_Controller
 			'data_view' => array(),
 			'activo' => 'active'
 			);
-
+		$this->load->model('model_producto');
 		$data['producto'] = $this->model_producto->mostrar_producto($inicio,$limite);
 
 		/*pagination*/
