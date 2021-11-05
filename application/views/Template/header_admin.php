@@ -288,7 +288,7 @@
                 </li><!-- End Usuarios Page Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="<?= base_url(); ?>">
+                    <a class="nav-link collapsed" href="<?= base_url(); ?>ProductosAd">
                         <i class="bi bi-gem"></i>
                         <span>Productos</span>
                     </a>

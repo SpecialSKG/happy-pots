@@ -90,15 +90,13 @@ class Product extends CI_Controller
 		}
 	}
 
-	public function goToInsert()
+	/*public function goToInsert()
 	{
 		$this->load->model('CrudModel');
 		$data = array(
 			'page_title' => 'Productos',
-			'view' => 'testform',
-			'data_view' => array(
-				'categorias' => $this->CrudModel->mostrar("id", "categoria")
-			),
+			'view' => 'Administracion/ProductosAdmin',
+			'data_view' => array(),
 			'activo' => 'active'
 		);
 		$this->load->view('Template/main_view',$data);
@@ -159,7 +157,7 @@ class Product extends CI_Controller
 	public function eliminar_producto($id)
 	{
 		$this->model_producto->eliminar_producto($id);
-	}
+	}*/
 
 	public function insertarDetalleTemp()
 	{
