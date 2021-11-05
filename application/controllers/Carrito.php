@@ -19,7 +19,9 @@ class Carrito extends CI_Controller
         $data = array(
             'page_title' => 'Carrito',
             'view' => 'cart',
-            'data_view' => array()
+            'data_view' => array(
+                'detalles' => $this->verCarritoUser()
+            )
         );
         $this->load->view('Template/main_view',$data);
     }
@@ -57,8 +59,9 @@ class Carrito extends CI_Controller
     */
     public function verCarritoUser(){
         if ($this->session->userdata('login')) {
-            $carrito = $this->crudModel->listarWhereQuery($this->tabla, ' usuario = '.$this->session->userdata('id'));
-            echo json_encode($carrito);
+            $this->load->model('crudModel');
+            $carrito = $this->crudModel->listarWhereQuery('`detalle_temp` t INNER join `producto` p on t.producto = p.id Inner join `material` m on t.material = m.id', ' usuario = '.$this->session->userdata('id'));
+            return $carrito;
         } else {
             redirect(base_url('Login'));
         }
@@ -109,4 +112,8 @@ class Carrito extends CI_Controller
             redirect(base_url('Login'));
         }
     }
+
+    /*
+    
+    */
 }
