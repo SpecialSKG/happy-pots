@@ -15,7 +15,7 @@ class ProductosAd extends CI_Controller
 		if ($this->session->userdata("login") === TRUE) {
 			$data = array(
 				'page_title' => 'Productos',
-				'view' => 'Administracion/ProductosAdmin',
+				'view' => 'Productos/ProductosAdmin',
 				'data_view' => array(),
 				'data' => $this->model_producto->getProductos()
 			);
@@ -30,7 +30,7 @@ class ProductosAd extends CI_Controller
 		if ($this->session->userdata("login") === TRUE) {
 			$data = array(
 				'page_title' => 'Productos',
-				'view' => 'testform',
+				'view' => 'Productos/InsertProductos',
 				'data_view' => array(),
 				'categorias' => $this->CrudModel->mostrar('id','categoria')
 			);
@@ -71,7 +71,7 @@ class ProductosAd extends CI_Controller
 			//intentamos insertar en base de datos y retornamos segun sea el caso
 			if ($this->model_producto->insertar_producto($producto)) {
 				
-				redirect(base_url() . 'Dashboard', 'refresh');
+				redirect(base_url() . 'ProductosAd', 'refresh');
 			} else {
 				redirect(base_url() . 'Dashboard', 'refresh');
 			}
