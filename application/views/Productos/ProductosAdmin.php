@@ -31,6 +31,7 @@
                                 <th scope="col">Precio</th>
                                 <th scope="col">Categoria</th>
                                 <th scope="col">Imagen</th>
+                                <th scope="col">Estado</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -45,6 +46,7 @@
                                     <td>
                                         <img src="<?= base_url() . 'assets/images/productos/' . $d->img_producto_id ?>" alt="..." width="100" >
                                     </td>
+                                    <td><?= $d->estado ?></td>
                                     <td>
                                         <a type="submit" href="<?= base_url() . 'ProductosAd/obtenerProducto/' . $d->id ?>" class="btn btn-info">
                                             <i class="bi bi-info-circle"></i>

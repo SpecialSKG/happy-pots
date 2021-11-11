@@ -41,7 +41,7 @@ class ProductosAd extends CI_Controller
 	}
 
 
-	public function insertar_producto()
+/*	public function insertar_producto()
 	{
 		//traemos la imagen del form
 		$imagen = 'img';
@@ -78,7 +78,7 @@ class ProductosAd extends CI_Controller
 		} else {
 			redirect(base_url() . 'Dashboard', 'refresh');
 		}
-	}
+	}*/
 
 	public function obtenerProducto($id)
 	{
@@ -102,8 +102,9 @@ class ProductosAd extends CI_Controller
 			'nombre' => $this->input->post('nombre'),
 			'descripcion' => $this->input->post('direccion'),
 			'precio' => $this->input->post('precio'),
-			//'productocol' => $this->input->post('productocol'),
-			'img_producto_id' => $this->input->post('img_producto_id')
+			'img_producto_id' => $this->input->post('img_producto_id'),
+			'id_categoria' => $this->input->post('id_categoria'),
+			'estado' => $this->input->post('estado')
 		);
 		$id = $this->input->post('id');
 		$this->model_producto->actualizar_producto($id, $producto);
