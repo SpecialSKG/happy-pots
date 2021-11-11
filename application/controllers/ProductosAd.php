@@ -32,7 +32,7 @@ class ProductosAd extends CI_Controller
 				'page_title' => 'Productos',
 				'view' => 'Productos/InsertProductos',
 				'data_view' => array(),
-				'categorias' => $this->CrudModel->mostrar('id','categoria')
+				'categorias' => $this->CrudModel->mostrar('id', 'categoria')
 			);
 			$this->load->view('Template/main_admin', $data);
 		} else {
@@ -70,13 +70,29 @@ class ProductosAd extends CI_Controller
 			);
 			//intentamos insertar en base de datos y retornamos segun sea el caso
 			if ($this->model_producto->insertar_producto($producto)) {
-				
+
 				redirect(base_url() . 'ProductosAd', 'refresh');
 			} else {
 				redirect(base_url() . 'Dashboard', 'refresh');
 			}
 		} else {
 			redirect(base_url() . 'Dashboard', 'refresh');
+		}
+	}
+
+	public function obtenerProducto($id)
+	{
+		if ($this->session->userdata("login") === TRUE) {
+			$data = array(
+				'page_title' => 'Detalle Entidad',
+				'view' => 'Productos/UpdateProductos',
+				'data_view' => array(),
+				'categorias' => $this->CrudModel->mostrar('id', 'categoria'),
+				'detalle' => $this->model_producto->traer_producto($id)
+			);
+			$this->load->view('Template/main_admin', $data);
+		} else {
+			redirect(base_url() . 'Login', 'refresh');
 		}
 	}
 
@@ -97,5 +113,4 @@ class ProductosAd extends CI_Controller
 	{
 		$this->model_producto->eliminar_producto($id);
 	}
-	
 }

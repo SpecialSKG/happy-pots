@@ -24,19 +24,19 @@ class Model_producto extends CI_Model {
 
 		//Obtener todos los datos de los productos
 	public function getProductos(){
-		$this->db->select('*');
-		$this->db->from('producto');
-		$this->db->order_by('id', 'ASC');
+		$this->db->select('p.id, p.nombre, p.descripcion, p.precio, p.img_producto_id, c.nombre');
+		$this->db->from('producto as p');
+		$this->db->join('categoria as c', 'c.id = p.id_categoria', 'left');
+		$this->db->order_by('p.id', 'ASC');
 		$result = $this->db->get();
 		return $result->result();
 	}
 
-	public function traer_producto($id)
-	{
-		$this->db->where('id',$id);
-		$query=$this->db->get('producto');
-
-		return $query->row();
+	//obtener los datos de 1 usuario
+	public function traer_producto($id){
+		$this->db->where('id', $id);
+		$obt = $this->db->get('producto');
+		return ($obt->num_rows() === 1) ? $obt->row(): false;
 	}
 
 	public function actualizar_producto($id, $producto)

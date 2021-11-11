@@ -29,6 +29,7 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Descripcion</th>
                                 <th scope="col">Precio</th>
+                                <th scope="col">Categoria</th>
                                 <th scope="col">Imagen</th>
                                 <th scope="col">Acciones</th>
                             </tr>
@@ -40,11 +41,12 @@
                                     <td><?= $d->nombre ?></td>
                                     <td><?= $d->descripcion ?></td>
                                     <td><?= $d->precio ?></td>
+                                    <td><?= $d->nombre ?></td>
                                     <td>
                                         <img src="<?= base_url() . 'assets/images/productos/' . $d->img_producto_id ?>" alt="..." width="100" >
                                     </td>
                                     <td>
-                                        <a type="submit" href="<?= base_url() . 'ProductosAd/insertar_producto/' . $d->id ?>" class="btn btn-info">
+                                        <a type="submit" href="<?= base_url() . 'ProductosAd/obtenerProducto/' . $d->id ?>" class="btn btn-info">
                                             <i class="bi bi-info-circle"></i>
                                         </a>
                                         <a type="submit" data-id="<?= $d->id ?>" id="delete" class="btn btn-danger">
