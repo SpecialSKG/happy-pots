@@ -24,7 +24,7 @@ class Model_producto extends CI_Model {
 
 		//Obtener todos los datos de los productos
 	public function getProductos(){
-		$this->db->select('p.id, p.nombre, p.descripcion, p.precio, p.img_producto_id, c.nombre');
+		$this->db->select('p.id, p.nombre, p.descripcion, p.precio, p.img_producto_id, c.nombre_categorias, p.estado');
 		$this->db->from('producto as p');
 		$this->db->join('categoria as c', 'c.id = p.id_categoria', 'left');
 		$this->db->order_by('p.id', 'ASC');
@@ -50,7 +50,7 @@ class Model_producto extends CI_Model {
 
 	public function eliminar_producto($id)
 	{
-		$this->db->where('id',$id);
+		$this->db->where('id =', $id["id"]);
 		return($this->db->delete('producto'))? true:false;
 	}
 }

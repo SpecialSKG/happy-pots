@@ -22,7 +22,7 @@
                         </a>
                     </nav>
                     <!-- Table with stripped rows -->
-                    <table class="table datatable">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -37,23 +37,25 @@
                         </thead>
                         <tbody>
                             <?php foreach ($data as $d) { ?>
-                                <tr>
+                                <tr class="<?php $d->estado == 1 ? print '' : print 'table-warning' ?>">
                                     <th scope="row"><?= $d->id ?></th>
                                     <td><?= $d->nombre ?></td>
                                     <td><?= $d->descripcion ?></td>
                                     <td><?= $d->precio ?></td>
-                                    <td><?= $d->nombre ?></td>
+                                    <td><?= $d->nombre_categorias ?></td>
                                     <td>
-                                        <img src="<?= base_url() . 'assets/images/productos/' . $d->img_producto_id ?>" alt="..." width="100" >
+                                        <img src="<?= base_url() . 'assets/images/productos/' . $d->img_producto_id ?>" alt="..." width="100">
                                     </td>
-                                    <td><?= $d->estado ?></td>
+                                    <td>
+                                        <?= ($d->estado == 1) ? '<i class="btn btn-success bi bi-bag-check"></i>' : '<i class="btn btn-warning bi bi-bag-dash"></i>'; ?>
+                                    </td>
                                     <td>
                                         <a type="submit" href="<?= base_url() . 'ProductosAd/obtenerProducto/' . $d->id ?>" class="btn btn-info">
                                             <i class="bi bi-info-circle"></i>
                                         </a>
-                                        <a type="submit" data-id="<?= $d->id ?>" id="delete" class="btn btn-danger">
+                                        <button data-id="<?= $d->id ?>" id="eliminar_producto" class="btn btn-danger">
                                             <i class="bi bi-exclamation-octagon"></i>
-                                        </a>
+                                        </button>
                                     </td>
                                 </tr>
                             <?php } ?>
@@ -67,5 +69,3 @@
         </div>
     </div>
 </section>
-
-<script src="<?php echo base_url() . 'assets/js/usuario/delete_usuario.js'; ?>"></script>

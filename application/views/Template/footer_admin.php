@@ -28,6 +28,10 @@
 
 <script src="<?= base_url() . 'assets/js/main.js'; ?>"></script>
 
+<?php if ($view == 'Productos/ProductosAdmin') { ?>
+	<script src="<?= base_url() . 'assets/js/producto/delete_producto.js'; ?>"></script>
+<?php } ?>
+
 </body>
 
 </html>
