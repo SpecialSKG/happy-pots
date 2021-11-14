@@ -64,3 +64,18 @@
     </div>
 
 </section>
+
+<?php foreach ($reservas as $r) { 
+     $date = DateTime::createFromFormat('Y-m-d', $r->fecha);
+    ?>
+    <div class="container border border-dark my-2">
+        <?=$r->lugar." ". $date->format('d/m/Y')." " .$r->hora. " ".$r->total?>
+        <?php 
+            $detalle = $this->CrudModel->listarLoQueSea("select r.id as id_reserva, r.id as id_usuario, p.id as id_producto, m.id as id_material, r.fecha as fecha, r.hora as hora, r.total as total, p.nombre as producto, p.img_producto_id as img, p.precio as precio, d.cantidad as cantidad,l.lugar from reserva r inner join detalle d on r.id = d.reserva inner join producto p on d.producto = p.id inner join material m on d.material = m.id inner join lugar l on r.lugar = l.id where r.id = ".$r->id_reserva);   
+            foreach ($detalle as $d) {?>
+                <div><?= $d->producto?></div> 
+                <div><?= $d->cantidad?></div>
+                <div><img style="height: 80px;" src="<?= base_url()."assets/images/productos/".$d->img?>" alt="<?= $d->producto?>"> </div>
+        <?php } ?>
+    </div>
+<?php } ?>

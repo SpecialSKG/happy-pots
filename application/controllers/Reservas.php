@@ -7,6 +7,8 @@ class Reservas extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Reserva_M');
+		$this->load->model('crudModel');
+		$this->load->model('CrudModel');
 	}
 
 	public function index()
@@ -15,7 +17,8 @@ class Reservas extends CI_Controller
 			$data = array(
 				'page_title' => 'Reservas',
 				'view' => 'Reservas/Reserva',
-				'data_view' => array(),
+				'data_view' => array(
+				),
 				'data' => $this->Reserva_M->getReservas()
 			);
 			$this->load->view('Template/main_admin', $data);
@@ -71,7 +74,7 @@ class Reservas extends CI_Controller
 				'data_view' => array(),
 				'usuario' => $this->Reserva_M->getUsuario(),
 				'lugar' => $this->Reserva_M->getLugar(),
-				'detalle' => $this->Reserva_M->obtReservas($id)
+				'detalle' => $this->Reserva_M->obtReservas($id),
 			);
 			$this->load->view('Template/main_admin', $data);
 		} else {
@@ -124,7 +127,11 @@ class Reservas extends CI_Controller
 			$data = array(
 				'page_title' => 'Detalle Reserva',
 				'view' => 'Reservas/ReservaPerfil',
-				'data_view' => array(),
+				'data_view' => array(
+					'reservas' => $this->CrudModel->listarLoQueSea(
+						"select r.id as id_reserva, r.id as id_usuario, r.fecha as fecha, r.hora as hora, r.total as total, l.lugar from reserva r inner join detalle d on r.id = d.reserva inner join lugar l on r.lugar = l.id where r.usuario =".$this->session->userdata("id")." group by r.id ;")
+
+				),
 				'usuario' => $this->Reserva_M->getUsuario(),
 				'lugar' => $this->Reserva_M->getLugar(),
 				'detalle' => $this->Reserva_M->obtReservas($id)

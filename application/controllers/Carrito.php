@@ -10,6 +10,8 @@ class Carrito extends CI_Controller
     {
         parent::__construct();
         $this->load->model('CrudModel');
+        $this->load->model('crudModel');
+        $this->load->model('CartModel');
         $this->tabla = "detalle_temp";
         $this->nombreCampoId = "id";
     }
@@ -20,16 +22,17 @@ class Carrito extends CI_Controller
             'page_title' => 'Carrito',
             'view' => 'cart',
             'data_view' => array(
-                'detalles' => $this->verCarritoUser()
+                'detalles' => $this->verCarritoUser(),
+                'lugares' => $this->crudModel->mostrar("id", "lugar")
             )
         );
-        $this->load->view('Template/main_view',$data);
+        $this->load->view('Template/main_view', $data);
     }
 
-/*  Esta funcion es para insertar un registro en detalle_temp,
+    /*  Esta funcion es para insertar un registro en detalle_temp,
     se necesita esta logeado, con inputs post producto(int) materia(int) cantidad(int)
      se envia una respuesta en json en caso que inserte o no, 1 si inserta 0 si no lo hace
-*/
+ */
     public function insertar()
     {
         if ($this->session->userdata('login')) {
@@ -57,10 +60,11 @@ class Carrito extends CI_Controller
     no se necesita ningun input, solamente estar loggeado
     devuelve un json con el contenido de los registros de detalle_temp em forma de json
     */
-    public function verCarritoUser(){
+    public function verCarritoUser()
+    {
         if ($this->session->userdata('login')) {
             $this->load->model('crudModel');
-            $carrito = $this->crudModel->listarWhereQuery('`detalle_temp` t INNER join `producto` p on t.producto = p.id Inner join `material` m on t.material = m.id', ' usuario = '.$this->session->userdata('id'));
+            $carrito = $this->crudModel->listarLoQueSea('SELECT t.id, p.nombre, p.precio, t.cantidad, p.img_producto_id FROM `detalle_temp` t INNER join `producto` p on t.producto = p.id Inner join `material` m on t.material = m.id WHERE t.usuario = ' . $this->session->userdata('id'));
             return $carrito;
         } else {
             redirect(base_url('Login'));
@@ -70,29 +74,62 @@ class Carrito extends CI_Controller
     /*
     se necesita esta loggeado y un input post id(int) 
      */
-    public function eliminarProductoCarrito(){
+    public function eliminarProductoCarrito()
+    {
         if ($this->session->userdata('login')) {
             $idTempCarrito = $this->input->post('id');
             $tempCarrito = $this->crudModel->mostrarById($idTempCarrito);
-            if($tempCarrito->usuario == $this->session->userdata('id')){
-                if($this->crudModel->eliminar($idTempCarrito, $this->nombreCampoId, $this->tabla)){
-                    echo json_encode(array('success' => 1, 'message'=> 'Producto removido del carrito'));
-                }else{
-                    echo json_encode(array('success' => 0, 'message'=> 'Error al remover producto del carrito'));
+            if ($tempCarrito->usuario == $this->session->userdata('id')) {
+                if ($this->crudModel->eliminar($idTempCarrito, $this->nombreCampoId, $this->tabla)) {
+                    echo json_encode(array('success' => 1, 'message' => 'Producto removido del carrito'));
+                } else {
+                    echo json_encode(array('success' => 0, 'message' => 'Error al remover producto del carrito'));
                 }
-            }else{
-                echo json_encode(array('success' => 0, 'message'=> 'El producto no esta en tu carrito'));
+            } else {
+                echo json_encode(array('success' => 0, 'message' => 'El producto no esta en tu carrito'));
             }
         } else {
             redirect(base_url('Login'));
         }
     }
 
+    /*------------ */
+    public function actualizarCantidad()
+    {
+        try {
+            $item = $this->verporid();
+            $item->cantidad = $this->input->post('cantidad');
+            if ($item->cantidad <= 0) {
+                $item->cantidad = 1;
+            }
+            //$id, $nombreCampoId, $tabla, $item
+            $this->crudModel->actualizar($item->id, "id", "detalle_temp", $item);
+            redirect(base_url('Carrito'));
+        } catch (Exception $e) {
+            echo $e;
+        }
+    }
+
+    public function removerCarrito()
+    {
+        $this->crudModel->eliminar($this->input->post('id'), $this->nombreCampoId, $this->tabla);
+        redirect(base_url('Carrito'));
+    }
+
+    public function verporid()
+    {
+        $this->load->model('crudModel');
+        return $this->crudModel->mostrarItem($this->input->post('id'), "id", "detalle_temp");
+    }
+
+    /*------------ */
+
     /*
     funcion para actualizar una row de la tabla detalle_temp
     se necesita estar loggeado y los inputs id(int (id del detalle_temp)) producto(int) material(int) cantidad(int)
     */
-    public function modificarProducto(){
+    public function modificarProducto()
+    {
         if ($this->session->userdata('login')) {
             if ($this->input->is_ajax_request()) {
                 $item = array(
@@ -113,7 +150,19 @@ class Carrito extends CI_Controller
         }
     }
 
-    /*
-    
-    */
+    public function reserva()
+    {
+        $date = DateTime::createFromFormat('d/m/Y', $this->input->post('fecha'));
+
+        $item = (object) array(
+            'fecha' => $date->format('Y-m-d'),
+            'lugar' => $this->input->post('lugarhidden'),
+            'hora' => $this->input->post('horahidden'),
+            'total' => $this->input->post('total'),
+            'id' => $this->session->userdata('id'),
+        );
+
+        $this->CartModel->executeInsert($item);
+        redirect(base_url());
+    }
 }
