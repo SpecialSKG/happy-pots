@@ -16,12 +16,14 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Usuarios</h5>
-                    <a class="btn btn-primary" href="<?= base_url(); ?>Usuario/ins_Usuario">
-                        <i class="bi bi-star me-1"></i> Agregar
-                    </a>
 
+                    <nav class="d-flex justify-content-end">
+                        <a class="btn btn-primary" href="<?= base_url(); ?>Usuario/ins_Usuario">
+                            <i class="bi bi-star me-1"></i> Agregar
+                        </a>
+                    </nav>
                     <!-- Table with stripped rows -->
-                    <table class="table datatable">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -46,9 +48,16 @@
                                         <a type="submit" href="<?= base_url() . 'Usuario/obtenerUsuario/' . $d->id ?>" class="btn btn-info">
                                             <i class="bi bi-info-circle"></i>
                                         </a>
-                                        <a type="submit" data-id="<?= $d->id ?>" id="delete" class="btn btn-danger">
-                                            <i class="bi bi-exclamation-octagon"></i>
-                                        </a>
+                                        <?php if ($this->session->userdata('id') == $d->id) : ?>
+                                            <a type="submit" class="btn btn-outline-danger disabled">
+                                                <i class="bi bi-exclamation-octagon"></i>
+                                            </a>
+                                        <?php else : ?>
+                                            <button data-id="<?= $d->id ?>" id="delete" class="btn btn-danger">
+                                                <i class="bi bi-exclamation-octagon"></i>
+                                            </button>
+                                        <?php endif; ?>
+
                                     </td>
                                 </tr>
                             <?php } ?>

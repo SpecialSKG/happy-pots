@@ -1,6 +1,6 @@
-$('tr td #delete').click(
+$("tr td #delete").click(
     function borrar_usuario() {
-        var id = $(this).attr('data-id');
+        var id = $(this).attr("data-id");
 
         Swal.fire({
             title: 'ELIMINAR',
@@ -26,7 +26,7 @@ $('tr td #delete').click(
                         id
                     },
                     dataType: "json",
-                    success: function(data) {
+                    success: function (data) {
                         if (data.success === 1) {
                             Swal.fire({
                                 icon: 'success',
@@ -51,7 +51,7 @@ $('tr td #delete').click(
                             })
                         }
                     },
-                    error: function(data) {
+                    error: function (data) {
                         console.log('Error:', data);
                     }
                 });

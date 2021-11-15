@@ -19,24 +19,24 @@
         <div class="row row-60 justify-content-center">
             <div class="col-lg-8">
                 <h4 class="text-spacing-25 text-transform-none">Ponerse en contacto</h4>
-                <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="<?= base_url("/Inicio/insertarFormulario") ?>">
                     <div class="row row-20 gutters-20">
                         <div class="col-md-6">
                             <div class="form-wrap">
-                                <input class="form-input" id="contact-your-name-5" type="text" name="name" data-constraints="@Required">
+                                <input class="form-input" id="contact-your-name-5" type="text" name="nombrecompleto" data-constraints="@Required">
                                 <label class="form-label" for="contact-your-name-5">Nombre completo</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-wrap">
-                                <input class="form-input" id="contact-email-5" type="email" name="email" data-constraints="@Email @Required">
+                                <input class="form-input" id="contact-email-5" type="email" name="correoelectronico" data-constraints="@Email @Required">
                                 <label class="form-label" for="contact-email-5">Correo electrónico</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-wrap">
                                 <!--Select 2-->
-                                <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
+                                <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required" name="tipoentrega">
                                     <option>-- Tipo de entrega --</option>
                                     <option value="1">Entrega rápida</option>
                                     <option value="2">Entrega normal</option>
@@ -45,18 +45,18 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-wrap">
-                                <input class="form-input" id="contact-phone-5" type="text" name="phone" data-constraints="@Numeric">
+                                <input class="form-input" id="contact-phone-5" type="text" name="telefono" data-constraints="@Numeric">
                                 <label class="form-label" for="contact-phone-5">Teléfono</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-wrap">
                                 <label class="form-label" for="contact-message-5">Mensaje</label>
-                                <textarea class="form-input textarea-lg" id="contact-message-5" name="message" data-constraints="@Required"></textarea>
+                                <textarea class="form-input textarea-lg" id="contact-message-5" name="mensaje" data-constraints="@Required"></textarea>
                             </div>
                         </div>
                     </div>
-                    <button class="button button-secondary button-winona" type="submit">Enviar</button>
+                    <input type="submit" class="button button-lg button-primary button-winona wow fadeInRight" value="Enviar mensaje">
                 </form>
             </div>
             <div class="col-lg-4">
