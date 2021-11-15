@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Model_inicio extends CI_Model {
+class model_inicio extends CI_Model {
 
 	public function mostrarCategorias(){
 		$this->db->order_by('id', 'desc');
