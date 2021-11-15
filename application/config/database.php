@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -72,6 +72,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 //$active_group = 'local';
+
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -80,13 +81,6 @@ $db['default'] = array(
 	'username' => 'uz59wyeoiyq2qpkh',
 	'password' => 'MygoCRCftz5V9Htysxot',
 	'database' => 'bj794z2rilgexy7abgzu',
-	
-	/*
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'happypots',
-	*/
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
