@@ -6,7 +6,7 @@ class Inicio extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('model_inicio');
+		$this->load->model('InicioModel');
 	}
 
 	public function index()
@@ -17,7 +17,7 @@ class Inicio extends CI_Controller
 			'data_view' => array(),
 			'activo' => 'active'
 		);
-		$data['producto'] = $this->Model_inicio->mostrarNuevosPots();
+		$data['producto'] = $this->InicioModel->mostrarNuevosPots();
 		$this->load->view('Template/main_view', $data);
 	}
 
@@ -29,7 +29,7 @@ class Inicio extends CI_Controller
 			'telefono' => $this->input->post('telefono'),
 			'mensaje' => $this->input->post('mensaje')
 		);
-		if ($this->Model_inicio->insertFormulario($datos)) {
+		if ($this->InicioModel->insertFormulario($datos)) {
 			redirect(base_url() . 'Inicio', 'refresh');
 		} else {
 			redirect(base_url() . 'Inicio', 'refresh');
