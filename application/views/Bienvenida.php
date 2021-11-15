@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-9 col-md-8 col-lg-7 col-xl-7 offset-lg-1 offset-xxl-0">
-                            <h2 class="oh swiper-title">
+                            <h2 class="oh swiper-title" style="color: #98BF44;-webkit-text-stroke: 1px grey;">
                                 <span class="d-inline-block" data-caption-animate="slideInUp" data-caption-delay="0">Set Geométrico</span>
                             </h2>
                             <p class="big swiper-text text-white" data-caption-animate="fadeInLeft" data-caption-delay="800">Nuestras macetas hechas con mucho amor</p>
@@ -21,7 +21,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-lg-7 offset-lg-1 offset-xxl-0">
-                            <h2 class="oh swiper-title">
+                            <h2 class="oh swiper-title" style="color: #98BF44;-webkit-text-stroke: 1px grey;">
                                 <span class="d-inline-block" data-caption-animate="slideInDown" data-caption-delay="0">Set Geométrico</span>
                             </h2>
                             <p class="big swiper-text text-white" data-caption-animate="fadeInRight" data-caption-delay="800">Cada macetita hecha a mano y con mucho amor para ti</p>
