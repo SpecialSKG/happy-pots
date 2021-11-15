@@ -119,71 +119,23 @@
     <div class="container">
         <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">Nuevos Pots</span></h3>
         <div class="row row-lg row-30">
+        <?php foreach($producto as $p){ ?>
             <div class="col-sm-6 col-lg-4 col-xl-3">
                 <!-- Product-->
                 <article class="product wow fadeInLeft" data-wow-delay=".15s">
-                    <div class="product-figure"><img src="<?= base_url() . 'assets/images/product-0-161x162.jpg'; ?>" alt="" width="161" height="162" />
+                    <div class="product-figure"><img src="<?= base_url() . 'assets/images/productos/' . $p->img_producto_id ?>" alt="" width="161" height="162" />
                     </div>
                     <br>
-                    <h6 class="product-title">Maceta</h6>
+                    <h6 class="product-title"><?=$p->nombre;?></h6>
                     <div class="product-price-wrap">
-                        <div class="product-price">$2.00</div>
+                        <div class="product-price">$<?=$p->precio;?></div>
                     </div>
                     <div class="product-button">
-                        <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Reservar</a></div>
-                        <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Ver producto</a></div>
+                        <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="<?=base_url(). "Product/maceta/". $p->id?>">Ver producto</a></div>
                     </div><span class="product-badge product-badge-new">Nuevo</span>
                 </article>
             </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-                <!-- Product-->
-                <article class="product wow fadeInLeft" data-wow-delay=".1s">
-                    <div class="product-figure"><img src="<?= base_url() . 'assets/images/product-0-161x162.jpg'; ?>" alt="" width="161" height="162" />
-                    </div>
-                    <br>
-                    <h6 class="product-title">Maceta</h6>
-                    <div class="product-price-wrap">
-                        <div class="product-price">$2.50</div>
-                    </div>
-                    <div class="product-button">
-                        <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Reservar</a></div>
-                        <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Ver producto</a></div>
-                    </div><span class="product-badge product-badge-new">Nuevo</span>
-                </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-                <!-- Product-->
-                <article class="product wow fadeInLeft" data-wow-delay=".05s">
-                    <div class="product-figure"><img src="<?= base_url() . 'assets/images/product-0-161x162.jpg'; ?>" alt="" width="161" height="162" />
-                    </div>
-                    <br>
-                    <h6 class="product-title">Maceta</h6>
-                    <div class="product-price-wrap">
-                        <div class="product-price">$4.00</div>
-                    </div>
-                    <div class="product-button">
-                        <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Reservar</a></div>
-                        <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Ver producto</a></div>
-                    </div><span class="product-badge product-badge-new">Nuevo</span>
-                </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-                <!-- Product-->
-                <article class="product wow fadeInLeft">
-                    <div class="product-figure"><img src="<?= base_url() . 'assets/images/product-0-161x162.jpg'; ?>" alt="" width="161" height="162" />
-                    </div>
-                    <br>
-                    <h6 class="product-title">Maceta</h6>
-                    <div class="product-price-wrap">
-                        <div class="product-price product-price-old">$4.00</div>
-                        <div class="product-price">$2.50</div>
-                    </div>
-                    <div class="product-button">
-                        <div class="button-wrap"><a class="button button-xs button-primary button-winona" href="#">Reservar</a></div>
-                        <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="#">Ver producto</a></div>
-                    </div><span class="product-badge product-badge-sale">Oferta</span>
-                </article>
-            </div>
+        <?php } ?>            
         </div>
     </div>
 </section>
