@@ -6,7 +6,7 @@ class Formulario extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('model_inicio');
+        $this->load->model('Model_inicio');
     }
 
     public function index()
@@ -16,7 +16,7 @@ class Formulario extends CI_Controller
                 'page_title' => 'Formulario',
                 'view' => 'Formulario/Form',
                 'data_view' => array(
-                    'datos' => $this->model_inicio->getFormulario()
+                    'datos' => $this->Model_inicio->getFormulario()
                 )
             );
             $this->load->view('Template/main_admin', $data);
@@ -29,7 +29,7 @@ class Formulario extends CI_Controller
 	{
 		if ($this->input->is_ajax_request()) {
 			$data = array('id' => $this->input->post('id'));
-			if ($this->model_inicio->deleteFormulario($data)) {
+			if ($this->Model_inicio->deleteFormulario($data)) {
 				echo json_encode(array('success' => 1));
 			} else {
 				echo json_encode(array('success' => 0));
