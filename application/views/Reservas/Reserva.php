@@ -16,12 +16,14 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Reservas</h5>
-                    <a class="btn btn-primary" href="<?= base_url(); ?>Reservas/ins_Reserva">
-                        <i class="bi bi-star me-1"></i> Agregar
-                    </a>
 
+                    <nav class="d-flex justify-content-end">
+                        <a class="btn btn-primary" href="<?= base_url(); ?>Reservas/ins_Reserva">
+                            <i class="bi bi-star me-1"></i> Agregar
+                        </a>
+                    </nav>
                     <!-- Table with stripped rows -->
-                    <table class="table datatable">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -44,19 +46,16 @@
                                         <a type="submit" href="<?= base_url() . 'Reservas/obtenerReserva/' . $d->id ?>" class="btn btn-info">
                                             <i class="bi bi-info-circle"></i>
                                         </a>
-                                        <a type="submit" data-id="<?= $d->id ?>" id="delete" class="btn btn-danger">
+
+                                        <button data-id="<?= $d->id ?>" id="delete" class="btn btn-danger">
                                             <i class="bi bi-exclamation-octagon"></i>
-                                        </a>
+                                        </button>
                                     </td>
                                 </tr>
                             <?php } ?>
                         </tbody>
                     </table>
                     <!-- End Table with stripped rows -->
-
-                    <?php foreach ($reservas as $r) { ?>
-                        <div>asda</div>
-                    <?php } ?>
                 </div>
             </div>
 

@@ -8,7 +8,6 @@ class Reservas extends CI_Controller
 		parent::__construct();
 		$this->load->model('Reserva_M');
 		$this->load->model('crudModel');
-		$this->load->model('CrudModel');
 	}
 
 	public function index()

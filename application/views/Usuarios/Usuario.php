@@ -16,10 +16,12 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Usuarios</h5>
-                    <a class="btn btn-primary" href="<?= base_url(); ?>Usuario/ins_Usuario">
-                        <i class="bi bi-star me-1"></i> Agregar
-                    </a>
 
+                    <nav class="d-flex justify-content-end">
+                        <a class="btn btn-primary" href="<?= base_url(); ?>Usuario/ins_Usuario">
+                            <i class="bi bi-star me-1"></i> Agregar
+                        </a>
+                    </nav>
                     <!-- Table with stripped rows -->
                     <table class="table">
                         <thead>
