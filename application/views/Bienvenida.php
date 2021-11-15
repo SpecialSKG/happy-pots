@@ -1,7 +1,7 @@
 <!-- Swiper-->
 <section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true" data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
     <div class="swiper-wrapper text-sm-left">
-        <div class="swiper-slide" data-slide-bg="<?=base_url().'assets/images/slide-1.jpg';?>">
+        <div class="swiper-slide" data-slide-bg="<?= base_url() . 'assets/images/slide-1.jpg'; ?>">
             <div class="swiper-slide-caption section-md">
                 <div class="container">
                     <div class="row">
@@ -16,7 +16,7 @@
             </div>
         </div>
         <!-- context-dark -->
-        <div class="swiper-slide" data-slide-bg="<?=base_url().'assets/images/slide-2.jpg';?>">
+        <div class="swiper-slide" data-slide-bg="<?= base_url() . 'assets/images/slide-2.jpg'; ?>">
             <div class="swiper-slide-caption section-md">
                 <div class="container">
                     <div class="row">
@@ -119,23 +119,23 @@
     <div class="container">
         <h3 class="oh-desktop"><span class="d-inline-block wow slideInUp">Nuevos Pots</span></h3>
         <div class="row row-lg row-30">
-        <?php foreach($producto as $p){ ?>
-            <div class="col-sm-6 col-lg-4 col-xl-3">
-                <!-- Product-->
-                <article class="product wow fadeInLeft" data-wow-delay=".15s">
-                    <div class="product-figure"><img src="<?= base_url() . 'assets/images/productos/' . $p->img_producto_id ?>" alt="" width="161" height="162" />
-                    </div>
-                    <br>
-                    <h6 class="product-title"><?=$p->nombre;?></h6>
-                    <div class="product-price-wrap">
-                        <div class="product-price">$<?=$p->precio;?></div>
-                    </div>
-                    <div class="product-button">
-                        <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="<?=base_url(). "Product/maceta/". $p->id?>">Ver producto</a></div>
-                    </div><span class="product-badge product-badge-new">Nuevo</span>
-                </article>
-            </div>
-        <?php } ?>            
+            <?php foreach ($producto as $p) { ?>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <!-- Product-->
+                    <article class="product wow fadeInLeft" data-wow-delay=".15s">
+                        <div class="product-figure"><img src="<?= base_url() . 'assets/images/productos/' . $p->img_producto_id ?>" alt="" width="161" height="162" />
+                        </div>
+                        <br>
+                        <h6 class="product-title"><?= $p->nombre; ?></h6>
+                        <div class="product-price-wrap">
+                            <div class="product-price">$<?= $p->precio; ?></div>
+                        </div>
+                        <div class="product-button">
+                            <div class="button-wrap"><a class="button button-xs button-secondary button-winona" href="<?= base_url() . "Product/maceta/" . $p->id ?>">Ver producto</a></div>
+                        </div><span class="product-badge product-badge-new">Nuevo</span>
+                    </article>
+                </div>
+            <?php } ?>
         </div>
     </div>
 </section>
@@ -168,39 +168,45 @@
 <section class="section section-sm section-first bg-default">
     <div class="container">
         <h3 class="heading-3">Contáctanos</h3>
-        <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+        <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="<?= base_url("/Inicio/insertarFormulario") ?>">
             <div class="row row-20 gutters-20">
                 <div class="col-md-6 col-lg-4 oh-desktop">
                     <div class="form-wrap wow slideInDown">
-                        <input class="form-input" id="contact-your-name-6" type="text" name="name" data-constraints="@Required">
+                        <input class="form-input" id="contact-your-name-6" type="text" name="nombrecompleto" data-constraints="@Required">
                         <label class="form-label" for="contact-your-name-6">Nombre completo</label>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 oh-desktop">
                     <div class="form-wrap wow slideInUp">
-                        <input class="form-input" id="contact-email-6" type="email" name="email" data-constraints="@Email @Required">
+                        <input class="form-input" id="contact-email-6" type="email" name="correoelectronico" data-constraints="@Email @Required">
                         <label class="form-label" for="contact-email-6">Correo electrónico</label>
                     </div>
                 </div>
                 <div class="col-lg-4 oh-desktop">
                     <div class="form-wrap wow slideInDown">
                         <!--Select 2-->
-                        <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required">
+                        <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required" name="tipoentrega">
                             <option>-- Tipo de entrega --</option>
                             <option value="1">Entrega rápida</option>
                             <option value="2">Entrega normal</option>
                         </select>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-md-4">
+                    <div class="form-wrap">
+                        <input class="form-input" id="contact-phone-5" type="text" name="telefono" data-constraints="@Numeric">
+                        <label class="form-label" for="contact-phone-5">Teléfono</label>
+                    </div>
+                </div>
+                <div class="col-8">
                     <div class="form-wrap wow fadeIn">
                         <label class="form-label" for="contact-message-6">Mensaje</label>
-                        <textarea class="form-input textarea-lg" id="contact-message-6" name="message" data-constraints="@Required"></textarea>
+                        <textarea class="form-input textarea-lg" id="contact-message-6" name="mensaje" data-constraints="@Required"></textarea>
                     </div>
                 </div>
             </div>
             <div class="group-custom-1 group-middle oh-desktop">
-                <button class="button button-lg button-primary button-winona wow fadeInRight" type="submit">Enviar mensaje</button>
+                <input type="submit" class="button button-lg button-primary button-winona wow fadeInRight" value="Enviar mensaje">
                 <!-- Quote Classic-->
                 <article class="quote-classic quote-classic-3 wow slideInDown">
                     <div class="quote-classic-text">

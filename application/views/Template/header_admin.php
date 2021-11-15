@@ -153,6 +153,13 @@
                     </a>
                 </li><!-- End Productos Page Nav -->
 
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="<?= base_url(); ?>Formulario">
+                        <i class="bi bi-envelope"></i>
+                        <span>Formularios</span>
+                    </a>
+                </li><!-- End Productos Page Nav -->
+
 
                 <li class="nav-heading">Otros</li>
 
