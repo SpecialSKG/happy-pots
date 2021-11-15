@@ -6,7 +6,7 @@ class Product extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('model_producto');
+		$this->load->model('ProductoModel');
 		$this->load->model('CrudModel');
 	}
 
@@ -25,13 +25,13 @@ class Product extends CI_Controller
 			'data_view' => array(),
 			'activo' => 'active'
 			);
-		$this->load->model('model_producto');
-		$data['producto'] = $this->model_producto->mostrar_producto($inicio,$limite);
+		$this->load->model('ProductoModel');
+		$data['producto'] = $this->ProductoModel->mostrar_producto($inicio,$limite);
 
 		/*pagination*/
 		$this->load->library('pagination');
 		$config['base_url'] = base_url().'product/pagina/';
-		$config['total_rows'] = count($this->model_producto->mostrar_producto());
+		$config['total_rows'] = count($this->ProductoModel->mostrar_producto());
 		$config['per_page'] = $limite;
 		$config['first_url'] = base_url().'product';
 		$config['full_tag_open'] = '<ul class="pagination">';
@@ -60,14 +60,14 @@ class Product extends CI_Controller
 		if($this->uri->segment(3)!='')
 		{
 			$id=$this->uri->segment(3);
-			$data['producto_actualizar'] = $this->model_producto->traer_producto($id);
+			$data['producto_actualizar'] = $this->ProductoModel->traer_producto($id);
 		}
 		/*
 		$data = array(
 			'page_title' => 'Productos',
 			'view' => 'Producto',
 			'data_view' => array(
-				'productos' => $this->model_producto->mostrar_producto()
+				'productos' => $this->ProductoModel->mostrar_producto()
 			),
 			'activo' => 'active'
 		);*/
@@ -82,7 +82,7 @@ class Product extends CI_Controller
 				'page_title' => 'Productos',
 				'view' => 'producto-detalle',
 				'data_view' => array(
-					'producto' => $this->model_producto->traer_producto($this->uri->segment(3))
+					'producto' => $this->ProductoModel->traer_producto($this->uri->segment(3))
 				),
 				'activo' => 'active'
 			);
@@ -131,7 +131,7 @@ class Product extends CI_Controller
 				'img_producto_id' => $imgloaded['file_name']
 			);
 			//intentamos insertar en base de datos y retornamos segun sea el caso
-			if ($this->model_producto->insertar_producto($producto)) {
+			if ($this->ProductoModel->insertar_producto($producto)) {
 				echo json_encode(array('status' => 1, 'message' => "Producto Insertado"));
 			} else {
 				echo json_encode(array('status' => 0, 'message' => "Error al insertar el producto"));
@@ -151,12 +151,12 @@ class Product extends CI_Controller
 			'img_producto_id' => $this->input->post('img_producto_id')
 		);
 		$id = $this->input->post('id');
-		$this->model_producto->actualizar_producto($id, $producto);
+		$this->ProductoModel->actualizar_producto($id, $producto);
 	}
 
 	public function eliminar_producto($id)
 	{
-		$this->model_producto->eliminar_producto($id);
+		$this->ProductoModel->eliminar_producto($id);
 	}*/
 
 	public function insertarDetalleTemp()

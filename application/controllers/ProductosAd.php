@@ -6,7 +6,7 @@ class ProductosAd extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('model_producto');
+		$this->load->model('ProductoModel');
 		$this->load->model('CrudModel');
 	}
 
@@ -17,7 +17,7 @@ class ProductosAd extends CI_Controller
 				'page_title' => 'Productos',
 				'view' => 'Productos/ProductosAdmin',
 				'data_view' => array(),
-				'data' => $this->model_producto->getProductos()
+				'data' => $this->ProductoModel->getProductos()
 			);
 			$this->load->view('Template/main_admin', $data);
 		} else {
@@ -69,7 +69,7 @@ class ProductosAd extends CI_Controller
 				'img_producto_id' => $imgloaded['file_name']
 			);
 			//intentamos insertar en base de datos y retornamos segun sea el caso
-			if ($this->model_producto->insertar_producto($producto)) {
+			if ($this->ProductoModel->insertar_producto($producto)) {
 				redirect(base_url() . 'ProductosAd', 'refresh');
 			} else {
 				redirect(base_url() . 'Dashboard', 'refresh');
@@ -87,7 +87,7 @@ class ProductosAd extends CI_Controller
 				'view' => 'Productos/ProductosUpdate',
 				'data_view' => array(),
 				'categorias' => $this->CrudModel->mostrar('id', 'categoria'),
-				'detalle' => $this->model_producto->traer_producto($id)
+				'detalle' => $this->ProductoModel->traer_producto($id)
 			);
 			$this->load->view('Template/main_admin', $data);
 		} else {
@@ -135,7 +135,7 @@ class ProductosAd extends CI_Controller
 				);
 			}
 			$id = $this->input->post('id');
-			if ($this->model_producto->actualizar_producto($id, $producto)) {
+			if ($this->ProductoModel->actualizar_producto($id, $producto)) {
 				redirect(base_url() . 'ProductosAd', 'refresh');
 			} else {
 				redirect(base_url() . 'Dashboard', 'refresh');
@@ -153,7 +153,7 @@ class ProductosAd extends CI_Controller
 			if ($img != 'missing_img.jpg') {
 				unlink('./assets/images/productos/' . $img);
 			}
-			if ($this->model_producto->eliminar_producto($data)) {
+			if ($this->ProductoModel->eliminar_producto($data)) {
 				echo json_encode(array('success' => 1));
 			} else {
 				echo json_encode(array('success' => 0));
