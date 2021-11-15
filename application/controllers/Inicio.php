@@ -6,6 +6,7 @@ class Inicio extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('model_inicio');
 	}
 
 	public function index()
@@ -16,6 +17,7 @@ class Inicio extends CI_Controller
 			'data_view' => array(),
 			'activo' => 'active'
 		);
+		$data['producto'] = $this->model_inicio->mostrarNuevosPots();
 		$this->load->view('Template/main_view', $data);
 	}
 }
