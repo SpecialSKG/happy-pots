@@ -1,6 +1,7 @@
 $("tr td #eliminar_producto").click(
     function borrar_producto() {
         var id = $(this).attr("data-id");
+        var img = $(this).attr("data-img");
 
         Swal.fire({
             title: "ELIMINAR",
@@ -24,6 +25,7 @@ $("tr td #eliminar_producto").click(
                     dataType: "json",
                     data: {
                         id,
+                        img
                     },
                     dataType: "json",
                     success: function (data) {

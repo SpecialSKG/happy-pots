@@ -36,21 +36,21 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="floating_nombre" value="<?= $detalle->nombre; ?>" placeholder="Nombre" required>
-                                <label for="floating_nombre">Nombre</label>
+                                <input type="text" class="form-control" name="nombre" id="nombre" value="<?= $detalle->nombre; ?>" placeholder="Nombre" required>
+                                <label for="nombre">Nombre</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="descripcion" class="form-control" id="floating_descrip" value="<?= $detalle->descripcion; ?>" placeholder="Descripcion" required>
-                                <label for="floating_email">Descripcion</label>
+                                <input type="descripcion" class="form-control" name="descripcion" id="descripcion" value="<?= $detalle->descripcion; ?>" placeholder="Descripcion" required>
+                                <label for="descripcion">Descripcion</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="floating_precio" value="<?= $detalle->precio; ?>" placeholder="Precio" required>
-                                    <label for="floating_cell">Precio</label>
+                                    <input type="text" class="form-control" name="precio" id="precio" value="<?= $detalle->precio; ?>" placeholder="Precio" required>
+                                    <label for="precio">Precio</label>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                         <div class="col-md-6">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <select class="form-select" aria-label="Default select example" name="categoria" id="categoria">
+                                    <select class="form-select" aria-label="Default select example" name="id_categoria" id="categoria">
                                         <option disabled>Categorias</option>
                                         <?php foreach ($categorias as $c) { ?>
                                             <option value="<?= $c->id ?>" <?= $c->id == $detalle->id_categoria  ? 'selected' : '' ?>>
@@ -79,7 +79,7 @@
                         </div>
 
                         <div class="text-center">
-                            <input hidden id="id" value="<?= $detalle->id; ?>">
+                            <input hidden id="id" name="id" value="<?= $detalle->id; ?>">
                             <input type="submit" class="btn btn-primary" value="Guardar">
                             <button type="reset" class="btn btn-secondary">Reset</button>
                         </div>

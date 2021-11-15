@@ -21,7 +21,7 @@
                     </a>
 
                     <!-- Table with stripped rows -->
-                    <table class="table datatable">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -47,13 +47,13 @@
                                             <i class="bi bi-info-circle"></i>
                                         </a>
                                         <?php if ($this->session->userdata('id') == $d->id) : ?>
-                                            <a type="submit" class="btn btn-outline-danger disabled" >
+                                            <a type="submit" class="btn btn-outline-danger disabled">
                                                 <i class="bi bi-exclamation-octagon"></i>
                                             </a>
                                         <?php else : ?>
-                                            <a type="submit" data-id="<?= $d->id ?>" id="delete" class="btn btn-danger">
+                                            <button data-id="<?= $d->id ?>" id="delete" class="btn btn-danger">
                                                 <i class="bi bi-exclamation-octagon"></i>
-                                            </a>
+                                            </button>
                                         <?php endif; ?>
 
                                     </td>

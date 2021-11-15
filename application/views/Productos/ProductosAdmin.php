@@ -53,7 +53,7 @@
                                         <a type="submit" href="<?= base_url() . 'ProductosAd/obtenerProducto/' . $d->id ?>" class="btn btn-info">
                                             <i class="bi bi-info-circle"></i>
                                         </a>
-                                        <button data-id="<?= $d->id ?>" id="eliminar_producto" class="btn btn-danger">
+                                        <button data-img="<?= $d->img_producto_id ?>" data-id="<?= $d->id ?>" id="eliminar_producto" class="btn btn-danger">
                                             <i class="bi bi-exclamation-octagon"></i>
                                         </button>
                                     </td>
