@@ -72,7 +72,7 @@
 
                 <input type="number" required class="form-control mt-5" id="cantidad" placeholder="¿Cuántos quieres?" style="font-size:1.3rem;">
                 <div class="btn btn-sm btn-primary mt-4" name="agregarTemp" id="agregarTemp">Reservar producto</div>
-                <button class="btn btn-sm mt-4" name="verCanasta" id="verCanasta" >Ver canasta</button>
+                <a class="btn btn-sm mt-4" name="verCanasta" id="verCanasta" href="<?= base_url("Carrito")?>" >Ver canasta</a>
             </div>
         </div>
         <div class="row">
@@ -119,9 +119,5 @@
             });
         });
 
-        $("#verCanasta").click(function (e) { 
-            e.preventDefault();
-
-        });
     });
 </script>

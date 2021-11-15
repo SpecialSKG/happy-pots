@@ -163,7 +163,7 @@ class Product extends CI_Controller
 	{
 		if ($this->session->userdata('login')) {
 
-			if ($this->input->post('cantidad') == "" || $this->input->post('cantidad') < 0) {
+			if ($this->input->post('cantidad') == "" || $this->input->post('cantidad') <= 0) {
 				echo json_encode(array('result' => 0, 'message' => "La cantidad de macetas tiene que ser mayor a 0"));
 			} else {
 				$item = array(

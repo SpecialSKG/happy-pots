@@ -58,9 +58,24 @@ class CrudModel extends CI_Model{
         return $query->row();
     }
 
+    public function mostrarItem($id, $nombreId, $tabla){
+            $this->db->where($nombreId, $id);
+            $query = $this->db->get($tabla);
+            return $query->row();
+    } 
+
     public function listarWhereQuery($tabla, $where){
         $sql = $this->db->query("SELECT * FROM ".$tabla." where ".$where);
         return $sql->result();
+    }
+
+    public function listarLoQueSea($query){
+        $sql = $this->db->query($query);
+        return $sql->result();
+    }
+
+    public function hacerReserva(){
+           
     }
 
 }

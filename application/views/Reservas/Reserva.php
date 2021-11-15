@@ -54,6 +54,9 @@
                     </table>
                     <!-- End Table with stripped rows -->
 
+                    <?php foreach ($reservas as $r) { ?>
+                        <div>asda</div>
+                    <?php } ?>
                 </div>
             </div>
 
