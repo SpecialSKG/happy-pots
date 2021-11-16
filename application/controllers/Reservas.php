@@ -127,7 +127,7 @@ class Reservas extends CI_Controller
 				'page_title' => 'Detalle Reserva',
 				'view' => 'Reservas/ReservaPerfil',
 				'data_view' => array(
-					'reservas' => $this->CrudModel->listarLoQueSea(
+					'reservas' => $this->crudModel->listarLoQueSea(
 						"select r.id as id_reserva, r.id as id_usuario, r.fecha as fecha, r.hora as hora, r.total as total, l.lugar from reserva r inner join detalle d on r.id = d.reserva inner join lugar l on r.lugar = l.id where r.usuario =".$this->session->userdata("id")." group by r.id ;")
 
 				),
