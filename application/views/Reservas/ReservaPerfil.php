@@ -8,6 +8,64 @@
     </nav>
 </div><!-- End Page Title -->
 
+<!-- <section class="section contact">
+    <div class="row gy-4">
+        <div class="col-xl-6 offset-lg-3">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="info-box card">
+                        <i class="bi bi-emoji-laughing"></i>
+                        <h3>Usuario</h3>
+                        <select class="form-select" id="floating_usuario" aria-label="State" disabled>
+                            <option selected>Opciones</option>
+                            <?php //if (isset($detalle->lugar)) { ?>
+                                <?php //foreach ($usuario as $u) : ?>
+                                    <option value="<?= //$u->id; ?>" <?= //$u->id == $detalle->usuario  ? 'selected' : '' ?>>
+                                        <?= //$u->nombre; ?>
+                                    </option>
+                                <?php //endforeach; ?>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="info-box card">
+                        <i class="bi bi-compass"></i>
+                        <h3>Lugar</h3>
+                        <select class="form-select" id="floating_lugar" aria-label="State" disabled>
+                            <option selected>Opciones</option>
+                            <?php //if (isset($detalle->lugar)) { ?>
+                                <?php //foreach ($lugar as $l) : ?>
+                                    <option value="<?= //$l->id; ?>" <?=// $l->id == $detalle->lugar  ? 'selected' : '' ?>>
+                                        <?= //$l->lugar; ?>
+                                    </option>
+                                <?php //endforeach; ?>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="info-box card">
+                        <i class="bi bi-calendar-day"></i>
+                        <h3>Fecha</h3>
+                        <?php //if (isset($detalle->usuario)) { ?>
+                            <p><?= //$detalle->fecha; ?></p>
+                        <?php //} ?>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="info-box card">
+                        <i class="bi bi-clock"></i>
+                        <h3>Hora</h3>
+                        <?php //if (isset($detalle->hora)) { ?>
+                            <p><?= //$detalle->hora; ?></p>
+                        <?php //} ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
 <section class="section">
     <div class="container my-2">
         <h2 class="display-4 py-2">Mis reservas</h2>
