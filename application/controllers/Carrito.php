@@ -152,10 +152,11 @@ class Carrito extends CI_Controller
 
     public function reserva()
     {
-        $date = DateTime::createFromFormat('d/m/Y', $this->input->post('fecha'));
+        $date = str_replace('/', '-',$this->input->post('fecha') ) ;
+       // $date = DateTime::createFromFormat('d/m/Y', $this->input->post('fecha'));
 
         $item = (object) array(
-            'fecha' => $date->format('Y-m-d'),
+            'fecha' => date('Y-m-d', strtotime($date)),
             'lugar' => $this->input->post('lugarhidden'),
             'hora' => $this->input->post('horahidden'),
             'total' => $this->input->post('total'),

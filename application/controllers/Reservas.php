@@ -53,13 +53,11 @@ class Reservas extends CI_Controller
 				'fecha' => $this->input->post('fecha'),
 				'hora' => $this->input->post('hora')
 			);
-			echo json_encode($data);
-			/*
 			if ($this->Reserva_M->insertReservas($data)) {
 				echo json_encode(array('success' => 1));
 			} else {
 				echo json_encode(array('success' => 0));
-			}*/
+			}
 		} else {
 			echo "no se puede acceder";
 		}
