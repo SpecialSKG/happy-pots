@@ -14,8 +14,8 @@ class DashboardModel extends CI_Model {
 		$this->db->from('reserva as r');
 		$this->db->join('usuario as u', 'u.id = r.usuario', 'left');
 		$this->db->join('lugar as l', 'l.id = r.lugar', 'left');
-		$this->db->order_by('r.id', 'DES');
-        $this->db->where('r.fecha', date("Y-m-d"));
+		$this->db->order_by('r.fecha', 'ASC');
+        //$this->db->where('r.fecha', date("Y-m"));
 		$result = $this->db->get();
 		return $result->result();
 	}
