@@ -7,7 +7,11 @@ class Reservas extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Reserva_M');
+<<<<<<< Updated upstream
 		$this->load->model('CrudModel');
+=======
+		$this->load->model('crudModel');
+>>>>>>> Stashed changes
 	}
 
 	public function index()
@@ -53,11 +57,13 @@ class Reservas extends CI_Controller
 				'fecha' => $this->input->post('fecha'),
 				'hora' => $this->input->post('hora')
 			);
+			echo json_encode($data);
+			/*
 			if ($this->Reserva_M->insertReservas($data)) {
 				echo json_encode(array('success' => 1));
 			} else {
 				echo json_encode(array('success' => 0));
-			}
+			}*/
 		} else {
 			echo "no se puede acceder";
 		}
@@ -127,7 +133,7 @@ class Reservas extends CI_Controller
 				'page_title' => 'Detalle Reserva',
 				'view' => 'Reservas/ReservaPerfil',
 				'data_view' => array(
-					'reservas' => $this->CrudModel->listarLoQueSea(
+					'reservas' => $this->crudModel->listarLoQueSea(
 						"select r.id as id_reserva, r.id as id_usuario, r.fecha as fecha, r.hora as hora, r.total as total, l.lugar from reserva r inner join detalle d on r.id = d.reserva inner join lugar l on r.lugar = l.id where r.usuario =".$this->session->userdata("id")." group by r.id ;")
 
 				),
