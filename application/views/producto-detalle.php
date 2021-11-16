@@ -52,22 +52,22 @@
 
                 <label class="col-2">
                     <input type="radio" name="material" id="material" value="4" checked>
-                    <img class="border border-dark" src="<?= base_url('assets/images/materiales/Blanco.jpg') ?>">
+                    <img class="border border-dark" src="<?= base_url('assets/images/materiales/blanco1.jpg') ?>">
                 </label>
 
                 <label class="col-2">
                     <input type="radio" name="material" id="material" value="3">
-                    <img class="border border-dark" src="<?= base_url('assets/images/materiales/Verde.jpg') ?>">
+                    <img class="border border-dark" src="<?= base_url('assets/images/materiales/verde1.jpg') ?>">
                 </label>
 
                 <label class="col-2">
                     <input type="radio" name="material" id="material" value="2">
-                    <img class="border border-dark" src="<?= base_url('assets/images/materiales/Azul.jpg') ?>">
+                    <img class="border border-dark" src="<?= base_url('assets/images/materiales/azul1.jpg') ?>">
                 </label>
 
                 <label class="col-2">
                     <input type="radio" name="material" id="material" value="1">
-                    <img class="border border-dark" src="<?= base_url('assets/images/materiales/Rojo.jpg') ?>">
+                    <img class="border border-dark" src="<?= base_url('assets/images/materiales/rojo1.jpg') ?>">
                 </label>
 
                 <input type="number" required class="form-control mt-5" id="cantidad" placeholder="¿Cuántos quieres?" style="font-size:1.3rem;">
