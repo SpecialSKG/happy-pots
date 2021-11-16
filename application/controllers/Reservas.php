@@ -7,11 +7,7 @@ class Reservas extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Reserva_M');
-<<<<<<< Updated upstream
 		$this->load->model('CrudModel');
-=======
-		$this->load->model('crudModel');
->>>>>>> Stashed changes
 	}
 
 	public function index()
