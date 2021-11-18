@@ -57,6 +57,13 @@
 <script src="<?= base_url('assets/js/jqueryui/jquery-ui.js') ?>"></script>
 <script src="<?= base_url('assets/js/jquery.validate.min.js') ?>"></script>
 <!-- coded by Himic-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PEW8XHSY1N"></script><script>  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PEW8XHSY1N');
+</script>
 </body>
 
 </html>
