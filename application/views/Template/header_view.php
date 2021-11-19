@@ -109,9 +109,9 @@
                                         </li>
                                     </ul>
                                     <ul class="list-share-2">
-                                        <li>
+                                        <!-- <li>
                                             <a class="icon mdi mdi-facebook" href="#" target="_blank"></a>
-                                        </li>
+                                        </li> -->
                                         <li>
                                             <a class="icon fa fa-instagram" href="https://www.instagram.com/happy.potsv/" target="_blank"></a>
                                         </li>
