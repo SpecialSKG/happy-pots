@@ -12,15 +12,18 @@ class Reservas extends CI_Controller
 
 	public function index()
 	{
-		if ($this->session->userdata("login") === TRUE) {
-			$data = array(
-				'page_title' => 'Reservas',
-				'view' => 'Reservas/Reserva',
-				'data_view' => array(
-				),
-				'data' => $this->Reserva_M->getReservas()
-			);
-			$this->load->view('Template/main_admin', $data);
+		if ($this->session->userdata('login') === TRUE) {
+			if ($this->session->userdata('tipo') == '1') {
+				$data = array(
+					'page_title' => 'Reservas',
+					'view' => 'Reservas/Reserva',
+					'data_view' => array(),
+					'data' => $this->Reserva_M->getReservas()
+				);
+				$this->load->view('Template/main_admin', $data);
+			} else if ($this->session->userdata('tipo') == '2') {
+				redirect(base_url() . 'DashboardCliente', 'refresh');
+			}
 		} else {
 			redirect(base_url() . 'Login', 'refresh');
 		}
@@ -29,15 +32,19 @@ class Reservas extends CI_Controller
 	//ingresar una reserva
 	public function ins_Reserva()
 	{
-		if ($this->session->userdata("login") === TRUE) {
-			$data = array(
-				'page_title' => 'Reservas',
-				'view' => 'Reservas/ReservaInsert',
-				'data_view' => array(),
-				'usuario' => $this->Reserva_M->getUsuario(),
-				'lugar' => $this->Reserva_M->getLugar()
-			);
-			$this->load->view('Template/main_admin', $data);
+		if ($this->session->userdata('login') === TRUE) {
+			if ($this->session->userdata('tipo') == '1') {
+				$data = array(
+					'page_title' => 'Reservas',
+					'view' => 'Reservas/ReservaInsert',
+					'data_view' => array(),
+					'usuario' => $this->Reserva_M->getUsuario(),
+					'lugar' => $this->Reserva_M->getLugar()
+				);
+				$this->load->view('Template/main_admin', $data);
+			} else if ($this->session->userdata('tipo') == '2') {
+				redirect(base_url() . 'DashboardCliente', 'refresh');
+			}
 		} else {
 			redirect(base_url() . 'Login', 'refresh');
 		}
@@ -66,16 +73,20 @@ class Reservas extends CI_Controller
 	//obtener datos de 1 usuario
 	public function obtenerReserva($id)
 	{
-		if ($this->session->userdata("login") === TRUE) {
-			$data = array(
-				'page_title' => 'Detalle Reserva',
-				'view' => 'Reservas/ReservaUpdate',
-				'data_view' => array(),
-				'usuario' => $this->Reserva_M->getUsuario(),
-				'lugar' => $this->Reserva_M->getLugar(),
-				'detalle' => $this->Reserva_M->obtReservas($id),
-			);
-			$this->load->view('Template/main_admin', $data);
+		if ($this->session->userdata('login') === TRUE) {
+			if ($this->session->userdata('tipo') == '1') {
+				$data = array(
+					'page_title' => 'Detalle Reserva',
+					'view' => 'Reservas/ReservaUpdate',
+					'data_view' => array(),
+					'usuario' => $this->Reserva_M->getUsuario(),
+					'lugar' => $this->Reserva_M->getLugar(),
+					'detalle' => $this->Reserva_M->obtReservas($id),
+				);
+				$this->load->view('Template/main_admin', $data);
+			} else if ($this->session->userdata('tipo') == '2') {
+				redirect(base_url() . 'DashboardCliente', 'refresh');
+			}
 		} else {
 			redirect(base_url() . 'Login', 'refresh');
 		}
@@ -84,36 +95,44 @@ class Reservas extends CI_Controller
 	//actualizar datos de 1 usuario
 	public function actualizarReserva()
 	{
-		if ($this->input->is_ajax_request()) {
-			$data = array(
-				'usuario' => $this->input->post('usuario'),
-				'lugar' => $this->input->post('lugar'),
-				'fecha' => $this->input->post('fecha'),
-				'hora' => $this->input->post('hora'),
-				'id' => $this->input->post('id')
-			);
-			if ($this->Reserva_M->updateReservas($data)) {
-				echo json_encode(array('success' => 1));
-			} else {
-				echo json_encode(array('success' => 0));
+		if ($this->session->userdata('login') === TRUE) {
+			if ($this->session->userdata('tipo') == '1') {
+				$data = array(
+					'usuario' => $this->input->post('usuario'),
+					'lugar' => $this->input->post('lugar'),
+					'fecha' => $this->input->post('fecha'),
+					'hora' => $this->input->post('hora'),
+					'id' => $this->input->post('id')
+				);
+				if ($this->Reserva_M->updateReservas($data)) {
+					echo json_encode(array('success' => 1));
+				} else {
+					echo json_encode(array('success' => 0));
+				}
+			} else if ($this->session->userdata('tipo') == '2') {
+				redirect(base_url() . 'DashboardCliente', 'refresh');
 			}
 		} else {
-			echo "no se puede acceder";
+			redirect(base_url() . 'Login', 'refresh');
 		}
 	}
 
 	//borrar 1 Reserva
 	public function borrarReserva()
 	{
-		if ($this->input->is_ajax_request()) {
-			$data = array('id' => $this->input->post('id'));
-			if ($this->Reserva_M->deleteReservas($data)) {
-				echo json_encode(array('success' => 1));
-			} else {
-				echo json_encode(array('success' => 0));
+		if ($this->session->userdata('login') === TRUE) {
+			if ($this->session->userdata('tipo') == '1') {
+				$data = array('id' => $this->input->post('id'));
+				if ($this->Reserva_M->deleteReservas($data)) {
+					echo json_encode(array('success' => 1));
+				} else {
+					echo json_encode(array('success' => 0));
+				}
+			} else if ($this->session->userdata('tipo') == '2') {
+				redirect(base_url() . 'DashboardCliente', 'refresh');
 			}
 		} else {
-			echo "no se puede acceder";
+			redirect(base_url() . 'Login', 'refresh');
 		}
 	}
 
@@ -128,7 +147,8 @@ class Reservas extends CI_Controller
 				'view' => 'Reservas/ReservaPerfil',
 				'data_view' => array(
 					'reservas' => $this->CrudModel->listarLoQueSea(
-						"select r.id as id_reserva, r.id as id_usuario, r.fecha as fecha, r.hora as hora, r.total as total, l.lugar from reserva r inner join detalle d on r.id = d.reserva inner join lugar l on r.lugar = l.id where r.usuario =".$this->session->userdata("id")." group by r.id ;")
+						"select r.id as id_reserva, r.id as id_usuario, r.fecha as fecha, r.hora as hora, r.total as total, l.lugar from reserva r inner join detalle d on r.id = d.reserva inner join lugar l on r.lugar = l.id where r.usuario =" . $this->session->userdata("id") . " group by r.id ;"
+					)
 
 				),
 				'usuario' => $this->Reserva_M->getUsuario(),

@@ -16,7 +16,7 @@ class Product extends CI_Controller
 		$inicio = 0;
 		$limite = 4;
 
-		if($pagina){
+		if ($pagina) {
 			$inicio = ($pagina - 1) * $limite;
 		}
 		$data = array(
@@ -24,7 +24,7 @@ class Product extends CI_Controller
 			'view' => 'Producto',
 			'data_view' => array(),
 			'activo' => 'active'
-			);
+		);
 		$this->load->model('ProductoModel');
 		$data['producto'] = $this->ProductoModel->mostrar_producto_activo($inicio,$limite);
 
@@ -33,7 +33,7 @@ class Product extends CI_Controller
 		$config['base_url'] = base_url().'product/pagina/';
 		$config['total_rows'] = count($this->ProductoModel->mostrar_producto_activo());
 		$config['per_page'] = $limite;
-		$config['first_url'] = base_url().'product';
+		$config['first_url'] = base_url() . 'product';
 		$config['full_tag_open'] = '<ul class="pagination">';
 		$config['full_tag_close'] = '</ul>';
 		$config['first_link'] = '&lsaquo;&lsaquo; Primero';
@@ -56,10 +56,9 @@ class Product extends CI_Controller
 		$this->pagination->initialize($config);
 		/*end pagination*/
 
-		
-		if($this->uri->segment(3)!='')
-		{
-			$id=$this->uri->segment(3);
+
+		if ($this->uri->segment(3) != '') {
+			$id = $this->uri->segment(3);
 			$data['producto_actualizar'] = $this->ProductoModel->traer_producto($id);
 		}
 		/*
@@ -71,7 +70,7 @@ class Product extends CI_Controller
 			),
 			'activo' => 'active'
 		);*/
-		
+
 		$this->load->view('Template/main_view', $data);
 	}
 
@@ -184,6 +183,4 @@ class Product extends CI_Controller
 			echo json_encode(array('result' => 0, 'message' => 'no esta logeado'));
 		}
 	}
-
-	
 }

@@ -78,3 +78,18 @@ class Login extends CI_Controller
 		}
 	}
 }
+/* if ($this->session->userdata('login') === TRUE) {
+	if ($this->session->userdata('tipo') == '1') {
+
+	} else if ($this->session->userdata('tipo') == '2') {
+		redirect(base_url() . 'DashboardCliente', 'refresh');
+	}
+} else {
+	redirect(base_url() . 'Login', 'refresh');
+}
+
+if ($this->session->userdata('login') === TRUE) {
+
+} else {
+	redirect(base_url() . 'Login', 'refresh');
+} */
