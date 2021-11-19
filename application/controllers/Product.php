@@ -26,12 +26,12 @@ class Product extends CI_Controller
 			'activo' => 'active'
 			);
 		$this->load->model('ProductoModel');
-		$data['producto'] = $this->ProductoModel->mostrar_producto($inicio,$limite);
+		$data['producto'] = $this->ProductoModel->mostrar_producto_activo($inicio,$limite);
 
 		/*pagination*/
 		$this->load->library('pagination');
 		$config['base_url'] = base_url().'product/pagina/';
-		$config['total_rows'] = count($this->ProductoModel->mostrar_producto());
+		$config['total_rows'] = count($this->ProductoModel->mostrar_producto_activo());
 		$config['per_page'] = $limite;
 		$config['first_url'] = base_url().'product';
 		$config['full_tag_open'] = '<ul class="pagination">';

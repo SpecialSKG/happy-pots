@@ -22,6 +22,18 @@ class ProductoModel extends CI_Model {
 		return $query->result();
 	}
 
+	public function mostrar_producto_activo($inicio = FALSE, $limite = FALSE)
+	{
+		$this->db->order_by('id', 'asc');
+		$this->db->where('estado','1');
+		if($inicio !== FALSE && $limite !== FALSE){
+			$this->db->limit($limite,$inicio);
+		}
+		$query=$this->db->get('producto');
+
+		return $query->result();
+	}
+
 		//Obtener todos los datos de los productos
 	public function getProductos(){
 		$this->db->select('p.id, p.nombre, p.descripcion, p.precio, p.img_producto_id, c.nombre_categorias, p.estado');
