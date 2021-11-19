@@ -159,7 +159,7 @@ class Usuario extends CI_Controller
 				'page_title' => 'Datos Perfil',
 				'view' => 'Usuarios/UsuarioPerfil',
 				'data_view' => array(),
-				'Perfil' => $this->Usuario_M->obtPerfil($id)
+				'Perfil' => $this->Usuario_M->obtPerfil($this->session->userdata("id"))
 			);
 			$this->load->view('Template/main_admin', $data);
 		} else {
