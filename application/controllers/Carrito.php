@@ -164,6 +164,6 @@ class Carrito extends CI_Controller
         );
 
         $this->CartModel->executeInsert($item);
-        redirect(base_url());
+        redirect(base_url("Reservas/obtenerReservaPerfil/"). $this->session->userdata("id"));
     }
 }
