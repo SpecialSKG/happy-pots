@@ -139,7 +139,8 @@
             beforeShowDay: function(date) {
                 return [date.getDay() == 0 || date.getDay() == 6]
             },
-            minDate: dateDay
+            minDate: dateDay,
+            dateFormat: 'yy-mm-dd' 
         },
         
         );
