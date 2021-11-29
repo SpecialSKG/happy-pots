@@ -39,11 +39,11 @@
                 <div class="signup nodisplay">
                     <h1>Registro</h1>
                     <form autocomplete="off">
-                        <input type="text" id="r_nombre" name="nombre" placeholder="nombre">
-                        <input type="email" id="r_email" name="email" placeholder="email" required>
-                        <input type="text" id="r_cell" name="cell" placeholder="telefono">
-                        <input type="password" id="r_pass" name="pass" placeholder="password">
-                        <input type="button" class="button submit" value="Crear Cuenta" id="registro_cliente">
+                        <input type="text" id="r_nombre" name="nombre" placeholder="Nombre Completo" required>
+                        <input type="email" id="r_email" name="email" placeholder="Corre Electronico" required>
+                        <input type="text" id="r_cell" name="cell" placeholder="Telefono" required>
+                        <input type="password" id="r_pass" name="pass" placeholder="Contraseña" required>
+                        <input type="button" class="button submit" value="Guardar Cuenta" id="registro_cliente">
                     </form>
                 </div>
 
@@ -54,7 +54,7 @@
                         <input type="password" placeholder="Contraseña" name="pass" id="l_pass" required>
 
                         <!-- <input type="button" class="button submit" value="Login" id="logeo"> -->
-                        <button type="submit" class="button submit">Login</button>
+                        <button type="submit" class="button submit">Inicio Sesion</button>
                     </form>
                 </div>
 
@@ -65,7 +65,7 @@
                 <p class="desc">Elige tu maceta <span>perfecto</span></p>
                 <img class="flower" src="<?= base_url() . 'assets/images/happypots.jpg'; ?>" alt="Logo de Happy Pots" width="50" height="50" border="0">
                 <p class="account">Tienes una cuenta?</p>
-                <button class="button" id="signin">Login</button>
+                <button class="button" id="signin">Inicio Sesion</button>
             </div>
 
             <div class="rightbox">
@@ -73,7 +73,7 @@
                 <p class="desc">Una maceta para tu <span>vida.</span></p>
                 <img class="flower" src="<?= base_url() . 'assets/images/happypots.jpg'; ?>" alt="Logo de Happy Pots" width="50" height="50" />
                 <p class="account">No tienes una cuenta?</p>
-                <button class="button" id="signup">sign up</button>
+                <button class="button" id="signup">Crear Cuenta</button>
             </div>
 
         </div>
