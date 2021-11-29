@@ -2,9 +2,7 @@
     <h1>Dashboard</h1>
     <nav>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active">
-                <a href="">Inicio</a>
-            </li>
+            <li class="breadcrumb-item active">Inicio</li>
         </ol>
     </nav>
 </div>

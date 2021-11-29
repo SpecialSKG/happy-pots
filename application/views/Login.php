@@ -18,7 +18,7 @@
 <body>
     <div class="container">
 
-        <button class="btn-share">
+        <button class="btn-share" onclick="location.href='<?= base_url(); ?>'">
             <span class="btn-text">Inicio</span>
             <ul class="social-icons">
                 <li>

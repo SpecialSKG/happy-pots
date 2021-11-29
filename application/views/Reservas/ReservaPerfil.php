@@ -2,7 +2,9 @@
     <h1>Reserva</h1>
     <nav>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><i class="bi bi-house-door"></i></li>
+            <li class="breadcrumb-item">
+                <a href="<?= base_url("/DashboardCliente") ?>"><i class="bi bi-house-door"></i></a>
+            </li>
             <li class="breadcrumb-item active">Reserva</li>
         </ol>
     </nav>

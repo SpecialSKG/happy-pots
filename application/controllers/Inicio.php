@@ -15,24 +15,30 @@ class Inicio extends CI_Controller
 			'page_title' => 'Happy Pots',
 			'view' => 'Bienvenida',
 			'data_view' => array(),
-			'activo' => 'active'
+			'activo' => 'active',
+			'producto' => $this->InicioModel->mostrarNuevosPots(),
+			'categoria' => $this->InicioModel->mostrarCategorias()
 		);
-		$data['producto'] = $this->InicioModel->mostrarNuevosPots();
 		$this->load->view('Template/main_view', $data);
 	}
 
-	public function insertarFormulario(){
-		$datos = array(
-			'nombrecompleto' => $this->input->post('nombrecompleto'),
-			'correoelectronico' => $this->input->post('correoelectronico'),
-			'tipoentrega' => $this->input->post('tipoentrega'),
-			'telefono' => $this->input->post('telefono'),
-			'mensaje' => $this->input->post('mensaje')
-		);
-		if ($this->InicioModel->insertFormulario($datos)) {
-			redirect(base_url() . 'Inicio', 'refresh');
+	public function insertarFormulario()
+	{
+		if ($this->input->is_ajax_request()) {
+			$data = array(
+				'nombrecompleto' => $this->input->post('nombrecompleto'),
+				'correoelectronico' => $this->input->post('correoelectronico'),
+				'tipoentrega' => $this->input->post('tipoentrega'),
+				'telefono' => $this->input->post('telefono'),
+				'mensaje' => $this->input->post('mensaje')
+			);
+			if ($this->InicioModel->insertFormulario($data)) {
+				echo json_encode(array('success' => 1));
+			} else {
+				echo json_encode(array('success' => 0));
+			}
 		} else {
-			redirect(base_url() . 'Inicio', 'refresh');
+			echo "no se puede acceder";
 		}
 	}
 }

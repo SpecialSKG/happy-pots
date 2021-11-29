@@ -19,7 +19,7 @@ $("tr td #delete").click(
             if (result.isConfirmed) {
                 $.ajax({
                     dataType: 'json',
-                    url: baseurl + "Usuario/borrar",
+                    url: baseurl + "/Usuario/borrarUsuario",
                     type: 'post',
                     dataType: 'json',
                     data: {
@@ -35,7 +35,7 @@ $("tr td #delete").click(
                                 showConfirmButton: false,
                                 timer: 1500
                             })
-                            document.location.href = baseurl + 'Usuario/';
+                            document.location.href = baseurl + '/Usuario';
                         } else {
                             Swal.fire({
                                 icon: 'error',

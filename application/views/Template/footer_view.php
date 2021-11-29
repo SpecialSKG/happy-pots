@@ -8,20 +8,30 @@
                     <div class="group-xmd group-sm-justify">
                         <div class="footer-modern-contacts wow slideInUp">
                             <div class="unit unit-spacing-sm align-items-center">
-                                <div class="unit-left"><span class="icon icon-24 mdi mdi-phone"></span></div>
-                                <div class="unit-body"><a class="phone" href="tel:+50374700643">(503) 7470-0643</a></div>
+                                <div class="unit-left">
+                                    <span class="icon icon-24 mdi mdi-phone"></span>
+                                </div>
+                                <div class="unit-body">
+                                    <a class="phone" href="tel:+50374700643">(+503) 7470-0643</a>
+                                </div>
                             </div>
                         </div>
                         <div class="footer-modern-contacts wow slideInDown">
                             <div class="unit unit-spacing-sm align-items-center">
-                                <div class="unit-left"><span class="icon mdi mdi-email"></span></div>
-                                <div class="unit-body"><a class="mail" href="mailto:happypots@outlook.es">happypots@outlook.es</a></div>
+                                <div class="unit-left">
+                                    <span class="icon mdi mdi-email"></span>
+                                </div>
+                                <div class="unit-body">
+                                    <a class="mail" href="mailto:happypots@outlook.es">happypots@outlook.es</a>
+                                </div>
                             </div>
                         </div>
                         <div class="wow slideInRight">
                             <ul class="list-inline footer-social-list footer-social-list-2 footer-social-list-3">
-                                <li><a class="icon mdi mdi-facebook" href="#"></a></li>
-                                <li><a class="icon mdi fa-instagram" href="https://www.instagram.com/happy.potsv/" target="_blank"></a></li>
+                                <!-- <li><a class="icon mdi mdi-facebook" href="#"></a></li> -->
+                                <li>
+                                    <a class="icon mdi fa-instagram" href="https://www.instagram.com/happy.potsv/" target="_blank"></a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -56,13 +66,27 @@
 <script src="<?= base_url() . 'assets/js/main.js'; ?>"></script>
 <script src="<?= base_url('assets/js/jqueryui/jquery-ui.js') ?>"></script>
 <script src="<?= base_url('assets/js/jquery.validate.min.js') ?>"></script>
-<!-- coded by Himic-->
 
+<script src="<?= base_url() . 'assets/plugins/sweetalert/sweetalert2.all.js'; ?>"></script>
+
+<!-- coded by Himic-->
+<?php if ($view == 'Bienvenida') {  ?>
+    <script src="<?= base_url() . 'assets/js/formulario/insert_form.js'; ?>"></script>
+<?php } ?>
+
+<?php if ($view == 'Contacto') {  ?>
+    <script src="<?= base_url() . 'assets/js/formulario/insert_form.js'; ?>"></script>
+<?php } ?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PEW8XHSY1N"></script><script>  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PEW8XHSY1N');
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PEW8XHSY1N"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PEW8XHSY1N');
 </script>
 </body>
 

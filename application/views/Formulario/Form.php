@@ -2,9 +2,10 @@
     <h1>Tabla Formulario</h1>
     <nav>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><i class="bi bi-house-door"></i></li>
-            <li class="breadcrumb-item">Formulario</li>
-            <li class="breadcrumb-item active">Data</li>
+            <li class="breadcrumb-item">
+                <a href="<?= base_url("/Dashboard") ?>"><i class="bi bi-house-door"></i></a>
+            </li>
+            <li class="breadcrumb-item active">Formulario</li>
         </ol>
     </nav>
 </div><!-- End Page Title -->

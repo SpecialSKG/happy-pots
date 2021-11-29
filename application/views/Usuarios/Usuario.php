@@ -2,9 +2,10 @@
     <h1>Tabla Usuarios</h1>
     <nav>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><i class="bi bi-house-door"></i></li>
-            <li class="breadcrumb-item">Usuario</li>
-            <li class="breadcrumb-item active">Data</li>
+            <li class="breadcrumb-item">
+                <a href="<?= base_url("/Dashboard") ?>"><i class="bi bi-house-door"></i></a>
+            </li>
+            <li class="breadcrumb-item active">Usuario</li>
         </ol>
     </nav>
 </div><!-- End Page Title -->
@@ -43,13 +44,15 @@
                                     <td><?= $d->email ?></td>
                                     <td><?= base64_decode($d->pass) ?></td>
                                     <td><?= $d->cell ?></td>
-                                    <td><?= $d->tipo ?></td>
+                                    <td>
+                                        <?= ($d->tipo == 1) ? '<i class="btn btn-success bi bi-star"></i>' : '<i class="btn btn-warning bi bi-vector-pen"></i>'; ?>
+                                    </td>
                                     <td>
                                         <a type="submit" href="<?= base_url() . 'Usuario/obtenerUsuario/' . $d->id ?>" class="btn btn-info">
                                             <i class="bi bi-info-circle"></i>
                                         </a>
                                         <?php if ($this->session->userdata('id') == $d->id) : ?>
-                                            <a type="submit" class="btn btn-outline-danger disabled">
+                                            <a class="btn btn-outline-danger disabled">
                                                 <i class="bi bi-exclamation-octagon"></i>
                                             </a>
                                         <?php else : ?>
@@ -71,5 +74,3 @@
         </div>
     </div>
 </section>
-
-<script src="<?php echo base_url() . 'assets/js/usuario/delete_usuario.js'; ?>"></script>

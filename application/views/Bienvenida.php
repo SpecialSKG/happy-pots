@@ -1,28 +1,33 @@
 <!-- Swiper-->
+<br><br>
 <section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true" data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
     <div class="swiper-wrapper text-sm-left">
-        <div class="swiper-slide" data-slide-bg="<?= base_url() . 'assets/images/slide-1.jpg'; ?>">
+
+        <div class="swiper-slide" data-slide-bg="<?= base_url() . 'assets/images/slide/1.png'; ?>">
+        </div>
+        <!-- slide -->
+        <div class="swiper-slide" data-slide-bg="<?= base_url() . 'assets/images/slide/2.png'; ?>">
             <div class="swiper-slide-caption section-md">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-9 col-md-8 col-lg-7 col-xl-7 offset-lg-1 offset-xxl-0">
+                        <div class="col-sm-9 col-md-8 col-lg-7 col-xl-7 offset-xxl-0">
                             <h2 class="oh swiper-title" style="color: #98BF44;-webkit-text-stroke: 1px grey;">
-                                <span class="d-inline-block" data-caption-animate="slideInUp" data-caption-delay="0">Set Geométrico</span>
+                                <span class="d-inline-block" data-caption-animate="slideInUp" data-caption-delay="0">Cariño en cada una</span>
                             </h2>
-                            <p class="big swiper-text text-white" data-caption-animate="fadeInLeft" data-caption-delay="800">Nuestras macetas hechas con mucho amor</p>
+                            <p class="big swiper-text text-white" data-caption-animate="fadeInLeft" data-caption-delay="800">Impregnadas con mucho amor en su creación.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- context-dark -->
-        <div class="swiper-slide" data-slide-bg="<?= base_url() . 'assets/images/slide-2.jpg'; ?>">
+        <!-- slide -->
+        <div class="swiper-slide" data-slide-bg="<?= base_url() . 'assets/images/slide/3.png'; ?>">
             <div class="swiper-slide-caption section-md">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-8 col-lg-7 offset-lg-1 offset-xxl-0">
+                        <div class="col-sm-8 col-lg-7 offset-xxl-0">
                             <h2 class="oh swiper-title" style="color: #98BF44;-webkit-text-stroke: 1px grey;">
-                                <span class="d-inline-block" data-caption-animate="slideInDown" data-caption-delay="0">Set Geométrico</span>
+                                <span class="d-inline-block" data-caption-animate="slideInDown" data-caption-delay="0">Magia en ellas.</span>
                             </h2>
                             <p class="big swiper-text text-white" data-caption-animate="fadeInRight" data-caption-delay="800">Cada macetita hecha a mano y con mucho amor para ti</p>
                         </div>
@@ -30,6 +35,22 @@
                 </div>
             </div>
         </div>
+        <!-- slide -->
+        <div class="swiper-slide" data-slide-bg="<?= base_url() . 'assets/images/slide/4.png'; ?>">
+            <div class="swiper-slide-caption section-md">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9 col-md-8 col-lg-7 col-xl-7 offset-xxl-0">
+                            <h2 class="oh swiper-title" style="color: #98BF44;-webkit-text-stroke: 1px grey;">
+                                <span class="d-inline-block" data-caption-animate="slideInUp" data-caption-delay="0">Diferentes Diseños</span>
+                            </h2>
+                            <p class="big swiper-text text-white" data-caption-animate="fadeInLeft" data-caption-delay="800">Para cada situacion y lugar de elección.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slide -->
     </div>
     <!-- Swiper Pagination-->
     <div class="swiper-pagination" data-bullet-custom="true"></div>
@@ -52,42 +73,25 @@
     <div class="container">
         <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Categorías</span></h3>
         <div class="row row-md row-30">
-            <div class="col-sm-6 col-lg-4">
-                <div class="oh-desktop">
-                    <!-- Services Terri-->
-                    <article class="services-terri wow slideInUp">
-                        <div class="services-terri-figure"><img src="<?= base_url() . 'assets/images/menu-1-370x278.jpg'; ?>" alt="" width="370" height="278" />
-                        </div>
-                        <div class="services-terri-caption"><span class="services-terri-icon linearicons-leaf"></span>
-                            <h5 class="services-terri-title"><a href="#">Plantas</a></h5>
-                        </div>
-                    </article>
+
+            <?php foreach ($categoria as $c) { ?>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="oh-desktop">
+                        <!-- Services Terri-->
+                        <article class="services-terri wow slideInUp">
+                            <div class="services-terri-figure">
+                                <img src="<?= base_url() . 'assets/images/categorias/'. $c->img_categoria; ?>" alt="" width="370" height="278" />
+                            </div>
+                            <div class="services-terri-caption">
+                                <span class="services-terri-icon linearicons-leaf"></span>
+                                <h5 class="services-terri-title">
+                                    <a href="#"><?= $c->nombre_categorias ?></a>
+                                </h5>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="oh-desktop">
-                    <!-- Services Terri-->
-                    <article class="services-terri wow slideInDown">
-                        <div class="services-terri-figure"><img src="<?= base_url() . 'assets/images/producto-categoria-2.jpg'; ?>" alt="" width="370" height="278" />
-                        </div>
-                        <div class="services-terri-caption"><span class="services-terri-icon linearicons-heart"></span>
-                            <h5 class="services-terri-title"><a href="#">Formas</a></h5>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="oh-desktop">
-                    <!-- Services Terri-->
-                    <article class="services-terri wow slideInDown">
-                        <div class="services-terri-figure"><img src="<?= base_url() . 'assets/images/menu-3-370x278.jpg'; ?>" alt="" width="370" height="278" />
-                        </div>
-                        <div class="services-terri-caption"><span class="services-terri-icon linearicons-paw"></span>
-                            <h5 class="services-terri-title"><a href="#">Animales</a></h5>
-                        </div>
-                    </article>
-                </div>
-            </div>
+            <?php } ?>
 
         </div>
     </div>
@@ -168,51 +172,56 @@
 <section class="section section-sm section-first bg-default">
     <div class="container">
         <h3 class="heading-3">Contáctanos</h3>
-        <form class="rd-form rd-mailform form-style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="<?= base_url("/Inicio/insertarFormulario") ?>">
-            <div class="row row-20 gutters-20">
-                <div class="col-md-6 col-lg-4 oh-desktop">
-                    <div class="form-wrap wow slideInDown">
-                        <input class="form-input" id="contact-your-name-6" type="text" name="nombrecompleto" data-constraints="@Required">
-                        <label class="form-label" for="contact-your-name-6">Nombre completo</label>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 oh-desktop">
-                    <div class="form-wrap wow slideInUp">
-                        <input class="form-input" id="contact-email-6" type="email" name="correoelectronico" data-constraints="@Email @Required">
-                        <label class="form-label" for="contact-email-6">Correo electrónico</label>
-                    </div>
-                </div>
-                <div class="col-lg-4 oh-desktop">
-                    <div class="form-wrap wow slideInDown">
-                        <!--Select 2-->
-                        <select class="form-input" data-minimum-results-for-search="Infinity" data-constraints="@Required" name="tipoentrega">
-                            <option>-- Tipo de entrega --</option>
-                            <option value="1">Entrega rápida</option>
-                            <option value="2">Entrega normal</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-wrap">
-                        <input class="form-input" id="contact-phone-5" type="text" name="telefono" data-constraints="@Numeric">
-                        <label class="form-label" for="contact-phone-5">Teléfono</label>
-                    </div>
-                </div>
-                <div class="col-8">
-                    <div class="form-wrap wow fadeIn">
-                        <label class="form-label" for="contact-message-6">Mensaje</label>
-                        <textarea class="form-input textarea-lg" id="contact-message-6" name="mensaje" data-constraints="@Required"></textarea>
-                    </div>
-                </div>
-            </div>
-            <div class="group-custom-1 group-middle oh-desktop">
-                <input type="submit" class="button button-lg button-primary button-winona wow fadeInRight" value="Enviar mensaje">
-                <!-- Quote Classic-->
+
+        <div class="row justify-content-end">
+            <div class="col-md-12 col-lg-10 offset-lg-2 oh-desktop">
                 <article class="quote-classic quote-classic-3 wow slideInDown">
                     <div class="quote-classic-text">
                         <p class="q">Recuerda reservar con 1 día de anticipación</p>
                     </div>
                 </article>
+            </div>
+        </div>
+
+        <form class="rd-form rd-mailform form-style-1">
+            <div class="row row-20 gutters-20">
+                <div class="col-md-6 col-lg-6 oh-desktop">
+                    <div class="form-wrap wow slideInDown">
+                        <input class="form-input" id="nombrecompleto" type="text" name="nombrecompleto">
+                        <label class="form-label" for="nombrecompleto">Nombre completo</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 oh-desktop">
+                    <div class="form-wrap wow slideInUp">
+                        <input class="form-input" id="correoelectronico" type="email" name="correoelectronico">
+                        <label class="form-label" for="correoelectronico">Correo electrónico</label>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 oh-desktop">
+                    <div class="form-wrap wow slideInDown">
+                        <!--Select 2-->
+                        <select class="form-input" data-minimum-results-for-search="Infinity" name="tipoentrega" id="tipoentrega">
+                            <option>-- Tipo de entrega --</option>
+                            <option value="1">Consulta Normal</option>
+                            <option value="2">Consulta Urgente</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 oh-desktop">
+                    <div class="form-wrap">
+                        <input class="form-input" id="telefono" type="text" name="telefono">
+                        <label class="form-label" for="telefono">Teléfono</label>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-12 oh-desktop">
+                    <div class="form-wrap wow fadeIn">
+                        <label class="form-label" for="mensaje">Mensaje</label>
+                        <textarea class="form-input textarea-lg" id="mensaje" name="mensaje"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="group-custom-1 group-middle oh-desktop">
+                <input type="button" class="button button-lg button-primary button-winona wow fadeInRight" value="Enviar mensaje" id="registro_form">
             </div>
         </form>
     </div>
@@ -227,7 +236,7 @@
                 <div class="box-icon-megan-header">
                     <div class="box-icon-megan-icon linearicons-calendar-full"></div>
                 </div>
-                <h5 class="box-icon-megan-title"><a href="#">Reservas</a></h5>
+                <h5 class="box-icon-megan-title"><a>Reservas</a></h5>
                 <p class="box-icon-megan-text">Somos responsables con nuestros pedidos, por eso pedimos una reserva y confirmación a la hora de entrega.</p>
             </article>
 
@@ -235,7 +244,7 @@
                 <div class="box-icon-megan-header">
                     <div class="box-icon-megan-icon linearicons-bag"></div>
                 </div>
-                <h5 class="box-icon-megan-title"><a href="#">Entregas</a></h5>
+                <h5 class="box-icon-megan-title"><a>Entregas</a></h5>
                 <p class="box-icon-megan-text">Nuestras entregas se realizan en centros comerciales o lugares donde ambas partes puedan estar cómodas y no se tengan problemas.</p>
             </article>
 
@@ -243,7 +252,7 @@
                 <div class="box-icon-megan-header">
                     <div class="box-icon-megan-icon linearicons-tag"></div>
                 </div>
-                <h5 class="box-icon-megan-title"><a href="#">Productos</a></h5>
+                <h5 class="box-icon-megan-title"><a>Productos</a></h5>
                 <p class="box-icon-megan-text">Nuestros productos son elaborados a mano, por tal razón, llevan todo nuestro cariño en la elaboración.</p>
             </article>
 
@@ -251,7 +260,7 @@
                 <div class="box-icon-megan-header">
                     <div class="box-icon-megan-icon linearicons-thumbs-up"></div>
                 </div>
-                <h5 class="box-icon-megan-title"><a href="#">Servicio</a></h5>
+                <h5 class="box-icon-megan-title"><a>Servicio</a></h5>
                 <p class="box-icon-megan-text">El cliente es nuestra prioridad #1, ya que brindamos un servicio al cliente de primer nivel.</p>
             </article>
 

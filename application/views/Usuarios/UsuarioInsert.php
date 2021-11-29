@@ -2,8 +2,10 @@
     <h1>Tabla Usuarios</h1>
     <nav>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><i class="bi bi-house-door"></i></li>
-            <li class="breadcrumb-item">Usuario</li>
+            <li class="breadcrumb-item">
+                <a href="<?= base_url("/Dashboard") ?>"><i class="bi bi-house-door"></i></a>
+            </li>
+            <li class="breadcrumb-item"><a href="<?= base_url("/Usuario") ?>">Usuarios</a></li>
             <li class="breadcrumb-item active">Data</li>
         </ol>
     </nav>
@@ -36,8 +38,11 @@
                             <div class="form-floating mb-3">
                                 <select class="form-select" id="floating_tipo" aria-label="State" required>
                                     <option selected>Opciones</option>
-                                    <option value="1">Administracion</option>
-                                    <option value="2">Usuario</option>
+                                    <?php foreach ($tipo as $t) : ?>
+                                        <option value="<?= $t->id; ?>">
+                                            <?= $t->nombre_tipo; ?>
+                                        </option>
+                                    <?php endforeach; ?>
                                 </select>
                                 <label for="floating_usuario">Tipo</label>
                             </div>

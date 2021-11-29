@@ -24,6 +24,8 @@
     <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/jqueryui/jquery-ui.structure.css') ?>">
     <link type="text/css" rel="stylesheet" href="<?= base_url('assets/css/jqueryui/jquery-ui.theme.css') ?>">
 
+    <link rel="stylesheet" href="<?= base_url() . 'assets/plugins/sweetalert/sweetalert2.css' ?>">
+
     <script src="<?= base_url() . 'assets/js/jquery.js'; ?>"></script>
     <script src="<?= base_url('assets/js/jqueryui/jquery-ui.js') ?>"></script>
     <script src="<?= base_url() . 'assets/js/alertify.min.js'; ?>"></script>
@@ -83,7 +85,9 @@
                             <!-- RD Navbar Panel-->
                             <div class="rd-navbar-panel">
                                 <!-- RD Navbar Toggle-->
-                                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap">
+                                    <span></span>
+                            </button>
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand">
                                     <a class="brand d-flex align-items-center display-6" href="<?= base_url() ?>">
@@ -98,7 +102,7 @@
                                         <li>
                                             <div class="unit unit-spacing-xs">
                                                 <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                                                <div class="unit-body"><a class="phone" href="tel:+50374700643">(503) 7470-0643</a></div>
+                                                <div class="unit-body"><a class="phone" href="tel:+50374700643">(+503) 7470-0643</a></div>
                                             </div>
                                         </li>
                                         <li>
@@ -126,13 +130,17 @@
                                 <div class="rd-navbar-main">
                                     <!-- RD Navbar Nav-->
                                     <ul class="rd-navbar-nav">
-                                        <li class="rd-nav-item <?= $view == 'Bienvenida' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url(); ?>">Inicio</a>
+                                        <li class="rd-nav-item <?= $view == 'Bienvenida' ? $activo : ''; ?>">
+                                        <a class="rd-nav-link" href="<?= base_url(); ?>">Inicio</a>
                                         </li>
-                                        <li class="rd-nav-item <?= $view == 'Acercade' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Acerca'; ?>">¿Quiénes somos?</a>
+                                        <li class="rd-nav-item <?= $view == 'Acercade' ? $activo : ''; ?>">
+                                        <a class="rd-nav-link" href="<?= base_url() . 'Acerca'; ?>">¿Quiénes somos?</a>
                                         </li>
-                                        <li class="rd-nav-item <?= $view == 'Producto' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Product'; ?>">Productos</a>
+                                        <li class="rd-nav-item <?= $view == 'Producto' ? $activo : ''; ?>">
+                                        <a class="rd-nav-link" href="<?= base_url() . 'Product'; ?>">Productos</a>
                                         </li>
-                                        <li class="rd-nav-item <?= $view == 'Contacto' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Contact'; ?>">Contáctanos</a>
+                                        <li class="rd-nav-item <?= $view == 'Contacto' ? $activo : ''; ?>">
+                                        <a class="rd-nav-link" href="<?= base_url() . 'Contact'; ?>">Contáctanos</a>
                                         </li>
                                         <!--<li class="rd-nav-item <?= $view == 'Reserva' ? $activo : ''; ?>"><a class="rd-nav-link" href="<?= base_url() . 'Reserva'; ?>">Reserva</a>
                                         </li>-->

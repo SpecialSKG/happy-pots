@@ -30,9 +30,10 @@
 
 <?php if ($view == 'Productos/ProductosAdmin') { ?>
     <script src="<?= base_url() . 'assets/js/producto/delete_producto.js'; ?>"></script>
-<?php } ?>
-<?php if ($view == 'Formulario/Form') { ?>
+<?php } elseif ($view == 'Formulario/Form') { ?>
     <script src="<?= base_url() . 'assets/js/formulario/delete_form.js'; ?>"></script>
+<?php } elseif ($view == 'Usuarios/Usuario') { ?>
+    <script src="<?= base_url() . 'assets/js/usuario/delete_usuario.js'; ?>"></script>
 <?php } ?>
 
 </body>

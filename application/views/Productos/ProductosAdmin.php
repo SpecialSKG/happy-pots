@@ -2,9 +2,10 @@
     <h1>Productos</h1>
     <nav>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><i class="bi bi-house-door"></i></li>
-            <li class="breadcrumb-item">Productos</li>
-            <li class="breadcrumb-item active">Data</li>
+            <li class="breadcrumb-item">
+                <a href="<?= base_url("/Dashboard") ?>"><i class="bi bi-house-door"></i></a>
+            </li>
+            <li class="breadcrumb-item active">Productos</li>
         </ol>
     </nav>
 </div><!-- End Page Title -->

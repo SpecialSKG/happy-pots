@@ -2,8 +2,9 @@
     <h1>Dashboard</h1>
     <nav>
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="">Home</a></li>
-            <li class="breadcrumb-item active">Dashboard</li>
+            <li class="breadcrumb-item active">
+                <a href="<?= base_url("/Dashboard") ?>"><i class="bi bi-house-door"></i></a>
+            </li>
         </ol>
     </nav>
 </div><!-- End Page Title -->
@@ -12,11 +13,11 @@
     <div class="row">
 
         <!-- Left side columns -->
-        <div class="col-lg-8 offset-lg-2">
+        <div class="col-lg-10 offset-lg-1">
             <div class="row">
 
                 <!-- Sales Card -->
-                <div class="col-xxl-4 col-md-6">
+                <div class="col-xxl-4 col-md-4">
                     <div class="card info-card sales-card">
 
                         <div class="card-body">
@@ -38,7 +39,7 @@
                 </div><!-- End Sales Card -->
 
                 <!-- Revenue Card -->
-                <div class="col-xxl-4 col-md-6">
+                <div class="col-xxl-4 col-md-4">
                     <div class="card info-card revenue-card">
 
                         <div class="card-body">
@@ -60,7 +61,7 @@
                 </div><!-- End Revenue Card -->
 
                 <!-- Customers Card -->
-                <div class="col-xxl-4 col-xl-12">
+                <div class="col-xxl-4 col-md-4">
 
                     <div class="card info-card customers-card">
 

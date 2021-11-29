@@ -36,6 +36,11 @@ class Usuario_M extends CI_Model {
 		return ($this->db->update('usuario', $data)) ? true:false;
 	}
 
+	public function getTipo(){
+		$result = $this->db->get('tipo');
+		return $result->result();
+	}
+
 	/* -------------------------------------------------- */
 
 	//obtener los datos de 1 perfil de usuario

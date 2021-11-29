@@ -36,7 +36,7 @@ class Usuario extends CI_Controller
 					'page_title' => 'Usuario',
 					'view' => 'Usuarios/UsuarioInsert',
 					'data_view' => array(),
-					'data' => $this->Usuario_M->getUsuarios()
+					'tipo' => $this->Usuario_M->getTipo()
 				);
 				$this->load->view('Template/main_admin', $data);
 			} else if ($this->session->userdata('tipo') == '2') {
@@ -56,7 +56,8 @@ class Usuario extends CI_Controller
 					'page_title' => 'Detalle Entidad',
 					'view' => 'Usuarios/UsuarioUpdate',
 					'data_view' => array(),
-					'detalle' => $this->Usuario_M->obtUsuario($id)
+					'detalle' => $this->Usuario_M->obtUsuario($id),
+					'tipo' => $this->Usuario_M->getTipo()
 				);
 				$this->load->view('Template/main_admin', $data);
 			} else if ($this->session->userdata('tipo') == '2') {
