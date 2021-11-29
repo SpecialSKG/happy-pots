@@ -1,5 +1,5 @@
 <div class="pagetitle">
-    <h1>Dashboard</h1>
+    <h1>Dashboard Cliente</h1>
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item active">Inicio</li>

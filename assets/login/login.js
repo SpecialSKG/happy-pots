@@ -60,7 +60,7 @@ $('#logeo').click(function() {
                     let timerInterval
                     Swal.fire({
                         icon: 'success',
-                        title: 'Login..!',
+                        title: 'Iniciando..!',
                         timer: 1500,
                         didOpen: () => {
                             Swal.showLoading()
@@ -163,7 +163,7 @@ $('#registro_cliente').click(function() {
                     let timerInterval
                     Swal.fire({
                         icon: 'success',
-                        title: 'Login..!',
+                        title: 'Creando..!',
                         timer: 1500,
                         didOpen: () => {
                             Swal.showLoading()
