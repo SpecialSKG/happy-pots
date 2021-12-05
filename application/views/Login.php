@@ -62,8 +62,8 @@
 
             <div class="leftbox">
                 <h2 class="title"><span>Happy</span>-<br>Pots</h2>
-                <p class="desc">Elige tu maceta <span>perfecto</span></p>
-                <img class="flower" src="<?= base_url() . 'assets/images/happypots.jpg'; ?>" alt="Logo de Happy Pots" width="50" height="50" border="0">
+                <p class="desc">Elige tu maceta <span>perfecta</span></p>
+                <img class="flower" src="<?= base_url() . 'assets/images/happypots.png'; ?>" alt="Logo de Happy Pots" width="50" height="50" border="0">
                 <p class="account">Tienes una cuenta?</p>
                 <button class="button" id="signin">Inicio Sesion</button>
             </div>
@@ -71,7 +71,7 @@
             <div class="rightbox">
                 <h2 class="title"><span>Happy</span>-<br>Pots</h2>
                 <p class="desc">Una maceta para tu <span>vida.</span></p>
-                <img class="flower" src="<?= base_url() . 'assets/images/happypots.jpg'; ?>" alt="Logo de Happy Pots" width="50" height="50" />
+                <img class="flower" src="<?= base_url() . 'assets/images/happypots.png'; ?>" alt="Logo de Happy Pots" width="50" height="50" />
                 <p class="account">No tienes una cuenta?</p>
                 <button class="button" id="signup">Crear Cuenta</button>
             </div>
