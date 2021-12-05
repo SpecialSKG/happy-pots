@@ -201,7 +201,7 @@
                     <div class="form-wrap wow slideInDown">
                         <!--Select 2-->
                         <select class="form-input" data-minimum-results-for-search="Infinity" name="tipoentrega" id="tipoentrega">
-                            <option>-- Tipo de entrega --</option>
+                            <option>-- Tipo de Consulta --</option>
                             <option value="1">Consulta Normal</option>
                             <option value="2">Consulta Urgente</option>
                         </select>

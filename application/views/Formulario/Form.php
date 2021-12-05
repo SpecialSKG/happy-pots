@@ -25,7 +25,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Entrega</th>
+                                <th scope="col">Consulta</th>
                                 <th scope="col">Telefono</th>
                                 <th scope="col">Mensaje</th>
                                 <th scope="col"></th>
@@ -38,7 +38,7 @@
                                     <td><?= $d->nombrecompleto ?></td>
                                     <td><?= $d->correoelectronico ?></td>
                                     <td>
-                                        <?= ($d->tipoentrega == 1) ? '<i class="btn btn-success bi bi-hourglass"></i>' : '<i class="btn btn-warning bi bi-hourglass-split"></i>'; ?>
+                                        <?= ($d->tipoentrega == 1) ? '<i class="btn btn-success bi bi-hourglass" title="Consulta Normal"></i>' : '<i class="btn btn-warning bi bi-hourglass-split" title="Consulta Urgente"></i>'; ?>
                                     </td>
 
                                     <td><?= $d->telefono ?></td>
