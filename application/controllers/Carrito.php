@@ -155,6 +155,8 @@ class Carrito extends CI_Controller
         $date = str_replace('/', '-',$this->input->post('fecha') ) ;
        // $date = DateTime::createFromFormat('d/m/Y', $this->input->post('fecha'));
 
+       $idquemado = $this->session->userdata('id');
+       echo $idquemado;
         $item = (object) array(
             'fecha' => date('Y-m-d', strtotime($date)),
             'lugar' => $this->input->post('lugarhidden'),
