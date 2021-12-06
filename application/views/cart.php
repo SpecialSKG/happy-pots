@@ -18,11 +18,12 @@
     <div class="container">
 
         <h4 class="text-center my-3 py-3">Detalle</h4>
-        <table class="table table-striped table-responsive my-5">
+        <table class="table table-striped table-responsive my-5 ">
             <tr style="background-color: #98BF44;">
                 <th width="5%">N°</th>
                 <th width="30%">Nombre del producto</th>
                 <th width="10%">Imagen</th>
+                <th width="10%">Material</th>
                 <th width="15%">Precio</th>
                 <th width="20%">Cantidad</th>
                 <th width="15%">Precio total</th>
@@ -38,6 +39,7 @@
                     <td><?= $numeracion ?><?php $numeracion = $numeracion + 1 ?></td>
                     <td><?= $d->nombre ?></td>
                     <td><img src="<?= base_url('assets/images/productos/') . $d->img_producto_id ?>" alt="" /></td>
+                    <td><img src="<?= base_url('assets/images/materiales/') . $d->material ?>" alt="" /></td>
                     <td><?= "$ " . $d->precio ?></td>
                     <td>
                         <form action="<?= base_url('/Carrito/actualizarCantidad') ?>" method="post">
@@ -93,10 +95,12 @@
             <table class="table text-left">
                 <tr>
                     <th>Sub Total : </th>
-                    <td><?php
+                    <td>
+                        <?php
                         $subtota = sprintf("%01.2f", $subtota);
                         echo ("$ " . $subtota);
-                        ?></td>
+                        ?>
+                    </td>
                 </tr>
                 <tr>
                     <th>Envio : </th>
@@ -113,7 +117,7 @@
                     <td><?= "$" . $total ?></td>
                     <input type="hidden" value="<?= $total ?>" name="total" id="total" />
                     <input type="hidden" name="lugarhidden" id="lugarhidden" />
-                    <input type="hidden" name="horahidden"  id="horahidden" />
+                    <input type="hidden" name="horahidden" id="horahidden" />
                 </tr>
             </table>
             <input name="enviar" id="enviar" type="submit" class="btn btn-sm btn-primary m-0" value="Reservar" />
@@ -122,7 +126,7 @@
         <!-- Aquí mostrar un mensaje cuando el carrito este vacío -->
         <div class="row">
             <div class="col">
-                <a class="btn btn-sm" href="<?php base_url() . 'Product'; ?>">Seguir comprando</a>
+                <a class="btn btn-sm btn-primary m-0" href="<?php base_url() . 'Product'; ?>">Seguir comprando</a>
             </div>
         </div>
 
@@ -136,13 +140,13 @@
         $("#horahidden").val("02:30 pm");
 
         $('#fecha').datepicker({
-            beforeShowDay: function(date) {
-                return [date.getDay() == 0 || date.getDay() == 6]
+                beforeShowDay: function(date) {
+                    return [date.getDay() == 0 || date.getDay() == 6]
+                },
+                minDate: dateDay,
+                dateFormat: 'yy-mm-dd'
             },
-            minDate: dateDay,
-            dateFormat: 'yy-mm-dd' 
-        },
-        
+
         );
         $("#hora").append("<option value='02:30 pm'>02:30 pm</option><option value='03:00 pm'>03:00 pm</option>");
 
@@ -152,12 +156,12 @@
             }
         });
 
-        $("#lugar").change(function (e) { 
+        $("#lugar").change(function(e) {
             $("#lugarhidden").val($("#lugar").val());
             $("#horahidden").val($("#hora option").val());
         });
 
-        $("#hora").change(function (e) { 
+        $("#hora").change(function(e) {
             $("#horahidden").val($("#hora").val());
         });
 
@@ -186,7 +190,7 @@
             }
             $("#hora").append(optiones);
         });
-        
+
         $("form[name='formulario'] ").validate({
             rules: {
                 lugar: "required",

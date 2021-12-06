@@ -64,8 +64,10 @@ class Carrito extends CI_Controller
     {
         if ($this->session->userdata('login')) {
             $this->load->model('crudModel');
-            $carrito = $this->crudModel->listarLoQueSea('SELECT t.id, p.nombre, p.precio, t.cantidad, p.img_producto_id FROM `detalle_temp` t INNER join `producto` p on t.producto = p.id Inner join `material` m on t.material = m.id WHERE t.usuario = ' . $this->session->userdata('id'));
+            $carrito = $this->crudModel->listarLoQueSea('SELECT t.id, p.nombre, p.precio, t.cantidad, p.img_producto_id, m.material FROM `detalle_temp` t INNER join `producto` p on t.producto = p.id Inner join `material` m on t.material = m.id WHERE t.usuario = ' . $this->session->userdata('id'));
             return $carrito;
+
+            /* SELECT dt.id, dt.usuario, dt.producto, m.material , dt.cantidad FROM bj794z2rilgexy7abgzu.detalle_temp dt inner join material m  on dt.material = m.id; */
         } else {
             redirect(base_url('Login'));
         }
@@ -152,11 +154,11 @@ class Carrito extends CI_Controller
 
     public function reserva()
     {
-        $date = str_replace('/', '-',$this->input->post('fecha') ) ;
-       // $date = DateTime::createFromFormat('d/m/Y', $this->input->post('fecha'));
+        $date = str_replace('/', '-', $this->input->post('fecha'));
+        // $date = DateTime::createFromFormat('d/m/Y', $this->input->post('fecha'));
 
-       $idquemado = $this->session->userdata('id');
-       echo $idquemado;
+        $idquemado = $this->session->userdata('id');
+        echo $idquemado;
         $item = (object) array(
             'fecha' => date('Y-m-d', strtotime($date)),
             'lugar' => $this->input->post('lugarhidden'),
@@ -166,6 +168,6 @@ class Carrito extends CI_Controller
         );
 
         $this->CartModel->executeInsert($item);
-        redirect(base_url("Reservas/obtenerReservaPerfil/"). $this->session->userdata("id"));
+        redirect(base_url("Reservas/obtenerReservaPerfil/") . $this->session->userdata("id"));
     }
 }

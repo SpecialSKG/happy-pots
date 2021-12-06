@@ -88,6 +88,34 @@
     gtag('js', new Date());
     gtag('config', 'G-PEW8XHSY1N');
 </script>
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+    (function() {
+        var options = {
+            whatsapp: "+50374700643", // WhatsApp number
+            instagram: "happy.potsv", // Instagram username
+            instagram_color: "#FF318E", // Instagram button color
+            call_to_action: "Envíanos un mensaje", // Call to action
+            button_color: "#A8CE50", // Color of button
+            position: "left", // Position may be 'right' or 'left'
+            order: "whatsapp,instagram", // Order of buttons
+            pre_filled_message: "Deseo mas información", // WhatsApp pre-filled message
+        };
+        var proto = document.location.protocol,
+            host = "getbutton.io",
+            url = proto + "//static." + host;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function() {
+            WhWidgetSendButton.init(host, proto, options);
+        };
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /GetButton.io widget -->
 </body>
 
 </html>
