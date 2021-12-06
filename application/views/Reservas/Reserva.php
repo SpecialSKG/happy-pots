@@ -36,9 +36,10 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $contador = 1;?>
                             <?php foreach ($data as $d) { ?>
                                 <tr>
-                                    <th scope="row"><?= $d->id ?></th>
+                                    <th scope="row"><?= $contador ?></th>
                                     <td><?= $d->nombre ?></td>
                                     <td><?= $d->lugar ?></td>
                                     <td><?= $d->fecha ?></td>
@@ -47,12 +48,15 @@
                                         <a type="submit" href="<?= base_url() . 'Reservas/obtenerReserva/' . $d->id ?>" class="btn btn-info">
                                             <i class="bi bi-info-circle"></i>
                                         </a>
-
+                                        <a type="submit" href="<?= base_url() . 'Reservas/obtenerReservaPorId/' . $d->id ?>" class="btn btn-info">
+                                            <i class="bi bi-info-circle"></i>
+                                        </a>
                                         <button data-id="<?= $d->id ?>" id="delete" class="btn btn-danger">
                                             <i class="bi bi-exclamation-octagon"></i>
                                         </button>
                                     </td>
                                 </tr>
+                                <?php $contador++; ?>
                             <?php } ?>
                         </tbody>
                     </table>

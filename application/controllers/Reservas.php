@@ -146,7 +146,7 @@ class Reservas extends CI_Controller
 				'page_title' => 'Detalle Reserva',
 				'view' => 'Reservas/ReservaPerfil',
 				'data_view' => array(
-					'reservas' => $this->CrudModel->listarLoQueSea(
+					'reserva' => $this->CrudModel->listarLoQueSea(
 						"select r.id as id_reserva, r.id as id_usuario, r.fecha as fecha, r.hora as hora, r.total as total, l.lugar from reserva r inner join detalle d on r.id = d.reserva inner join lugar l on r.lugar = l.id where r.usuario =" . $this->session->userdata("id") . " group by r.id ;"
 					)
 
@@ -158,6 +158,34 @@ class Reservas extends CI_Controller
 			$this->load->view('Template/main_admin', $data);
 		} else {
 			redirect(base_url() . 'Login', 'refresh');
+		}
+	}
+
+	//obtener datos de 1 usuario
+	public function obtenerReservaPorId($id)
+	{
+		if ($this->session->userdata("login") === TRUE && $this->session->userdata("tipo") == '1' ) {
+			$data = array(
+				'page_title' => 'Detalle Reserva',
+				'view' => 'Reservas/ReservaUna',
+				'data_view' => array(
+					'reserva' => $this->CrudModel->listarLoQueSea(
+						"SELECT d.id as iddetalle, r.lugar as lugar,r.fecha as fecha,r.id as idreserva,r.hora as hora, r.total as total, p.nombre as producto, p.precio as precio,p.img_producto_id as img,d.cantidad as cantidad,m.material as material,  u.nombre as usuario  ".
+						" FROM reserva r  inner join detalle d 	on r.id = d.reserva".
+						" inner join material m on d.material = m.id".
+						" inner join producto p on p.id = d.producto".
+						" inner join usuario u on u.id = r.usuario".
+						"  where r.id = ".$id.";"
+					)
+
+				),
+				'usuario' => $this->Reserva_M->getUsuario(),
+				'lugar' => $this->Reserva_M->getLugar(),
+				'detalle' => $this->Reserva_M->obtReservas($id)
+			);
+			$this->load->view('Template/main_admin', $data);
+		} else {
+			redirect(base_url() . 'DashboardCliente', 'refresh');
 		}
 	}
 }

@@ -46,7 +46,7 @@
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <h2><?=$producto->nombre;?></h2>
                 <br>
-                <p><del>$15.00</del></p>
+                <p><del><?=$producto->precio + 2;?></del></p>
                 <h5><?=$producto->precio;?></h5>
                 <p>Colores</p>
 
