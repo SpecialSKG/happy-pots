@@ -51,65 +51,69 @@
 
 <section class="section section-lg bg-default">
     <div class="container">
-
-        <div class="col-lg-10 offset-lg-1">
-            <!-- Tab panes-->
-            <div class="row">
-                <h4>Preguntas Frecuentes</h4>
+        <div class="row my-5 ">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <h4>Preguntas frecuentes</h4>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="form-label">
-                        ¿De qué están hechas las macetas?
-                    </label>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Actualmente todas nuestras macetas están hechas 100% de concreto.
-                    </p>
-                </div>
-            </div>
+        </div>     
+        <div class="accordion" id="accordionExample">
+          <div class="card" style="color: white;background-color: #673ab7;">
+            <div class="card-header" style="padding: 0;background-color: #98bf44;" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" style="color:black;line-height: 0;" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <strong style="font-size: 18px;">¿De qué están hechas las macetas?</strong>
+              </button>
+          </h2>
+      </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="form-label">
-                        ¿Entregan en otros lugares?
-                    </label>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Actualmente solo entregamos en La Skina, SOHO, Multiplaza, Metrocentro San Salvador y Metrocentro Lourdes, en los horarios estipulados en nuestra sección de Carrito, aunque si se pone en contacto con nosotros por medio de WhatsApp se puede acordar otro horario mas no otro lugar.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="form-label">
-                        ¿Dónde están ubicado / tienen tienda física?
-                    </label>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        No, Happy Pots es un emprendimiento que no tiene un lugar físico en estos momentos, pero los invitamos a estar pendientes de nuestras redes sociales puesto que en ellas notificamos sobre lugares y días donde participamos en bazares.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <label class="form-label">
-                        ¿La planta va incluida en el precio?
-                    </label>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        De hecho, Happy Pots se dedica únicamente a la venta de macetas, razón por la cual entregamos únicamente la maceta que usted desee mas no la plantita.
-                    </p>
-                </div>
-            </div>
-
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Actualmente todas nuestras macetas están hechas 100% de concreto.</p>
         </div>
-
     </div>
+</div>
+<div class="card" style="color: white;background-color: #673ab7;">
+    <div class="card-header"  style="padding: 0;background-color: #98bf44;" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" style="color:black;line-height: 0;" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <strong style="font-size: 18px;">¿Entregan en otros lugares?</strong>
+      </button>
+  </h2>
+</div>
+<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+  <div class="card-body">
+    <p>Actualmente solo entregamos en La Skina, SOHO, Multiplaza, Metrocentro San Salvador y Metrocentro Lourdes, en los horarios estipulados en nuestra sección de Carrito, aunque si se pone en contacto con nosotros por medio de WhatsApp se puede acordar otro horario mas no otro lugar.</p>
+</div>
+</div>
+</div>
+<div class="card" style="color: white;background-color: #673ab7;">
+    <div class="card-header"  style="padding: 0;background-color: #98bf44;" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" style="color:black;line-height: 0;" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <strong style="font-size: 18px;">¿Dónde están ubicado / tienen tienda física?</strong>
+      </button>
+  </h2>
+</div>
+<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+  <div class="card-body">
+    <p>No, Happy Pots es un emprendimiento que no tiene un lugar físico en estos momentos, pero los invitamos a estar pendientes de nuestras redes sociales puesto que en ellas notificamos sobre lugares y días donde participamos en bazares.</p>
+</div>
+</div>
+</div>
+<div class="card" style="color: white;background-color: #673ab7;">
+    <div class="card-header"  style="padding: 0;background-color: #98bf44;" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" style="color:black;line-height: 0;" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <strong style="font-size: 18px;">¿La planta va incluida en el precio?</strong>
+      </button>
+  </h2>
+</div>
+<div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+  <div class="card-body">
+    <p>De hecho, Happy Pots se dedica únicamente a la venta de macetas, razón por la cual entregamos únicamente la maceta que usted desee mas no la plantita.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
