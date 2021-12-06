@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://happy-pots.herokuapp.com/</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/Login</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/Acerca</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/Product</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/Contact</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/Product/maceta/6</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/Product/maceta/5</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/Product/maceta/4</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/Product/maceta/3</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/Product/maceta/2</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/product/pagina/2</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://happy-pots.herokuapp.com/product</loc>
+  <lastmod>2021-12-06T00:28:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
