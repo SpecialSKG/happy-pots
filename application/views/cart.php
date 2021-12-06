@@ -23,7 +23,7 @@
                 <th width="5%">N°</th>
                 <th width="30%">Nombre del producto</th>
                 <th width="10%">Imagen</th>
-                <th width="10%">Material</th>
+                <th width="10%">Color</th>
                 <th width="15%">Precio</th>
                 <th width="20%">Cantidad</th>
                 <th width="15%">Precio total</th>
