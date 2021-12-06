@@ -210,7 +210,12 @@ class Usuario extends CI_Controller
 					'pass' => base64_encode($this->input->post('pass')),
 					'id' => $this->input->post('id')
 				);
-				if ($this->entidades_model->update_perfilPass($data)) {
+				if ($this->Usuario_M->update_perfilPass($data)) {
+					$session_data = array(
+						'pass' => $data['pass'],
+						'login' => TRUE
+					);
+					$this->session->set_userdata($session_data);
 					echo json_encode(array('success' => 1));
 				} else {
 					echo json_encode(array('success' => 0));
